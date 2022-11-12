@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <a href="/html/registro-pesos.html" class="links-nav">Pesos</a>
+            <a href="" class="links-nav">Ayunos</a>
+            <a href="" class="links-nav" id="act-fisica">Actividad fisica</a>
+            <a href="" class="links-nav">Recetas</a>
+            <a href="" class="links-nav">Enfermedades</a>
+            <a href="" class="links-nav">Logros</a>
+            <a href="/html/editar.html" class="links-nav">Editar perfil</a>
+            <img src="/imgs/straw_logo.png" alt="imagen de logo straw">
+        </nav>
+    </header>
+    <main class="main-registro">
+        <h1>Registro</h1>
+        <form class="formulario">
+            <div>
+                <label for="txt-nombre">Nombre completo:</label>
+                <input type="text" name="txt-nombre" id="txt-nombre">
+            </div>
+            <div>
+                <label for="txt-fecha-nac">Fecha de nacimiento:</label>
+                <input type="date" name="txt-fecha-nac" id="txt-fecha-nac">
+            </div>
+            <div>
+                <label for="txt-estatura">Estatura:</label>
+                <input type="number" name="txt-estatura" id="txt-estatura">
+            </div>
+            <div>
+                <label for="txt-genero">Genero:</label>
+                <select name="txt-genero" id="txt-genero">
+                    <option value="">--soy--</option>
+                    <option value="masculino">Hombre</option>
+                    <option value="femenino">Mujer</option>
+                </select>
+            </div>
+            <div>
+                <label for="txt-correo">Correo electronico:</label>
+                <input type="email" name="txt-correo" id="txt-correo">
+            </div>
+            <div>
+                <label for="txt-foto">Adjuntar foto:</label>
+                <input type="file" accept="image/*" name="txt-foto" id="txt-foto">
+            </div>
+            <div>
+                <label for="txt-peso-meta ">Peso meta:</label>
+                <input type="number" name="txt-peso-meta" id="txt-peso-meta">
+            </div>
+            <button id="btn-registrar" type="button">Registrar</button>
+        </form>
+    </main>
+    <script src="/js/index.js"></script>
+</body>
+
+</html>
