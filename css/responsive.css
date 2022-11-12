@@ -1,0 +1,40 @@
+@media all and (max-width: 620px) {
+    body {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        margin-top: 40px;
+    }
+    .nav {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        height: 550px;
+    }
+    .links-nav {
+        height: 55px;
+        background-color: #1c3879;
+        border-radius: 5px;
+        text-align: center;
+        align-self: center;
+        text-decoration: none;
+        font-size: 16px;
+        color: white;
+        width: 80%;
+        font-weight: bold;
+        align-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .formulario div {
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        justify-content: space-evenly;
+    }
+    .vacio {
+        border: solid 2px red;
+        border-radius: 3px;
+    }
+}
