@@ -79,4 +79,4 @@ validarPesos = () => {
     }
 };
 btnRegistrar.addEventListener("click", validar);
-btnRegistrarPeso.addEventListener("click", validar);
+btnRegistrarPeso.addEventListener("click", validarPesos);
