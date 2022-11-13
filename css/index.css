@@ -94,3 +94,11 @@ button {
     height: 200px;
     width: 200px;
 }
+
+.titulos {
+    display: flex;
+    flex-direction: column;
+    background-color: #607eaa;
+    height: 300px;
+    font-size: 46px;
+}
