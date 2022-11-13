@@ -30,7 +30,60 @@
             </a>
         </nav>
     </header>
-    <h1>Recetas</h1>
+    <main class="main-recetas">
+        <h1>Registrar receta</h1>
+        <form class="receta-nueva">
+            <div>
+                <label for="txt-receta">Nombre:</label>
+                <input type="text" name="txt-receta" id="txt-receta">
+            </div>
+            <div>
+                <label for="txt-ingredientes">Ingredientes:</label>
+                <input type="text" name="txt-ingredientes" id="txt-ingredientes">
+            </div>
+
+            <div>
+                <label for="txt-foto-receta">Imagen:</label>
+                <input type="file" accept="image/*" name="txt-foto-receta" id="txt-foto-receta">
+            </div>
+
+            <div>
+                <label for="txt-pasos">Pasos de la receta:</label>
+                <input type="text" name="txt-pasos" id="txt-pasos">
+            </div>
+
+
+            <div>
+                <label for="txt-tipo-comida">Tipo de comida:</label>
+                <select name="txt-tipo-comida" id="txt-tipo-comida">
+                    <option value="">--Tipo de comida...--</option>
+                    <option value="desayuno">Desayuno</option>
+                    <option value="almuerzo">Almuerzo</option>
+                    <option value="cena">Cena</option>
+                    <option value="postre">Postre</option>
+                    <option value="merienda">Merienda</option>
+                    <option value="snack">Snack</option>
+                    <option value="bebida">Bebida</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="txt-categoria-receta">Categoria de comida:</label>
+                <select name="txt-categoria-receta" id="txt-categoria-recetaa">
+                    <option value="">--Categoria de comida...--</option>
+                    <option value="normal">Sin restricciones</option>
+                    <option value="vegetariana">Vegetariana</option>
+                    <option value="keto">Keto</option>
+                    <option value="sin-gluten">Sin gluten</option>
+                    <option value="vegana">Vegana</option>
+                </select>
+            </div>
+
+        </form>
+    </main>
+    <script src="/javascript/index.js"></script>
+</body>
+
 
 </body>
 
