@@ -37,4 +37,12 @@
         border: solid 2px red;
         border-radius: 3px;
     }
+    .main-principal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 900px;
+        max-width: 80%;
+    }
 }
