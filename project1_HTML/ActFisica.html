@@ -10,27 +10,23 @@
 </head>
 
 <body>
-    <header>
-        <nav class="nav">
-            <a href="/html/registro-pesos.html" class="links-nav">Pesos</a>
-            <a href="" class="links-nav">Ayunos</a>
-            <a href="" class="links-nav" id="act-fisica">Actividad fisica</a>
-            <a href="" class="links-nav">Recetas</a>
-            <a href="" class="links-nav">Enfermedades</a>
-            <a href="" class="links-nav">Logros</a>
-            <a href="/html/editar.html" class="links-nav">Editar perfil</a>
-            <img src="/imgs/straw_logo.png" alt="imagen de logo straw">
-        </nav>
 
-    </header>
-    <script src="ActFisica.js">
-    </script>
+
+
     <h1 id="titulo">Registrar ejercicio</h1>
-    <p class="datos">Hora de inicio:</p>
-    <p class="datos">Hora de finalizado:</p>
-    <p class="datos">Nombre:</p>
-    <p class="datos">Subor icono:</p>
+    <div id="sct-formDatos">
+        <form action="ActFisica.html" method="get">
+            <script src="./ActFisica.js"></script>
 
+            Hora de inicio:<input type="number" id="hInicio" name="hInicio"><br> Hora de Finalizado:<input type="number" id="hfinal" name="hFinal"><br> Nombre:
+            <input type="String" id="nombre" name="nombre"><br> Subir Icono<input type="image" name="subirIcono" id="subirIcono"><br>
+
+            <input type="submit" value="Registrar"><br> Peso:
+            <input type="number" id="peso" name="peso"><br> IMC Actual:<input type="number" id="imc" name="imc"><br>
+
+
+        </form>
+    </div>
 
 </body>
 
