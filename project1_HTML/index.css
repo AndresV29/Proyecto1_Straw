@@ -1,5 +1,8 @@
-h1 {
-    color: brown;
+#titulo {
     font-weight: 700;
     font-size: 50px;
+}
+
+#sct-formdatos {
+    margin: 5px;
 }
