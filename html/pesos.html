@@ -30,24 +30,33 @@
             </a>
         </nav>
     </header>
-    <main>
-        <div>
+    <main class="main-pesos">
+        <form class="registro-pesos">
             <h1>Registro de pesos</h1>
-            <h1>Historial</h1>
-        </div>
-
-        <form>
             <div>
                 <label for="txt-fecha-registro">Fecha:</label>
                 <input type="date" name="txt-fecha-registro" id="txt-fecha-registro" />
             </div>
             <div>
                 <label for="txt-peso-registro">Peso:</label>
-                <input type="number" name="txt-peso-registro" id="txt-peso-registro" />
+                <input type="number" name="txt-peso-registro" id="txt-peso-registro" min="0" />
             </div>
             <button id="btn-registrar-peso" type="button">Registrar</button>
         </form>
+        <div>
+            <h1>Historial</h1>
+        </div>
     </main>
+    <section class="resultados">
+        <div class="imc">
+            <label for="imc-actual">IMC Actual:</label>
+            <input id="imc-actual" name="imc-actual"></input>
+        </div>
+        <div class="clasificacion">
+            <label for="clasificacion-imc">Clasificación:</label>
+            <input id="clasificacion-imc" name="clasificacion-imc"></input>
+        </div>
+    </section>
     <script src="/javascript/index.js"></script>
 </body>
 
