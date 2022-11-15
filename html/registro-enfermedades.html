@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar enfermedades</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <a href="/html/registro.html" class="links-nav">Registro</a>
+            <a href="/html/pesos.html" class="links-nav">Pesos</a>
+            <a href="" class="links-nav">Ayunos</a>
+            <a href="" class="links-nav" id="act-fisica">Actividad fisica</a>
+            <a href="/html/registro-recetas.html" class="links-nav">Recetas</a>
+            <a href="/html/registro-enfermedades.html" class="links-nav">Enfermedades</a>
+            <a href="/html/logros.html" class="links-nav">Logros</a>
+            <a href="/html/editar.html" class="links-nav">Editar perfil</a>
+            <a href="/html/index.html">
+                <img src="/imagenes/straw_logo.png" alt="imagen de logo straw">
+            </a>
+        </nav>
+    </header>
+
+    <main class="main-enfermedades">
+        <h1>Registrar enfermedades</h1>
+        <form class="agregar-enfermedad">
+            <div>
+                <label for="txt-nombre-enfermedad">Nombre de la enfermedad:</label>
+                <input type="text" name="txt-nombre-enfermedad" id="txt-nombre-enfermedad">
+            </div>
+
+            <div>
+                <label for="txt-descripcion-enfermedad">Descripción:</label>
+                <input type="text" name="txt-descripcion-enfermedad" id="txt-descripcion-enfermedad">
+            </div>
+
+            <div>
+                <label for="txt-estado-enfermedad">Estado de la enfermedad:</label>
+                <select name="txt-estado-enfermedad" id="txt-estado-enfermedad">
+                    <option value="">--Mi enfermedad está...--</option>
+                    <option value="activa">Activa</option>
+                    <option value="controlada">Controlada</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="txt-medicamento">Medicamento:</label>
+                <input type="text" name="txt-medicamento" id="txt-medicamento">
+            </div>
+
+            <button id="btn-agregar-enfermedad" type="button">Registrar enfermedad</button>
+        </form>
+    </main>
+    <script src="/javascript/index.js"></script>
+</body>
+
+</html>
