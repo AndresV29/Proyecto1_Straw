@@ -21,8 +21,8 @@
             <a href="/html/pesos.html" class="links-nav">Pesos</a>
             <a href="" class="links-nav">Ayunos</a>
             <a href="" class="links-nav" id="act-fisica">Actividad fisica</a>
-            <a href="/html/recetas.html" class="links-nav">Recetas</a>
-            <a href="" class="links-nav">Enfermedades</a>
+            <a href="/html/registro-recetas.html" class="links-nav">Recetas</a>
+            <a href="/html/registro-enfermedades.html" class="links-nav">Enfermedades</a>
             <a href="/html/logros.html" class="links-nav">Logros</a>
             <a href="/html/editar.html" class="links-nav">Editar perfil</a>
             <a href="/html/index.html">
@@ -30,24 +30,33 @@
             </a>
         </nav>
     </header>
-    <main>
-        <div>
+    <main class="main-pesos">
+        <form class="registro-pesos">
             <h1>Registro de pesos</h1>
-            <h1>Historial</h1>
-        </div>
-
-        <form>
             <div>
                 <label for="txt-fecha-registro">Fecha:</label>
                 <input type="date" name="txt-fecha-registro" id="txt-fecha-registro" />
             </div>
             <div>
                 <label for="txt-peso-registro">Peso:</label>
-                <input type="number" name="txt-peso-registro" id="txt-peso-registro" />
+                <input type="number" name="txt-peso-registro" id="txt-peso-registro" min="0" />
             </div>
             <button id="btn-registrar-peso" type="button">Registrar</button>
         </form>
+        <div class="historial">
+            <h1>Historial</h1>
+        </div>
     </main>
+    <section class="resultados">
+        <div class="imc">
+            <label for="imc-actual">IMC Actual:</label>
+            <output id="imc-actual" name="imc-actual"></output>
+        </div>
+        <div class="clasificacion">
+            <label for="clasificacion-imc">Clasificación:</label>
+            <output id="clasificacion-imc" name="clasificacion-imc"></output>
+        </div>
+    </section>
     <script src="/javascript/index.js"></script>
 </body>
 
