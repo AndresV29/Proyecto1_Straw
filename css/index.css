@@ -102,3 +102,11 @@ button {
     height: 300px;
     font-size: 46px;
 }
+
+
+/* recetas */
+
+.vacio-1 {
+    border: solid 2px red;
+    border-radius: 3px;
+}
