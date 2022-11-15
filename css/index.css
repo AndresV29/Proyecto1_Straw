@@ -102,37 +102,3 @@ button {
     height: 300px;
     font-size: 46px;
 }
-
-
-/* recetas */
-
-.vacio-1 {
-    border: solid 2px red;
-    border-radius: 3px;
-}
-
-.receta-nueva {
-    display: flex;
-    flex-direction: column;
-    height: 500px;
-    width: 100%;
-    justify-content: space-around;
-    font-size: 22px;
-}
-
-
-/* enfermedades */
-
-.vacio-2 {
-    border: solid 2px red;
-    border-radius: 3px;
-}
-
-.agregar-enfermedad {
-    display: flex;
-    flex-direction: column;
-    height: 500px;
-    width: 100%;
-    justify-content: space-around;
-    font-size: 22px;
-}
