@@ -34,8 +34,8 @@
         <h1>Registrar receta</h1>
         <form class="receta-nueva">
             <div>
-                <label for="txt-receta">Nombre:</label>
-                <input type="text" name="txt-receta" id="txt-receta">
+                <label for="txt-nombre-receta">Nombre:</label>
+                <input type="text" name="txt-nombre-receta" id="txt-nombre-receta">
             </div>
             <div>
                 <label for="txt-ingredientes">Ingredientes:</label>
@@ -43,13 +43,13 @@
             </div>
 
             <div>
-                <label for="txt-foto-receta">Imagen:</label>
-                <input type="file" accept="image/*" name="txt-foto-receta" id="txt-foto-receta">
+                <label for="file-foto-receta">Imagen:</label>
+                <input type="file" accept="image/*" name="file-foto-receta" id="file-foto-receta">
             </div>
 
             <div>
-                <label for="txt-pasos">Pasos de la receta:</label>
-                <input type="text" name="txt-pasos" id="txt-pasos">
+                <label for="txt-pasos-receta">Pasos de la receta:</label>
+                <input type="text" name="txt-pasos-receta" id="txt-pasos-receta">
             </div>
 
 
@@ -69,7 +69,7 @@
 
             <div>
                 <label for="txt-categoria-receta">Categoria de comida:</label>
-                <select name="txt-categoria-receta" id="txt-categoria-recetaa">
+                <select name="txt-categoria-receta" id="txt-categoria-receta">
                     <option value="">--Categoria de comida...--</option>
                     <option value="normal">Sin restricciones</option>
                     <option value="vegetariana">Vegetariana</option>
@@ -78,7 +78,7 @@
                     <option value="vegana">Vegana</option>
                 </select>
             </div>
-
+            <button id="btn-agregar-receta" type="button">Agregar receta</button>
         </form>
     </main>
     <script src="/javascript/index.js"></script>
