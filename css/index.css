@@ -1,6 +1,6 @@
 html>* {
     box-sizing: border-box;
-    font-family: 'Merriweather', serif;
+    font-family: "Merriweather", serif;
     background-color: #f9f5eb;
 }
 
@@ -93,4 +93,41 @@ button {
 .logo-principal {
     height: 200px;
     width: 200px;
+}
+
+
+/* Estilos registro de pesos */
+
+.titulos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 75px;
+    font-size: 22px;
+    padding-top: 28px;
+}
+
+.registro-pesos {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 50%;
+    justify-content: space-around;
+    font-size: 22px;
+}
+
+.imc-clasificacion {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 100px;
+    width: 100%;
+    font-size: 28px;
+}
+
+table,
+th,
+td {
+    width: 50%;
+    border: solid #1c3879;
+    border-collapse: collapse;
 }
