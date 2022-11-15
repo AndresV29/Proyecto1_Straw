@@ -95,10 +95,41 @@ button {
     width: 200px;
 }
 
-.titulos {
+.main-pesos {
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+    justify-content: space-between;
+    width: 1100px;
+    margin-bottom: 50px;
+    font-size: 22px;
+}
+
+.historial {
+    width: 400px;
+    text-align: center;
+}
+
+.registro-pesos {
     display: flex;
     flex-direction: column;
-    background-color: #607eaa;
-    height: 300px;
-    font-size: 46px;
+    justify-content: space-between;
+}
+
+div output {
+    border: 2px solid #000;
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    border-radius: 5px;
+    font-size: 18px;
+    height: 30px;
+    width: 100px;
+}
+
+.resultados {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: auto;
+    font-size: 22px;
 }
