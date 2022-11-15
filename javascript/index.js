@@ -131,5 +131,42 @@ validarRecetas = () => {
     } else {
         txtCategoriaReceta.classList.remove("vacio-1");
     }
+
 };
 btnAgregarReceta.addEventListener("click", validarRecetas);
+
+// validacion enfermedades// validacion enfermedades// validacion enfermedades// validacion enfermedades// validacion enfermedades
+
+const btnAgregarEnfermedad = document.getElementById("btn-agregar-enfermedad");
+const txtNombreEnfermedad = document.getElementById("txt-nombre-enfermedad");
+const txtDescripcionEnfermedad = document.getElementById("txt-descripcion-enfermedad");
+const txtEstadoEnfermedad = document.getElementById("txt-estado-enfermedad");
+const txtMedicamentos = document.getElementById("txt-medicamento");
+
+validarEnfermedades = () => {
+    let nombreEnfermedad = txtNombreEnfermedad.value;
+    let descripcionEnfermedad = txtDescripcionEnfermedad.value;
+    let estadoEnfermedad = txtEstadoEnfermedad.value;
+    let medicamentos = txtMedicamentos.value;
+
+    if (nombreEnfermedad == "") {
+        txtNombreEnfermedad.classList.add("vacio-2");
+    } else {
+        txtNombreEnfermedad.classList.remove("vacio-2");
+    }
+    if (descripcionEnfermedad == "") {
+        txtDescripcionEnfermedad.classList.add("vacio-2");
+    } else {
+        txtDescripcionEnfermedad.classList.remove("vacio-2");
+    }
+    if (estadoEnfermedad == "") {
+        txtEstadoEnfermedad.classList.add("vacio-2");
+    } else {
+        txtEstadoEnfermedad.classList.remove("vacio-2");
+    }
+    if (medicamentos == "") {
+        txtMedicamentos.classList.add("vacio-2");
+    } else {
+        txtMedicamentos.classList.remove("vacio-2");
+    }
+};
