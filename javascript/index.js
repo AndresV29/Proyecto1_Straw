@@ -170,3 +170,5 @@ validarEnfermedades = () => {
         txtMedicamentos.classList.remove("vacio-2");
     }
 };
+
+btnAgregarEnfermedad.addEventListener("click", validarEnfermedades);
