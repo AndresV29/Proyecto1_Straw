@@ -104,7 +104,7 @@ button {
 }
 
 
-/* recetas */
+/* inicio estilo recetas */
 
 .vacio-1 {
     border: solid 2px red;
@@ -121,7 +121,10 @@ button {
 }
 
 
-/* enfermedades */
+/* fin estilos recetas */
+
+
+/* inicio estilos enfermedades */
 
 .vacio-2 {
     border: solid 2px red;
@@ -136,3 +139,6 @@ button {
     justify-content: space-around;
     font-size: 22px;
 }
+
+
+/* fin estilos enfermedades */
