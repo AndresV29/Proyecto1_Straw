@@ -102,34 +102,34 @@ validarRecetas = () => {
     let categoriaComida = txtCategoriaReceta.value;
 
     if (nombreReceta == "") {
-        txtNombreReceta.classList.add("vacio");
+        txtNombreReceta.classList.add("vacio-1");
     } else {
-        txtNombreReceta.classList.remove("vacio");
+        txtNombreReceta.classList.remove("vacio-1");
     }
     if (ingredientes == "") {
-        txtIngredientes.classList.add("vacio");
+        txtIngredientes.classList.add("vacio-1");
     } else {
-        txtIngredientes.classList.remove("vacio");
+        txtIngredientes.classList.remove("vacio-1");
     }
     if (fotoReceta == "") {
-        fileFotoReceta.classList.add("vacio");
+        fileFotoReceta.classList.add("vacio-1");
     } else {
-        fileFotoReceta.classList.remove("vacio");
+        fileFotoReceta.classList.remove("vacio-1");
     }
     if (pasosReceta == "") {
-        txtPasosReceta.classList.add("vacio");
+        txtPasosReceta.classList.add("vacio-1");
     } else {
-        txtPasosReceta.classList.remove("vacio");
+        txtPasosReceta.classList.remove("vacio-1");
     }
     if (tipoComida == "") {
-        txtTipoComida.classList.add("vacio");
+        txtTipoComida.classList.add("vacio-1");
     } else {
-        txtTipoComida.classList.remove("vacio");
+        txtTipoComida.classList.remove("vacio-1");
     }
     if (categoriaComida == "") {
-        txtCategoriaReceta.classList.add("vacio");
+        txtCategoriaReceta.classList.add("vacio-1");
     } else {
-        txtCategoriaReceta.classList.remove("vacio");
+        txtCategoriaReceta.classList.remove("vacio-1");
     }
 };
 btnAgregarReceta.addEventListener("click", validarRecetas);
