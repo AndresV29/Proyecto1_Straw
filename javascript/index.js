@@ -102,34 +102,34 @@ validarRecetas = () => {
     let categoriaComida = txtCategoriaReceta.value;
 
     if (nombreReceta == "") {
-        txtNombreReceta.classList.add("vacio-1");
+        txtNombreReceta.classList.add("vacio");
     } else {
-        txtNombreReceta.classList.remove("vacio-1");
+        txtNombreReceta.classList.remove("vacio");
     }
     if (ingredientes == "") {
-        txtIngredientes.classList.add("vacio-1");
+        txtIngredientes.classList.add("vacio");
     } else {
-        txtIngredientes.classList.remove("vacio-1");
+        txtIngredientes.classList.remove("vacio");
     }
     if (fotoReceta == "") {
-        fileFotoReceta.classList.add("vacio-1");
+        fileFotoReceta.classList.add("vacio");
     } else {
-        fileFotoReceta.classList.remove("vacio-1");
+        fileFotoReceta.classList.remove("vacio");
     }
     if (pasosReceta == "") {
-        txtPasosReceta.classList.add("vacio-1");
+        txtPasosReceta.classList.add("vacio");
     } else {
-        txtPasosReceta.classList.remove("vacio-1");
+        txtPasosReceta.classList.remove("vacio");
     }
     if (tipoComida == "") {
-        txtTipoComida.classList.add("vacio-1");
+        txtTipoComida.classList.add("vacio");
     } else {
-        txtTipoComida.classList.remove("vacio-1");
+        txtTipoComida.classList.remove("vacio");
     }
     if (categoriaComida == "") {
-        txtCategoriaReceta.classList.add("vacio-1");
+        txtCategoriaReceta.classList.add("vacio");
     } else {
-        txtCategoriaReceta.classList.remove("vacio-1");
+        txtCategoriaReceta.classList.remove("vacio");
     }
 
 };
@@ -142,33 +142,62 @@ const txtNombreEnfermedad = document.getElementById("txt-nombre-enfermedad");
 const txtDescripcionEnfermedad = document.getElementById("txt-descripcion-enfermedad");
 const txtEstadoEnfermedad = document.getElementById("txt-estado-enfermedad");
 const txtMedicamentos = document.getElementById("txt-medicamento");
+const tblEnfermedades = document.querySelector("#tbl-enfermedades");
+let enfermedad = {};
+
+const imprimirTablaEnfermedades = () => {
+    let fila = tblEnfermedades.insertRow();
+    fila.insertCell().innerText = enfermedad.nombreEnfermedad;
+    fila.insertCell().innerText = enfermedad.descripcionEnfermedad;
+    fila.insertCell().innerText = enfermedad.estadoEnfermedad;
+    fila.insertCell().innerText = enfermedad.medicamentos;
+
+    let celdaClasif = fila.insertCell();
+    celdaClasif.innerText = clasificacion;
+    celdaClasif.classList.add(clasificacion);
+
+};
+
+btnAgregarEnfermedad.addEventListener("click", validarEnfermedades);
 
 validarEnfermedades = () => {
     let nombreEnfermedad = txtNombreEnfermedad.value;
     let descripcionEnfermedad = txtDescripcionEnfermedad.value;
     let estadoEnfermedad = txtEstadoEnfermedad.value;
     let medicamentos = txtMedicamentos.value;
+    let error = false;
 
     if (nombreEnfermedad == "") {
-        txtNombreEnfermedad.classList.add("vacio-2");
+        error = true;
+        txtNombreEnfermedad.classList.add("vacio");
     } else {
-        txtNombreEnfermedad.classList.remove("vacio-2");
+        txtNombreEnfermedad.classList.remove("vacio");
     }
     if (descripcionEnfermedad == "") {
-        txtDescripcionEnfermedad.classList.add("vacio-2");
+        error = true;
+        txtDescripcionEnfermedad.classList.add("vacio");
     } else {
-        txtDescripcionEnfermedad.classList.remove("vacio-2");
+        txtDescripcionEnfermedad.classList.remove("vacio");
     }
     if (estadoEnfermedad == "") {
-        txtEstadoEnfermedad.classList.add("vacio-2");
+        error = true;
+        txtEstadoEnfermedad.classList.add("vacio");
     } else {
-        txtEstadoEnfermedad.classList.remove("vacio-2");
+        txtEstadoEnfermedad.classList.remove("vacio");
     }
     if (medicamentos == "") {
-        txtMedicamentos.classList.add("vacio-2");
+        error = true;
+        txtMedicamentos.classList.add("vacio");
     } else {
-        txtMedicamentos.classList.remove("vacio-2");
+        txtMedicamentos.classList.remove("vacio");
+    }
+    if (error == false) {
+        enfermedad.nombreEnfermedad = txtNombreEnfermedad.value;
+        enfermedad.descripcionEnfermedad = txtDescripcionEnfermedad.value;
+        enfermedad.estadoEnfermedad = txtEstadoEnfermedad.value;
+        enfermedad.medicamentos = txtMedicamentos.value;
+        imprimirTablaEnfermedades();
+    } else {
+        console.log("Por favor complete los campos resaltados");
     }
 };
-
-btnAgregarEnfermedad.addEventListener("click", validarEnfermedades);
