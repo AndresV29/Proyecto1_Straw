@@ -39,7 +39,7 @@
             </div>
             <div>
                 <label for="txt-ingredientes">Ingredientes:</label>
-                <input type="text" name="txt-ingredientes" id="txt-ingredientes">
+                <input type="text" name="txt-ingredientes" id="txt-ingredientes" placeholder="    separados por comas..">
             </div>
 
             <div>
@@ -49,7 +49,7 @@
 
             <div>
                 <label for="txt-pasos-receta">Pasos de la receta:</label>
-                <input type="text" name="txt-pasos-receta" id="txt-pasos-receta">
+                <input type="text" name="txt-pasos-receta" id="txt-pasos-receta" placeholder="     separados por puntos...">
             </div>
 
 
@@ -81,12 +81,23 @@
             <button id="btn-agregar-receta" type="button">Agregar receta</button>
         </form>
 
-        <!-- Visualizacion de recetas -->
-        <section>
+        <section class="tabla-recetas">
+            <table id="tbl-recetas">
+                <thead>
+                    <tr>
+                        <td>Nombre de la receta: </td>
+                        <td>Ingredientes: </td>
+                        <td>Imagen: </td>
+                        <td>Pasos de la receta: </td>
+                    </tr>
+                </thead>
 
 
+                <tbody>
 
+                </tbody>
 
+            </table>
         </section>
     </main>
     <script src="/javascript/registro-recetas.js"></script>
