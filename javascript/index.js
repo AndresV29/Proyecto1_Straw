@@ -157,9 +157,6 @@ const imprimirTablaEnfermedades = () => {
     celdaClasif.classList.add(clasificacion);
 
 };
-
-btnAgregarEnfermedad.addEventListener("click", validarEnfermedades);
-
 validarEnfermedades = () => {
     let nombreEnfermedad = txtNombreEnfermedad.value;
     let descripcionEnfermedad = txtDescripcionEnfermedad.value;
@@ -201,3 +198,5 @@ validarEnfermedades = () => {
         console.log("Por favor complete los campos resaltados");
     }
 };
+
+btnAgregarEnfermedad.addEventListener("click", validarEnfermedades);
