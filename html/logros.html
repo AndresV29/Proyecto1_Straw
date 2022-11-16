@@ -23,8 +23,9 @@
             <a href="/html/ayuno.html" class="links-nav">Ayunos</a>
             <a href="" class="links-nav" id="act-fisica">Actividad física</a>
             <a href="/html/registro-recetas.html" class="links-nav">Recetas</a>
-            <a href="/html/registro-enfermedades.html" class="links-nav">Enfermedades</a>
-            <a href="/html/logros.html" class="links-nav">Logros</a>
+            <a href="/html/registro-enfermedades.html" class="links-nav">Enfermedades</a
+        >
+        <a href="/html/logros.html" class="links-nav">Logros</a>
             <a href="/html/editar.html" class="links-nav">Editar perfil</a>
             <a href="/html/index.html">
                 <img src="/imagenes/straw_logo.png" alt="imagen de logo straw" />
@@ -39,7 +40,8 @@
                 <form>
                     <div class="espaciado">
                         <label for="txt-objetivo">Objetivo:</label>
-                        <select name="Objetivo" id="txt-objetivo">
+                        <select name="txt-objetivo" id="txt-objetivo">
+                <option value=""></option>
                 <option>Peso</option>
                 <option>Ayuno</option>
                 <option>Actividad física</option>
@@ -67,10 +69,11 @@
 
                     <div class="espaciado">
                         <label for="txt-dificultad">Dificultad:</label>
-                        <select id="txt-dificultad">
-                <option>Fácil</option>
-                <option>Medio</option>
-                <option>Difícil</option>
+                        <select name="txt-dificultad" id="txt-dificultad">
+                <option value="">Elegir dificultad</option>
+                <option value="Fácil">Fácil</option>
+                <option value="Medio">Medio</option>
+                <option value="Difícil">Difícil</option>
               </select>
                     </div>
 
