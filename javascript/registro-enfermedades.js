@@ -14,7 +14,6 @@ const imprimirTablaEnfermedades = () => {
     fila.insertCell().innerText = enfermedad.descripcionEnfermedad;
     fila.insertCell().innerText = enfermedad.estadoEnfermedad;
     fila.insertCell().innerText = enfermedad.medicamentos;
-
     let celdaClasif = fila.insertCell();
     celdaClasif.innerText = clasificacion;
     celdaClasif.classList.add(clasificacion);
