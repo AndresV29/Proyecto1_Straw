@@ -53,7 +53,7 @@ h1 {
     display: flex;
     flex-direction: column;
     height: 500px;
-    width: 100%;
+    width: 50%;
     justify-content: space-around;
     font-size: 22px;
 }
@@ -75,6 +75,11 @@ button {
     font-weight: bold;
     border-radius: 5px;
     border: none;
+}
+
+.vacio {
+    border: solid 2px red;
+    border-radius: 3px;
 }
 
 
@@ -105,7 +110,7 @@ th {
 td {
     padding: 15px;
     text-align: center;
-    height: 50px;
+    height: 1 0px;
     vertical-align: center;
 }
 
