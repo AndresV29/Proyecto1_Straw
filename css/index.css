@@ -1,6 +1,6 @@
 html>* {
     box-sizing: border-box;
-    font-family: 'Merriweather', serif;
+    font-family: "Merriweather", serif;
     background-color: #f9f5eb;
 }
 
@@ -113,6 +113,7 @@ button {
 .registro-pesos {
     display: flex;
     flex-direction: column;
+<<<<<<< Updated upstream
     justify-content: space-between;
 }
 
@@ -133,3 +134,50 @@ div output {
     margin: auto;
     font-size: 22px;
 }
+=======
+    background-color: #607eaa;
+    height: 300px;
+    font-size: 46px;
+}
+
+
+/* Logros */
+
+.contenedor {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 500px;
+    width: 100%;
+    font-size: 22px;
+}
+
+.izq {
+    flex-basis: 40%;
+}
+
+.der {
+    flex-basis: 60%;
+}
+
+.espaciado {
+    padding-bottom: 30px;
+}
+
+.title {
+    padding-bottom: 30px;
+    justify-content: right;
+}
+
+table,
+th,
+td {
+    width: 50%;
+    border: solid #1c3879;
+    border-collapse: collapse;
+    padding: 10px;
+    justify-content: center;
+}
+
+
+/* Logros */
+>>>>>>> Stashed changes

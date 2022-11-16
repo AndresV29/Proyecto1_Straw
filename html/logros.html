@@ -5,13 +5,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/responsive.css">
+    <title>{Straw} Logros</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="/imagenes/straw_logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
 </head>
 
 <body>
@@ -26,13 +27,76 @@
             <a href="/html/logros.html" class="links-nav">Logros</a>
             <a href="/html/editar.html" class="links-nav">Editar perfil</a>
             <a href="/html/index.html">
-                <img src="/imagenes/straw_logo.png" alt="imagen de logo straw">
+                <img src="/imagenes/straw_logo.png" alt="imagen de logo straw" />
             </a>
         </nav>
     </header>
 
+    <main class="main-registro">
+        <div class="contenedor">
+            <div class="izq">
+                <h1 class="title">Registrar Logros</h1>
+                <form>
+                    <div class="espaciado">
+                        <label for="txt-objetivo">Objetivo:</label>
+                        <select name="Objetivo" id="txt-objetivo">
+                <option>Peso</option>
+                <option>Ayuno</option>
+                <option>Actividad física</option>
+                <option>IMC</option>
+              </select>
+                    </div>
+                    <div class="espaciado">
+                        <label for="txt-obj">Nombre del logro</label>
+                        <input type="text" id="txt-obj" />
+                    </div>
+                    <div class="espaciado">
+                        <label for="txt-horas">Horas meta:</label>
+                        <input type="number" id="txt-horas" />
+                    </div>
 
-    <h1>HOLA RONNY!</h1>
+                    <div class="espaciado">
+                        <label for="txt-pesometa">Peso meta:</label>
+                        <input type="number" id="txt-pesometa" />
+                    </div>
+
+                    <div class="espaciado">
+                        <label for="txt-imc">IMC deseado:</label>
+                        <input type="number" id="txt-imc" />
+                    </div>
+
+                    <div class="espaciado">
+                        <label for="txt-dificultad">Dificultad:</label>
+                        <select id="txt-dificultad">
+                <option>Fácil</option>
+                <option>Medio</option>
+                <option>Difícil</option>
+              </select>
+                    </div>
+
+                    <button type="button" id="btn-registrar">Registrar</button>
+                </form>
+            </div>
+
+            <div class="der">
+                <h1 class="title">Historial de logros</h1>
+                <table id="tbl-logro">
+                    <thead>
+                        <tr>
+                            <td>Objetivo</td>
+                            <td>Nombre del logro</td>
+                            <td>Hora meta</td>
+                            <td>Peso meta</td>
+                            <td>IMC deseado</td>
+                            <td>Dificultad</td>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="/javascript/logros.js"></script>
 </body>
 
 </html>
