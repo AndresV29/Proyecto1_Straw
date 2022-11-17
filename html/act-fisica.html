@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{Straw} Página de inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/imagenes/straw_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/act-fisica.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <a href="/html/registro.html" class="links-nav">Registro</a>
+            <a href="/html/pesos.html" class="links-nav">Pesos</a>
+            <a href="/html/ayuno.html" class="links-nav">Ayunos</a>
+            <a href="/html/act-fisica.html" class="links-nav" id="act-fisica">Actividad física</a>
+            <a href="/html/registro-recetas.html" class="links-nav">Recetas</a>
+            <a href="/html/registro-enfermedades.html" class="links-nav">Enfermedades</a>
+            <a href="/html/logros.html" class="links-nav">Logros</a>
+            <a href="/html/editar.html" class="links-nav">Editar perfil</a>
+            <a href="/html/perfil.html">
+                <img src="/imagenes/straw_logo.png" alt="imagen de logo straw">
+            </a>
+        </nav>
+    </header>
+    <h1 id="titulo">Registrar Activdad</h1>
+    <div id="sct-formDatos">
+        <form action="ActFisica.html">
+            Hora de inicio:<input type="number" id="hInicio" name="hInicio"><br> Hora de Finalizado:<input type="number" id="hfinal" name="hFinal"><br> Nombre:
+            <input type="String" id="nombre" name="nombre"><br> Subir Icono<input type="image" name="subirIcono" id="subirIcono"><br>
+
+            <input type="submit" value="Registrar" id="registro"><br>
+        </form>
+    </div>
+    <p class="peso">Peso:</p>
+    <input type="number" class="peso" name="peso"><br>
+    <p class="peso">IMC Actual:</p><input type="number" class="peso" name="imc"><br>
+    <script src="./javascript/ActFisica.js"></script>
+</body>
+
+</html>
