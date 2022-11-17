@@ -59,6 +59,10 @@ h1 {
     font-size: 40px;
 }
 
+h2 {
+    padding: 25px;
+}
+
 .formulario {
     display: flex;
     flex-direction: column;
@@ -99,8 +103,9 @@ button {
 }
 
 #tbl-info {
+    padding: 25px;
     border-collapse: collapse;
-    margin: 25px 0;
+    margin: 25px;
     font-size: 0.9em;
     font-family: sans-serif;
     min-width: 400px;
