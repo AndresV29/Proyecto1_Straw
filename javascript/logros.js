@@ -1,4 +1,4 @@
-const btnRegistrar = document.getElementById("btn-registrar");
+const btnRegistrar = document.getElementById("btn-registrar-logros");
 const tblLogros = document.querySelector("#tbl-logro tbody");
 let logro = {};
 const imprimirTabla = () => {
@@ -76,7 +76,7 @@ const validar = () => {
         logro.peso = txtPesoMeta.value;
         logro.imc = txtImc.value;
         logro.dificultad = txtDificultad.value;
-        logro.icono = txtIcono.value;
+
         imprimirTabla();
     } else {
         console.log("Por favor rellene los espacios en blanco");
