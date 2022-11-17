@@ -1,8 +1,24 @@
+body {
+    background-color: #EAE3D2;
+}
+
 #titulo {
     font-weight: 700;
     font-size: 50px;
 }
 
-#sct-formdatos {
-    margin: 10px;
+input {
+    margin: 5px;
+}
+
+.peso {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#registro {
+    background-color: #1C3879;
+    color: white;
 }
