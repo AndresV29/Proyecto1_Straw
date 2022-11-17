@@ -52,25 +52,5 @@ validar = () => {
     } else {
         txtPesoMeta.classList.remove("vacio");
     }
-    if (vacio == false) {
-        nombre = txtNombre.value;
-        fechaNacimiento = txtFechaNacimiento.value;
-        estatura = txtEstatura.value;
-        genero = txtGenero.value;
-        correo = txtCorreo.value;
-        foto = txtFoto.value;
-        imprimirTabla();
-    } else {
-        console.log("Por favor rellene los campos resaltados")
-    }
-};
-
-const imprimirTabla = () => {
-    let fila = tblRegistro.insertRow();
-    fila.insertCell().innerText = persona.nombre;
-    fila.insertCell().innerText = persona.estatura;
-    fila.insertCell().innerText = persona.peso;
-    fila.insertCell().innerText = persona.imc;
-
 };
 btnRegistrar.addEventListener("click", validar);
