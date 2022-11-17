@@ -1,6 +1,6 @@
 html>* {
     box-sizing: border-box;
-    font-family: 'Merriweather', serif;
+    font-family: "Merriweather", serif;
     background-color: #f9f5eb;
 }
 
@@ -113,7 +113,7 @@ button {
 .registro-pesos {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    <<<<<<< Updated upstream justify-content: space-between;
 }
 
 div output {
@@ -133,3 +133,12 @@ div output {
     margin: auto;
     font-size: 22px;
 }
+
+=======background-color: #607eaa;
+height;
+300px;
+font-size;
+46px;
+
+}
+>>>>>>>Stashed changes
