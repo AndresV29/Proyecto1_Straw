@@ -87,7 +87,7 @@ button {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 600px;
+    height: 700px;
 }
 
 .logo-principal {
@@ -138,4 +138,9 @@ div output {
     text-align: center;
     line-height: 1.5;
     font-size: 22px;
+}
+
+.slogan {
+    margin: 35px 0;
+    font-weight: bold;
 }
