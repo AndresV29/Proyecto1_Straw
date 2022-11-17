@@ -1,13 +1,15 @@
 const btnRegistrar = document.getElementById("btn-registrar");
+const txtNombre = document.getElementById("txt-nombre");
+const txtFechaNacimiento = document.getElementById("txt-fecha-nac");
+const txtEstatura = document.getElementById("txt-estatura");
+const txtGenero = document.getElementById("txt-genero");
+const txtCorreo = document.getElementById("txt-correo");
+const txtFoto = document.getElementById("txt-foto");
+const txtPesoMeta = document.getElementById("txt-peso-meta");
+let registro = {};
 
 validar = () => {
-    const txtNombre = document.getElementById("txt-nombre");
-    const txtFechaNacimiento = document.getElementById("txt-fecha-nac");
-    const txtEstatura = document.getElementById("txt-estatura");
-    const txtGenero = document.getElementById("txt-genero");
-    const txtCorreo = document.getElementById("txt-correo");
-    const txtFoto = document.getElementById("txt-foto");
-    const txtPesoMeta = document.getElementById("txt-peso-meta");
+
     let nombre = txtNombre.value;
     let fechaNacimiento = txtFechaNacimiento.value;
     let estatura = txtEstatura.value;
@@ -50,5 +52,25 @@ validar = () => {
     } else {
         txtPesoMeta.classList.remove("vacio");
     }
+    if (vacio == false) {
+        nombre = txtNombre.value;
+        fechaNacimiento = txtFechaNacimiento.value;
+        estatura = txtEstatura.value;
+        genero = txtGenero.value;
+        correo = txtCorreo.value;
+        foto = txtFoto.value;
+        imprimirTabla();
+    } else {
+        console.log("Por favor rellene los campos resaltados")
+    }
+};
+
+const imprimirTabla = () => {
+    let fila = tblRegistro.insertRow();
+    fila.insertCell().innerText = persona.nombre;
+    fila.insertCell().innerText = persona.estatura;
+    fila.insertCell().innerText = persona.peso;
+    fila.insertCell().innerText = persona.imc;
+
 };
 btnRegistrar.addEventListener("click", validar);
