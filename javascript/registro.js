@@ -16,7 +16,6 @@ const validar = () => {
     } else {
         txtNombre.classList.remove("vacio");
     }
-
     if (txtFechaNacimiento.value == "") {
         error = true;
         txtFechaNacimiento.classList.add("vacio");
@@ -60,20 +59,21 @@ const validar = () => {
     }
 
     if (error) {
-        Swal.fire("Favor rellene los campos resaltados");
+        Swal.fire({
+            'icon': 'warning',
+            'title': '',
+            'text': 'Favor rellene los campos resaltados'
+        });
+    } else {
+        let usuario = {
+            nombre: txtNombre.value,
+            nacimiento: txtFechaNacimiento.value,
+            estatura: txtEstatura.value,
+            genero: txtGenero.value,
+            correo: txtCorreo.value,
+            foto: '',
+            pesoMeta: txtPesoMeta.value
+        };
     }
-    // else {
-    //     let usuario = {
-    //         nombre: txtNombre.value,
-    //         nacimiento: txtFechaNacimiento.value,
-    //         estatura: txtEstatura.value,
-    //         genero: txtGenero.value,
-    //         correo: txtCorreo.value,
-    //         foto: '',
-    //         pesoMeta: txtPesoMeta.value
-    //     };
-
-    //     registrarDatos(usuario, '/registrar-usuario')
-    // }
 };
 btnRegistrar.addEventListener('click', validar);
