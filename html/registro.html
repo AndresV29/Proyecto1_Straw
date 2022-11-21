@@ -8,10 +8,10 @@
     <title>{Straw} Registro de usuario</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/imagenes/straw_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/registro.css">
     <link rel="stylesheet" href="/css/responsive.css">
 </head>
 
@@ -32,22 +32,22 @@
         </nav>
     </header>
     <main class="main-registro">
-        <h1>Registro</h1>
+        <h1>Registro de usuario</h1>
         <form class="formulario">
             <div>
-                <label for="txt-nombre">Nombre completo:</label>
+                <label for="txt-nombre">Nombre completo</label>
                 <input type="text" name="txt-nombre" id="txt-nombre">
             </div>
             <div>
-                <label for="txt-fecha-nac">Fecha de nacimiento:</label>
+                <label for="txt-fecha-nac">Fecha de nacimiento</label>
                 <input type="date" name="txt-fecha-nac" id="txt-fecha-nac">
             </div>
             <div>
-                <label for="txt-estatura">Estatura:</label>
+                <label for="txt-estatura">Estatura</label>
                 <input type="number" name="txt-estatura" id="txt-estatura">
             </div>
             <div>
-                <label for="txt-genero">Género :</label>
+                <label for="txt-genero">Género</label>
                 <select name="txt-genero" id="txt-genero">
                     <option value="">--soy--</option>
                     <option value="masculino">Hombre</option>
@@ -55,19 +55,20 @@
                 </select>
             </div>
             <div>
-                <label for="txt-correo">Correo electronico:</label>
+                <label for="txt-correo">Correo electrónico</label>
                 <input type="email" name="txt-correo" id="txt-correo">
             </div>
             <div>
-                <label for="txt-foto">Adjuntar foto:</label>
+                <label for="txt-foto">Adjuntar foto</label>
                 <input type="file" accept="image/*" name="txt-foto" id="txt-foto">
             </div>
             <div>
-                <label for="txt-peso-meta ">Peso meta:</label>
+                <label for="txt-peso-meta ">Peso meta</label>
                 <input type="number" name="txt-peso-meta" id="txt-peso-meta">
             </div>
             <button id="btn-registrar" type="button">Registrar</button>
         </form>
     </main>
-    <script src="/javascript/index.js"></script>
+    <script src="/javascript/alert.js"></script>
+    <script src="/javascript/registro.js"></script>
 </body>
