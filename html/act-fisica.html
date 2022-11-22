@@ -34,22 +34,22 @@
     <h1 id="titulo">Registrar Activdad Física</h1>
     <div id="sct-formDatos">
         <div id="formulario">
-            <table class="tabla">
+            <table class="tabla1">
                 <tr>
                     <th>Datos actividad física</th>
                     <th></th>
                 </tr>
                 <tr>
                     <td>Hora de inicio:</td>
-                    <td><input type="time" id="h-inicio" name="hora-inicio" class="entrada"></td>
+                    <td><input type="time" id="h-inicio" name="hora-inicio" class="entrada" onblur="validaHoraInicio()"></td>
                 </tr>
                 <tr>
                     <td>Hora de Finalizado:</td>
-                    <td><input type="time" id="h-final" name="hFinal"></td>
+                    <td><input type="time" id="h-final" name="hFinal" class="entrada" onblur="validaHoraFinal()"></td>
                 </tr>
                 <tr>
                     <td>Nombre:</td>
-                    <td><input type="String" id="nombre" name="nombre"></td>
+                    <td><input type="String" id="nombre" name="nombre" class="entrada" onblur="validaNombre()"></td>
                 </tr>
                 <tr>
                     <td>Subir Icono:</td>
@@ -57,11 +57,11 @@
                 </tr>
                 <tr>
                     <td>Peso:</td>
-                    <td><input type="number" class="peso" name="peso" id="peso"></td>
+                    <td><input type="number" class="peso" name="peso" id="peso" onblur="validaPeso()"></td>
                 </tr>
                 <tr>
                     <td>IMC Actual:</td>
-                    <td><input type="number" class="peso" name="imc" id="imc"></td>
+                    <td><input type="number" class="peso" name="imc" id="imc" onblur="validaIMC()"></td>
                 </tr>
                 <tr>
                     <td></td>

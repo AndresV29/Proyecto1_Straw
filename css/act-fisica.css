@@ -5,10 +5,19 @@ body {
 #titulo {
     font-weight: 700;
     font-size: 50px;
+    padding-bottom: 50px;
+}
+
+.vacio {
+    border-color: red;
 }
 
 input {
     margin: 5px;
+}
+
+.tabla1 {
+    padding-left: 100px;
 }
 
 .peso {
@@ -16,6 +25,10 @@ input {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.peso:hover {
+    background-color: aqua;
 }
 
 #registro {
@@ -58,4 +71,8 @@ html>* {
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 30px;
+}
+
+.entrada:hover {
+    background-color: aqua;
 }
