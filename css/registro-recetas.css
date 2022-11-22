@@ -65,22 +65,23 @@ select {
     width: fit-content;
 }
 
-main {
-    margin: 0 50px;
-}
-
 h1 {
     font-weight: bold;
     font-size: 40px;
 }
 
-.formulario {
+main {
+    margin: 0 50px;
+}
+
+
+/* .formulario {
     display: flex;
     flex-direction: column;
     height: 600px;
     justify-content: space-around;
     font-size: 22px;
-}
+} */
 
 button:hover {
     background-color: #ef8121;
