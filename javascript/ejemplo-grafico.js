@@ -1,4 +1,4 @@
-let miCanvas = document.getElementById("ejemplo-grafico").getContext("2d");
+let miCanvas = document.getElementById("ejemplo-grafico");
 
 var chart = new Chart(miCanvas, {
     type: "bar",
