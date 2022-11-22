@@ -83,8 +83,8 @@ h1 {
 }
 
 button:hover {
-    background-color: #92b7ee;
-    color: black;
+    background-color: #ef8121;
+    color: rgb(255, 255, 255);
     border-radius: 3px;
     font-weight: bold;
     font-size: 19px;
@@ -95,7 +95,7 @@ button {
     height: 45px;
     width: 140px;
     color: white;
-    background-color: #e67e22;
+    background-color: #92b7ee;
     font-size: 19px;
     font-weight: bold;
     border-radius: 3px;
@@ -128,14 +128,6 @@ h1 {
     width: 50%;
     justify-content: space-around;
     font-size: 22px;
-}
-
-button:hover {
-    background-color: #607eaa;
-    color: black;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 19px;
 }
 
 
