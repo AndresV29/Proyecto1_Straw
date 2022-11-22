@@ -2,6 +2,7 @@
 
 html>* {
     box-sizing: border-box;
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: #f5f6fa;
 }
@@ -68,10 +69,6 @@ select {
 h1 {
     font-weight: bold;
     font-size: 40px;
-}
-
-main {
-    margin: 0 50px;
 }
 
 
