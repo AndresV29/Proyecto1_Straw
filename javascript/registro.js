@@ -74,6 +74,7 @@ const validar = () => {
             foto: '',
             pesoMeta: txtPesoMeta.value
         };
+        registrarDatos(usuario, '/registro-usuario');
     }
 };
 btnRegistrar.addEventListener('click', validar);
