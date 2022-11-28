@@ -77,7 +77,12 @@ validarRecetas = () => {
         receta.categoriaComida = txtCategoriaReceta.value;
         imprimirTablaRecetas();
     } else {
-        console.log("Por favor complete los campos resaltados");
+        swal.fire({
+            "icon": "warning",
+            "title": "No se ha registrado la receta",
+            "text": "Revise los campos resaltados"
+        })
     }
+    registrarDatos(receta, "/registrar-receta");
 };
 btnAgregarReceta.addEventListener("click", validarRecetas);
