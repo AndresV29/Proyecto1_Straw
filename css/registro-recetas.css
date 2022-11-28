@@ -139,10 +139,13 @@ h1 {
 table,
 th,
 td {
+    border: solid 1px #000;
     background-color: white;
 }
 
 table {
+    border-collapse: collapse;
+    border-spacing: 0;
     width: 80%;
 }
 
