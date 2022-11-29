@@ -5,6 +5,7 @@ const btnRegistrarPeso = document.getElementById("btn-registrar-peso");
 const tblHistorial = document.querySelector("#tbl-pesos tbody");
 let historial = {};
 let graficoPesos = document.getElementById("grafica-pesos");
+let chartData = [];
 
 const calcularImc = () => {
     let peso = txtPeso.value;
@@ -91,16 +92,29 @@ const validarPesos = () => {
 
 btnRegistrarPeso.addEventListener("click", validarPesos);
 
-var chart = new Chart(graficoPesos, {
-    type: "line",
-    data: {
-        labels: ["Peso", "Fecha"],
-        datasets: [{
-            label: "Grafica Historial de Pesos",
-            backgroundColor: "rgb(0,0,0,1.0)",
-            borerColor: "rgb(0,255,0)",
-            data: [txtPeso.value, txtFecha.value],
-        }, ],
-    },
-    options: {},
-});
+let chart = null;
+const updateChart = () => {
+    chartData.push({
+        fecha: txtFecha.value,
+        peso: txtPeso.value,
+    });
+
+    if (chart != null) {
+        chart.destroy();
+    }
+
+    chart = new Chart(graficoPesos, {
+        type: "line",
+
+        data: {
+            labels: chartData.map((row) => row.fecha),
+            datasets: [{
+                label: "Grafica Historial de Pesos",
+                backgroundColor: "rgb(0,0,0,1.0)",
+                borerColor: "rgb(0,255,0)",
+                data: chartData.map((row) => row.peso),
+            }, ],
+        },
+        options: {},
+    });
+};
