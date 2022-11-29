@@ -18,21 +18,21 @@ const clasificarImc = (imc) => {
     let clasificacion = "";
 
     if (imc >= 40) {
-        clasificacion = "obesidad-3";
+        clasificacion = "Obesidad-3";
     } else {
         if (imc >= 35) {
-            clasificacion = "obesidad-2";
+            clasificacion = "Obesidad-2";
         } else {
             if (imc >= 30) {
-                clasificacion = "obesidad-1";
+                clasificacion = "Obesidad-1";
             } else {
                 if (imc >= 25) {
-                    clasificacion = "sobrepeso";
+                    clasificacion = "Sobrepeso";
                 } else {
                     if (imc >= 18.5) {
-                        clasificacion = "normal";
+                        clasificacion = "Peso-normal";
                     } else {
-                        clasificacion = "bajo";
+                        clasificacion = "Peso-bajo";
                     }
                 }
             }
