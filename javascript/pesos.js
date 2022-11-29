@@ -85,6 +85,7 @@ const validarPesos = () => {
         historial.estatura = txtEstatura.value;
         historial.imc = calcularImc();
         imprimirTabla();
+        updateChart();
     } else {
         console.log("Por favor rellene los campos resaltados en rojo");
     }
