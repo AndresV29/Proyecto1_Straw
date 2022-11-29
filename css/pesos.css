@@ -118,6 +118,30 @@ button {
     width: 200px;
 }
 
+.Obesidad-3 {
+    background: #eb5a5f;
+}
+
+.Obesidad-2d {
+    background: #ff9252;
+}
+
+.Obesidad-1 {
+    background: #fea851;
+}
+
+.Sobrepeso {
+    background: #fbc531;
+}
+
+.Peso-normal {
+    background: #4cd137;
+}
+
+.Peso-bajo {
+    background: #00a8ff;
+}
+
 
 /* Estilos pagina registro de pesos */
 
@@ -137,6 +161,7 @@ button {
     width: 50%;
     justify-content: space-around;
     font-size: 22px;
+    padding-bottom: 2%;
 }
 
 .imc-clasificacion {
@@ -154,4 +179,14 @@ td {
     height: 45%;
     border: solid #1c3879;
     border-collapse: collapse;
+}
+
+.grafica {
+    display: flex;
+    flex-direction: row;
+    height: 250px;
+    width: 50%;
+    justify-content: right;
+    font-size: 22px;
+    margin-top: 5%;
 }
