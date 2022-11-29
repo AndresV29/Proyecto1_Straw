@@ -57,8 +57,10 @@ const imprimirTabla = () => {
 
 const validarPesos = () => {
     let error = false;
-
-    if (txtFecha.value == "") {
+    const fechaActual = new Date();
+    const fechaInput = new Date(txtFecha.value);
+    console.log(fechaActual, fechaInput, txtFecha.value);
+    if (txtFecha.value == "" || fechaInput > fechaActual) {
         error = true;
         txtFecha.classList.add("vacio");
     } else {
@@ -100,10 +102,26 @@ const updateChart = () => {
         peso: txtPeso.value,
     });
 
-    if (chart != null) {
+    if (chart !== null) {
         chart.destroy();
     }
 
+    chart = new Chart(graficoPesos, {
+        type: "line",
+
+        data: {
+            labels: chartData.map((row) => row.fecha),
+            datasets: [{
+                label: "Grafica Historial de Pesos",
+                backgroundColor: "rgb(0,0,0,1.0)",
+                borerColor: "rgb(0,255,0)",
+                data: chartData.map((row) => row.peso),
+            }, ],
+        },
+        options: {},
+    });
+};
+window.onload = function() {
     chart = new Chart(graficoPesos, {
         type: "line",
 
