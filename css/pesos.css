@@ -77,6 +77,11 @@ h1 {
     font-size: 40px;
 }
 
+h2 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
 .formulario {
     display: flex;
     flex-direction: column;
@@ -96,7 +101,7 @@ button:hover {
 
 button {
     height: 45px;
-    width: 140px;
+    width: 170px;
     color: white;
     background-color: #1e90ff;
     font-size: 19px;
@@ -117,6 +122,9 @@ button {
     height: 200px;
     width: 200px;
 }
+
+
+/* Clasificacion */
 
 .Obesidad-3 {
     background: #eb5a5f;
