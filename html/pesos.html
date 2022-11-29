@@ -46,20 +46,22 @@
                         <input type="date" name="txt-fecha-registro" id="txt-fecha-registro" />
                     </div>
                     <div>
-                        <label for="txt-peso-registro">Peso:</label>
+                        <label for="txt-peso-registro">Peso(Kg):</label>
                         <input type="number" name="txt-peso-registro" id="txt-peso-registro" />
                     </div>
                     <div>
-                        <label for="txt-estatura">Estatura:</label>
+                        <label for="txt-estatura">Estatura(Cm):</label>
                         <input type="number" id="txt-estatura" />
                     </div>
                 </form>
             </div>
+
             <div class="registrar-peso">
                 <button id="btn-registrar-peso" type="button">Registrar peso</button>
             </div>
-            <canvas id="grafica-pesos" width="300" height="50"></canvas>
-            <div></div>
+            <div class="grafica">
+                <canvas id="grafica-pesos" width="300" height="50"></canvas>
+            </div>
         </section>
 
         <section class="historial-pesos">
@@ -69,7 +71,7 @@
                     <thead>
                         <tr>
                             <th style="width: 25%">Fecha</th>
-                            <th style="width: 25%">Peso</th>
+                            <th style="width: 25%">Peso(Kg)</th>
                             <th style="width: 25%">IMC</th>
                             <th style="width: 25%">Clasificación</th>
                         </tr>
