@@ -66,10 +66,7 @@ validarRecetas = () => {
         receta.pasosReceta = txtPasosReceta.value;
         receta.tipoComida = txtTipoComida.value;
         receta.categoriaComida = txtCategoriaReceta.value;
-        registrarDatos(receta, "/registrar-recetas");
         imprimirTablaRecetas();
-
-
     } else {
         swal.fire({
             "icon": "warning",
@@ -77,6 +74,7 @@ validarRecetas = () => {
             "text": "Revise los campos resaltados"
         })
     };
+    registrarDatos(receta, "/registrar-recetas");
 
 };
 btnAgregarReceta.addEventListener("click", validarRecetas);
