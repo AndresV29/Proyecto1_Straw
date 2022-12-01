@@ -76,7 +76,7 @@ validarRecetas = () => {
             "title": "No se ha registrado la receta",
             "text": "Revise los campos resaltados"
         })
-    }
+    };
 
 };
 btnAgregarReceta.addEventListener("click", validarRecetas);
