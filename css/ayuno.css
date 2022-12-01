@@ -1,7 +1,12 @@
 html>* {
     box-sizing: border-box;
-    font-family: 'Merriweather', serif;
-    background-color: #f9f5eb;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f6fa;
+}
+
+h2 {
+    font-size: 30px;
+    padding-left: 50px;
 }
 
 .vacio {
@@ -13,41 +18,59 @@ html>* {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 80px;
-    justify-content: space-evenly;
+    height: 60px;
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 30px;
+    background-color: #1e90ff;
 }
 
 a:hover {
-    background-color: #607eaa;
+    background-color: #92b7ee;
     color: black;
-}
-
-#act-fisica {
-    font-size: 15px;
-    line-height: 1.6;
+    transition: 0.5s;
 }
 
 img {
-    height: 50px;
+    height: 55px;
 }
 
 .links-nav {
-    height: 45px;
-    background-color: #1c3879;
-    border-radius: 5px;
     text-align: center;
     align-self: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     color: white;
-    width: 130px;
     font-weight: bold;
     align-self: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #1e90ff;
+    height: 100%;
+    width: 100%;
+}
+
+label {
+    display: inline-block;
+    width: 250px;
+    height: 30px;
+}
+
+.formulario div input,
+select {
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+    height: 30px;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    border: 0.5;
+}
+
+#txt-foto {
+    width: fit-content;
 }
 
 main {
@@ -62,29 +85,34 @@ h1 {
 .formulario {
     display: flex;
     flex-direction: column;
-    height: 500px;
-    width: 100%;
+    height: 600px;
     justify-content: space-around;
     font-size: 22px;
 }
 
 button:hover {
-    background-color: #607eaa;
+    background-color: #92b7ee;
     color: black;
-    border-radius: 5px;
+    border-radius: 3px;
     font-weight: bold;
     font-size: 19px;
+    transition: 0.5s;
 }
 
 button {
     height: 45px;
     width: 140px;
     color: white;
-    background-color: #1c3879;
+    background-color: #1e90ff;
     font-size: 19px;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 3px;
     border: none;
+}
+
+.main-principal-registro {
+    display: flex;
+    flex-direction: row;
 }
 
 #tbl-fecha td {
@@ -99,8 +127,9 @@ button {
 }
 
 #tbl-info {
+    padding: 25px;
     border-collapse: collapse;
-    margin: 25px 0;
+    margin: 25px;
     font-size: 0.9em;
     font-family: sans-serif;
     min-width: 400px;
@@ -108,7 +137,7 @@ button {
 }
 
 #tbl-info thead tr {
-    background-color: #607EAA;
+    background-color: #1e90ff;
     color: #ffffff;
     text-align: center;
 }
@@ -128,9 +157,9 @@ button {
 }
 
 #tbl-info tbody tr:last-of-type {
-    border: 1px solid black;
-    border-left: 1px solid black;
-    border-bottom: 2px solid;
+    border: 0.5px solid black;
+    border-left: 0.5px solid black;
+    border-bottom: 1px solid;
 }
 
 #tbl-info tbody tr.active-row {
@@ -139,7 +168,7 @@ button {
 
 #tbl-dias {
     border-collapse: collapse;
-    margin: 25px 0;
+    margin: 45px 0;
     font-size: 0.9em;
     font-family: sans-serif;
     min-width: 400px;
@@ -156,7 +185,7 @@ button {
 
 #tbl-dias th,
 #tbl-dias td {
-    padding: 12px 15px;
+    padding: 12px 45px;
 }
 
 #tbl-dias tbody tr {
@@ -168,9 +197,9 @@ button {
 }
 
 #tbl-dias tbody tr:last-of-type {
-    border: 1px solid black;
-    border-left: 1px solid black;
-    border-bottom: 2px solid;
+    border: 0.5px solid black;
+    border-left: 0.5px solid black;
+    border-bottom: 1px solid;
 }
 
 #tbl-dias tbody tr.active-row {

@@ -18,9 +18,6 @@ const imprimirTablaRecetas = () => {
     fila.insertCell().innerText = receta.categoriaComida;
     // falta agregar foto que no es innerText
 
-    let celdaClasif = fila.insertCell();
-    celdaClasif.innerText = clasificacion;
-    celdaClasif.classList.add(clasificacion);
 };
 
 
@@ -44,12 +41,6 @@ validarRecetas = () => {
         txtIngredientes.classList.add("vacio");
     } else {
         txtIngredientes.classList.remove("vacio");
-    }
-    if (fotoReceta == "") {
-        error = true;
-        fileFotoReceta.classList.add("vacio");
-    } else {
-        fileFotoReceta.classList.remove("vacio");
     }
     if (pasosReceta == "") {
         error = true;
@@ -77,7 +68,12 @@ validarRecetas = () => {
         receta.categoriaComida = txtCategoriaReceta.value;
         imprimirTablaRecetas();
     } else {
-        console.log("Por favor complete los campos resaltados");
+        swal.fire({
+            "icon": "warning",
+            "title": "No se ha registrado la receta",
+            "text": "Revise los campos resaltados"
+        })
     }
+    registrarDatos(receta, "/registrar-receta");
 };
 btnAgregarReceta.addEventListener("click", validarRecetas);

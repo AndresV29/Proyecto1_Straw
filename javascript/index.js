@@ -1,13 +1,15 @@
 const btnRegistrar = document.getElementById("btn-registrar");
+const txtNombre = document.getElementById("txt-nombre");
+const txtFechaNacimiento = document.getElementById("txt-fecha-nac");
+const txtEstatura = document.getElementById("txt-estatura");
+const txtGenero = document.getElementById("txt-genero");
+const txtCorreo = document.getElementById("txt-correo");
+const txtFoto = document.getElementById("txt-foto");
+const txtPesoMeta = document.getElementById("txt-peso-meta");
+let registro = {};
 
 validar = () => {
-    const txtNombre = document.getElementById("txt-nombre");
-    const txtFechaNacimiento = document.getElementById("txt-fecha-nac");
-    const txtEstatura = document.getElementById("txt-estatura");
-    const txtGenero = document.getElementById("txt-genero");
-    const txtCorreo = document.getElementById("txt-correo");
-    const txtFoto = document.getElementById("txt-foto");
-    const txtPesoMeta = document.getElementById("txt-peso-meta");
+
     let nombre = txtNombre.value;
     let fechaNacimiento = txtFechaNacimiento.value;
     let estatura = txtEstatura.value;

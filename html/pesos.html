@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{Straw} Registro de pesos</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
@@ -21,60 +22,66 @@
             <a href="/html/registro.html" class="links-nav">Registro</a>
             <a href="/html/pesos.html" class="links-nav">Pesos</a>
             <a href="/html/ayuno.html" class="links-nav">Ayunos</a>
-            <a href="" class="links-nav" id="act-fisica">Actividad fisica</a>
-            <a href="/html/registro-recetas.html" class="links-nav">Recetas</a>
+            <a href="/html/act-fisica.html" class="links-nav" id="act-fisica">Actividad física</a
+        >
+        <a href="/html/registro-recetas.html" class="links-nav">Recetas</a>
             <a href="/html/registro-enfermedades.html" class="links-nav">Enfermedades</a
         >
         <a href="/html/logros.html" class="links-nav">Logros</a>
             <a href="/html/editar.html" class="links-nav">Editar perfil</a>
-            <a href="/html/index.html">
+            <a href="/html/perfil.html">
                 <img src="/imagenes/straw_logo.png" alt="imagen de logo straw" />
             </a>
         </nav>
     </header>
     <main>
-        <div class="titulos">
+        <section class="titulos">
             <h1>Registro de pesos</h1>
-            <h1>Historial</h1>
-        </div>
-        <section>
-            <form class="registro-pesos">
-                <div>
-                    <label for="txt-fecha-registro">Fecha:</label>
-                    <input type="date" name="txt-fecha-registro" id="txt-fecha-registro" />
-                </div>
-                <div>
-                    <label for="txt-peso-registro">Peso:</label>
-                    <input type="number" name="txt-peso-registro" id="txt-peso-registro" />
-                </div>
-                <button id="btn-registrar-peso" type="button">Registrar</button>
-            </form>
         </section>
-        <div style="position: relative; left: 750px; top: -225px">
-            <table id="tbl-pesos">
-                <thead>
-                    <tr>
-                        <th style="width: 25%">Fecha</th>
-                        <th style="width: 25%">Peso</th>
-                        <th style="width: 25%">IMC</th>
-                        <th style="width: 25%">Clasificación</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
-
-        <section class="imc-clasificacion">
+        <section>
             <div>
-                <label for="txt-imc-actual">IMC Actual:</label>
-                <input type="number" name="txt-imc-actual" id="txt-imc-actual" />
+                <form class="registro-pesos">
+                    <div>
+                        <label for="txt-fecha-registro">Fecha:</label>
+                        <input type="datetime-local" name="txt-fecha-registro" id="txt-fecha-registro" />
+                    </div>
+                    <div>
+                        <label for="txt-peso-registro">Peso(Kg):</label>
+                        <input type="number" name="txt-peso-registro" id="txt-peso-registro" />
+                    </div>
+                    <div>
+                        <label for="txt-estatura">Estatura(Cm):</label>
+                        <input type="number" id="txt-estatura" />
+                    </div>
+                </form>
             </div>
+
+            <div class="registrar-peso">
+                <button id="btn-registrar-peso" type="button">Registrar peso</button>
+            </div>
+            <div class="grafica">
+                <canvas id="grafica-pesos" width="300" height="50"></canvas>
+            </div>
+        </section>
+
+        <section class="historial-pesos">
+            <h2>Historial de pesos</h2>
             <div>
-                <label for="txt-clasificacion">Clasificacion:</label>
-                <input type="text" name="txt-clasificacion" id="txt-clasificacion" />
+                <table id="tbl-pesos">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%">Fecha</th>
+                            <th style="width: 25%">Peso(Kg)</th>
+                            <th style="width: 25%">IMC</th>
+                            <th style="width: 25%">Clasificación</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </div>
         </section>
     </main>
+    <script src="/javascript/alert.js"></script>
     <script src="/javascript/pesos.js"></script>
 </body>
 

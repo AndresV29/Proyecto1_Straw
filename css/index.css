@@ -87,7 +87,7 @@ button {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 600px;
+    height: 700px;
 }
 
 .logo-principal {
@@ -113,7 +113,7 @@ button {
 .registro-pesos {
     display: flex;
     flex-direction: column;
-    <<<<<<< Updated upstream justify-content: space-between;
+    justify-content: space-between;
 }
 
 div output {
@@ -134,11 +134,13 @@ div output {
     font-size: 22px;
 }
 
-=======background-color: #607eaa;
-height;
-300px;
-font-size;
-46px;
-
+.parrafo {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 22px;
 }
->>>>>>>Stashed changes
+
+.slogan {
+    margin: 35px 0;
+    font-weight: bold;
+}

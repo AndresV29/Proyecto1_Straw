@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/registro-enfermedades.css">
     <link rel="stylesheet" href="/css/responsive.css">
@@ -20,12 +20,12 @@
             <a href="/html/registro.html" class="links-nav">Registro</a>
             <a href="/html/pesos.html" class="links-nav">Pesos</a>
             <a href="/html/ayuno.html" class="links-nav">Ayunos</a>
-            <a href="" class="links-nav" id="act-fisica">Actividad física</a>
+            <a href="/html/act-fisica.html" class="links-nav" id="act-fisica">Actividad física</a>
             <a href="/html/registro-recetas.html" class="links-nav">Recetas</a>
             <a href="/html/registro-enfermedades.html" class="links-nav">Enfermedades</a>
             <a href="/html/logros.html" class="links-nav">Logros</a>
             <a href="/html/editar.html" class="links-nav">Editar perfil</a>
-            <a href="/html/index.html">
+            <a href="/html/perfil.html">
                 <img src="/imagenes/straw_logo.png" alt="imagen de logo straw">
             </a>
         </nav>
@@ -62,7 +62,7 @@
         </form>
 
         <section class="tabla-enfermedades">
-            <h2>Mis enfermedades:</h2>
+            <h2>Mis enfermedades :</h2>
             <table id="tbl-enfermedades">
                 <thead>
                     <tr>
@@ -81,6 +81,10 @@
             </table>
         </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/javascript/alert.js"></script>
+
+    <script src="/javascript/servicio-general.js"></script>
     <script src="/javascript/registro-enfermedades.js"></script>
 </body>
 

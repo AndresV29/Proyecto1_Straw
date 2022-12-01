@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{Straw} Página de inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/imagenes/straw_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/act-fisica.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <a href="/html/registro.html" class="links-nav">Registro</a>
+            <a href="/html/pesos.html" class="links-nav">Pesos</a>
+            <a href="/html/ayuno.html" class="links-nav">Ayunos</a>
+            <a href="/html/act-fisica.html" class="links-nav" id="act-fisica">Actividad física</a>
+            <a href="/html/registro-recetas.html" class="links-nav">Recetas</a>
+            <a href="/html/registro-enfermedades.html" class="links-nav">Enfermedades</a>
+            <a href="/html/logros.html" class="links-nav">Logros</a>
+            <a href="/html/editar.html" class="links-nav">Editar perfil</a>
+            <a href="/html/perfil.html">
+                <img src="/imagenes/straw_logo.png" alt="imagen de logo straw">
+            </a>
+        </nav>
+    </header>
+    <h1 id="titulo">Registrar Activdad Física</h1>
+    <div id="sct-formDatos">
+        <div id="formulario">
+            <table class="tabla1">
+                <tr>
+                    <th>Datos actividad física</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Hora de inicio:</td>
+                    <td><input type="time" id="h-inicio" name="hora-inicio" class="entrada" onblur="validaHoraInicio()"></td>
+                </tr>
+                <tr>
+                    <td>Hora de Finalizado:</td>
+                    <td><input type="time" id="h-final" name="hFinal" class="entrada" onblur="validaHoraFinal()"></td>
+                </tr>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input type="String" id="nombre" name="nombre" class="entrada" onblur="validaNombre()"></td>
+                </tr>
+                <tr>
+                    <td>Subir Icono:</td>
+                    <td><input type="file" name="subir-icono" id="subir-icono" accept="image/png, image/jpeg"></td>
+                </tr>
+                <tr>
+                    <td>Peso:</td>
+                    <td><input type="number" class="peso" name="peso" id="peso" onblur="validaPeso()"></td>
+                </tr>
+                <tr>
+                    <td>IMC Actual:</td>
+                    <td><input type="number" class="peso" name="imc" id="imc" onblur="validaIMC()"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="button" value="Registrar" id="registro">Registrar</button></td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+    <script src="../javascript/actFisics.js"></script>
+</body>
+
+</html>
