@@ -74,6 +74,6 @@ validarRecetas = () => {
             "text": "Revise los campos resaltados"
         })
     }
-    registrarDatos(receta, "/registrar-receta");
+    registrarDatos(receta, "/registrar-recetas");
 };
 btnAgregarReceta.addEventListener("click", validarRecetas);
