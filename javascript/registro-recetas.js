@@ -6,19 +6,43 @@ const fileFotoReceta = document.getElementById("file-foto-receta");
 const txtPasosReceta = document.getElementById("txt-pasos-receta");
 const txtTipoComida = document.getElementById("txt-tipo-comida");
 const txtCategoriaReceta = document.getElementById("txt-categoria-receta");
-const tblRecetas = document.querySelector("#tbl-recetas");
+// const tblRecetas = document.querySelector("#tbl-recetas");
 let receta = {};
 
-const imprimirTablaRecetas = () => {
-    let fila = tblRecetas.insertRow();
-    fila.insertCell().innerText = receta.nombreReceta;
-    fila.insertCell().innerText = receta.ingredientes;
-    fila.insertCell().innerText = receta.pasosReceta;
-    fila.insertCell().innerText = receta.tipoComida;
-    fila.insertCell().innerText = receta.categoriaComida;
-    // falta agregar foto que no es innerText
+// const imprimirTablaRecetas = () => {
+//     let fila = tblRecetas.insertRow();
+//     fila.insertCell().innerText = receta.nombreReceta;
+//     fila.insertCell().innerText = receta.ingredientes;
+//     fila.insertCell().innerText = receta.pasosReceta;
+//     fila.insertCell().innerText = receta.tipoComida;
+//     fila.insertCell().innerText = receta.categoriaComida;
+//     // falta agregar foto que no es innerText
+
+// };
+
+const cuerpoTabla = document.querySelector("#tbl-recetas tbody");
+let listaRecetas = [];
+
+const cargarLista = async() => {
+    listaRecetas = await obtenerDatos("/obtener-recetas");
+    mostrarRecetas();
 
 };
+
+const mostrarRecetas = () => {
+    cuerpoTabla.innerHTML = "";
+    listaRecetas.forEach(receta => {
+        let fila = cuerpoTabla.insertRow();
+        fila.insertCell().innerText = receta.nombreReceta;
+        fila.insertCell().innerText = receta.ingredientes;
+        fila.insertCell().innerText = receta.imagen;
+        fila.insertCell().innerText = receta.pasosReceta;
+        fila.insertCell().innerText = receta.tipoComida;
+        fila.insertCell().innerText = receta.categoriaComida;
+    });
+};
+
+cargarLista();
 
 
 validarRecetas = () => {
@@ -66,7 +90,7 @@ validarRecetas = () => {
         receta.pasosReceta = txtPasosReceta.value;
         receta.tipoComida = txtTipoComida.value;
         receta.categoriaComida = txtCategoriaReceta.value;
-        imprimirTablaRecetas();
+
     } else {
         swal.fire({
             "icon": "warning",
