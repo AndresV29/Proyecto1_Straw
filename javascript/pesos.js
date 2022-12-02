@@ -91,6 +91,22 @@ const validarPesos = () => {
     } else {
         console.log("Por favor rellene los campos resaltados en rojo");
     }
+
+    if (error) {
+        Swal.fire({
+            icon: "warning",
+            title: "No se ha registrado el peso",
+            text: "Revise los campos resaltados",
+        });
+    } else {
+        let nuevoPeso = {
+            fecha: txtFecha.value,
+            peso: txtPeso.value,
+            estatura: txtEstatura.value,
+        };
+
+        registrarDatos(nuevoPeso, "/registrar-peso");
+    }
 };
 
 btnRegistrarPeso.addEventListener("click", validarPesos);
