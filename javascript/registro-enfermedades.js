@@ -42,12 +42,6 @@ validarEnfermedades = () => {
     } else {
         txtEstadoEnfermedad.classList.remove("vacio");
     }
-    if (medicamentos == "") {
-        error = true;
-        txtMedicamentos.classList.add("vacio");
-    } else {
-        txtMedicamentos.classList.remove("vacio");
-    }
     if (error == false) {
         enfermedad.nombreEnfermedad = txtNombreEnfermedad.value;
         enfermedad.descripcionEnfermedad = txtDescripcionEnfermedad.value;
