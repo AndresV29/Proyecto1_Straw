@@ -35,10 +35,10 @@ const mostrarRecetas = () => {
         let fila = cuerpoTabla.insertRow();
         fila.insertCell().innerText = receta.nombreReceta;
         fila.insertCell().innerText = receta.ingredientes;
-        fila.insertCell().innerText = receta.imagen;
         fila.insertCell().innerText = receta.pasosReceta;
         fila.insertCell().innerText = receta.tipoComida;
         fila.insertCell().innerText = receta.categoriaComida;
+        fila.insertCell().innerText = receta.imagen;
     });
 };
 
