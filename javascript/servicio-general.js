@@ -10,7 +10,6 @@ const registrarDatos = async(pdatos, pendPoint) => {
 const obtenerDatos = async(pendPoint) => {
     let url = `http://localhost:3000/api${pendPoint}`
     let listaDatos = [];
-
     await axios({
         method: 'get',
         url: url
@@ -18,5 +17,4 @@ const obtenerDatos = async(pendPoint) => {
         listaDatos = response.data.lista
     });
     return listaDatos;
-
 };
