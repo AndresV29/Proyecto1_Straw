@@ -8,15 +8,38 @@ const txtMedicamentos = document.getElementById("txt-medicamento");
 const tblEnfermedades = document.querySelector("#tbl-enfermedades");
 let enfermedad = {};
 
-const imprimirTablaEnfermedades = () => {
-    let fila = tblEnfermedades.insertRow();
-    fila.insertCell().innerText = enfermedad.nombreEnfermedad;
-    fila.insertCell().innerText = enfermedad.descripcionEnfermedad;
-    fila.insertCell().innerText = enfermedad.estadoEnfermedad;
-    fila.insertCell().innerText = enfermedad.medicamentos;
+// const imprimirTablaEnfermedades = () => {
+//     let fila = tblEnfermedades.insertRow();
+//     fila.insertCell().innerText = enfermedad.nombreEnfermedad;
+//     fila.insertCell().innerText = enfermedad.descripcionEnfermedad;
+//     fila.insertCell().innerText = enfermedad.estadoEnfermedad;
+//     fila.insertCell().innerText = enfermedad.medicamentos;
 
+
+// };
+
+const cuerpoTabla = document.querySelector("#tbl-enfermedades tbody");
+let listaEnfermedades = [];
+
+const cargarLista = async() => {
+    listaEnfermedades = await obtenerDatos("/obtener-enfermedades");
+    mostrarEnfermedades();
 
 };
+
+const mostrarEnfermedades = () => {
+    cuerpoTabla.innerHTML = "";
+    listaEnfermedades.forEach(enfermedad => {
+        let fila = cuerpoTabla.insertRow();
+        fila.insertCell().innerText = enfermedad.nombreEnfermedad;
+        fila.insertCell().innerText = enfermedad.descripcionEnfermedad;
+        fila.insertCell().innerText = enfermedad.estadoEnfermedad;
+        fila.insertCell().innerText = enfermedad.medicamentos;
+    });
+};
+
+
+
 validarEnfermedades = () => {
     let nombreEnfermedad = txtNombreEnfermedad.value;
     let descripcionEnfermedad = txtDescripcionEnfermedad.value;
@@ -47,7 +70,7 @@ validarEnfermedades = () => {
         enfermedad.descripcionEnfermedad = txtDescripcionEnfermedad.value;
         enfermedad.estadoEnfermedad = txtEstadoEnfermedad.value;
         enfermedad.medicamentos = txtMedicamentos.value;
-        imprimirTablaEnfermedades();
+        // imprimirTablaEnfermedades();
     } else {
         swal.fire({
             "icon": "warning",
