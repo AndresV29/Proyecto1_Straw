@@ -5,7 +5,7 @@ const txtNombreEnfermedad = document.getElementById("txt-nombre-enfermedad");
 const txtDescripcionEnfermedad = document.getElementById("txt-descripcion-enfermedad");
 const txtEstadoEnfermedad = document.getElementById("txt-estado-enfermedad");
 const txtMedicamentos = document.getElementById("txt-medicamento");
-const tblEnfermedades = document.querySelector("#tbl-enfermedades");
+// const tblEnfermedades = document.querySelector("#tbl-enfermedades");
 let enfermedad = {};
 
 // const imprimirTablaEnfermedades = () => {
@@ -38,6 +38,7 @@ const mostrarEnfermedades = () => {
     });
 };
 
+cargarLista();
 
 
 validarEnfermedades = () => {
