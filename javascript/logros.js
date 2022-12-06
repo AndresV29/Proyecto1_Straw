@@ -79,7 +79,11 @@ const validar = () => {
 
         imprimirTabla();
     } else {
-        console.log("Por favor rellene los espacios en blanco");
+        swal.fire({
+            icon: "warning",
+            title: "No se ha registrado el Logro",
+            text: "Revise los campos resaltados",
+        });
     }
 };
 
