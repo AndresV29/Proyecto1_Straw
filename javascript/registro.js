@@ -8,6 +8,18 @@ const txtPesoMeta = document.getElementById("txt-peso-meta");
 const btnRegistrar = document.getElementById("btn-registrar");
 let registro = {};
 
+const limpiar = () => {
+    usuario = {
+        nombre: txtNombre.value = '',
+        nacimiento: txtFechaNacimiento.value = '',
+        estatura: txtEstatura.value = '',
+        genero: txtGenero.value = '',
+        correo: txtCorreo.value = '',
+        foto: txtFoto.value = '',
+        pesoMeta: txtPesoMeta.value = ''
+    }
+}
+
 const validar = () => {
     let error = false;
     if (txtNombre.value == "") {
@@ -60,8 +72,8 @@ const validar = () => {
 
     if (error) {
         Swal.fire({
-            'icon': 'warning',
-            'title': '',
+            'icon': 'error',
+            'title': 'No es posible avanzar',
             'text': 'Favor rellene los campos resaltados'
         });
     } else {
@@ -74,7 +86,16 @@ const validar = () => {
             foto: '',
             pesoMeta: txtPesoMeta.value
         };
+        Swal.fire({
+            'icon': 'success',
+            //pendiente un title para cuando el registro es exitoso
+            'title': '',
+            'text': 'Usuario registrado exitosamente'
+        });
         registrarDatos(usuario, '/registro-usuario');
+        limpiar();
     }
+
+
 };
 btnRegistrar.addEventListener('click', validar);
