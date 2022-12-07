@@ -4,7 +4,9 @@ const txtEstatura = document.getElementById("txt-estatura");
 const txtGenero = document.getElementById("txt-genero");
 const txtCorreo = document.getElementById("txt-correo");
 const txtFoto = document.getElementById("txt-foto");
+const imgPerfil = document.getElementById("imagenPerfil");
 const txtPesoMeta = document.getElementById("txt-peso-meta");
+const txtActividad = document.getElementById("txt-actividad");
 const btnRegistrar = document.getElementById("btn-registrar");
 let registro = {};
 
@@ -15,7 +17,7 @@ const limpiar = () => {
         estatura: txtEstatura.value = '',
         genero: txtGenero.value = '',
         correo: txtCorreo.value = '',
-        foto: txtFoto.value = '',
+        foto: imgPerfil.value = '',
         pesoMeta: txtPesoMeta.value = ''
     }
 }
@@ -55,13 +57,19 @@ const validar = () => {
     } else {
         txtCorreo.classList.remove("vacio");
     }
-
-    if (txtFoto.value == "") {
+    if (txtActividad.value == "") {
         error = true;
-        txtFoto.classList.add("vacio");
+        txtActividad.classList.add("vacio");
     } else {
-        txtFoto.classList.remove("vacio");
+        txtActividad.classList.remove("vacio");
     }
+
+    // if (txtFoto.value == "") {
+    //     error = true;
+    //     txtFoto.classList.add("vacio");
+    // } else {
+    //     txtFoto.classList.remove("vacio");
+    // }
 
     if (txtPesoMeta.value == "") {
         error = true;
@@ -83,8 +91,9 @@ const validar = () => {
             estatura: txtEstatura.value,
             genero: txtGenero.value,
             correo: txtCorreo.value,
-            foto: '',
-            pesoMeta: txtPesoMeta.value
+            foto: imgPerfil.src,
+            pesoMeta: txtPesoMeta.value,
+            actividad: txtActividad.value
         };
         Swal.fire({
             'icon': 'success',
