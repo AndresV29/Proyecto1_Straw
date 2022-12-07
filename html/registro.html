@@ -61,17 +61,28 @@
             <div>
                 <label for="txt-foto">Adjuntar foto</label>
                 <button type="button" id="txt-foto">Seleccionar archivo</button>
+                <div id="imagenPerfil"></div>
             </div>
             <div>
                 <label for="txt-peso-meta ">Peso meta</label>
-                <input type="number" name="txt-peso-meta" id="txt-peso-meta">
+                <input type="number" name="txt-peso-meta" id="txt-peso-meta" min="50">
+            </div>
+            <div>
+                <label for="txt-actividad">Realiza activadad física</label>
+                <select name="txt-actividad" id="txt-actividad">
+                    <option value="">--opciones--</option>
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select>
             </div>
             <button id="btn-registrar" type="button">Registrar</button>
         </form>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
     <script src="/javascript/alert.js"></script>
 
+    <script src="/javascript/registro.servicio.imagen.js"></script>
     <script src="/javascript/servicio-general.js"></script>
 
     <script src="/javascript/registro.js"></script>
