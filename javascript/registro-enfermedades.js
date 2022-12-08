@@ -31,10 +31,10 @@ const mostrarEnfermedades = () => {
     cuerpoTabla.innerHTML = "";
     listaEnfermedades.forEach(enfermedad => {
         let fila = cuerpoTabla.insertRow();
-        fila.insertCell().innerText = enfermedad.nombreEnfermedad;
-        fila.insertCell().innerText = enfermedad.descripcionEnfermedad;
-        fila.insertCell().innerText = enfermedad.estadoEnfermedad;
-        fila.insertCell().innerText = enfermedad.medicamentos;
+        fila.insertCell().innerText = enfermedad.nombre;
+        fila.insertCell().innerText = enfermedad.descripcion;
+        fila.insertCell().innerText = enfermedad.estado;
+        fila.insertCell().innerText = enfermedad.medicamento;
     });
 };
 
