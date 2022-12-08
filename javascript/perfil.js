@@ -11,7 +11,7 @@ const cargarLista = async() => {
 
 const cargarListapesos = async() => {
     listaPesos = await obtenerDatos('/obtener-pesos');
-
+    return listaPesos[listaPesos.length - 1];
 };
 
 const imagenPhoto = (imagen) => {
@@ -40,23 +40,42 @@ const proteina = (genero, actividad, peso) => {
     }
     return resultado;
 };
+const imc = (peso, estatura) => {
+    const indice = peso * estatura;
+    return indice
+};
 
-const mostrarTabla = () => {
+const mostrarTabla = async() => {
     cuerpoTabla.innerHTML = '';
-    listaUsuarios.forEach(usuario => {
-        let fila = cuerpoTabla.insertRow();
-        fila.insertCell().innerText = usuario.nombre;
-        fila.insertCell().innerText = moment(usuario.nacimiento).add(1, 'days').format('MM-DD-YYYY');
-        fila.insertCell().innerText = usuario.estatura;
-        fila.insertCell().innerText = usuario.genero;
-        fila.insertCell().innerText = usuario.correo;
-        fila.insertCell().innerText = usuario.pesoMeta;
-        fila.insertCell().innerText = agua(usuario.pesoMeta);
-        fila.insertCell().innerText = proteina(usuario.genero, usuario.actividad, usuario.pesoMeta);
-        fila.insertCell().innerText = usuario.imcdesdeotrapagina;
-        fila.insertCell().innerText = usuario.actividad;
-        fila.insertCell().appendChild(imagenPhoto(usuario.foto))
-    });
+    const dato = listaUsuarios[listaUsuarios.length - 1]
+    const ultimoPeso = await cargarListapesos();
+    const indice = imc(ultimoPeso.peso, ultimoPeso.estatura);
+    let fila = cuerpoTabla.insertRow();
+    fila.insertCell().innerText = dato.nombre;
+    fila.insertCell().innerText = moment(dato.nacimiento).add(1, 'days').format('MM-DD-YYYY');
+    fila.insertCell().innerText = dato.estatura;
+    fila.insertCell().innerText = dato.genero;
+    fila.insertCell().innerText = dato.correo;
+    fila.insertCell().innerText = dato.pesoMeta;
+    fila.insertCell().innerText = agua(dato.pesoMeta);
+    fila.insertCell().innerText = proteina(dato.genero, dato.actividad, dato.pesoMeta);
+    fila.insertCell().innerText = indice;
+    fila.insertCell().innerText = dato.actividad;
+    fila.insertCell().appendChild(imagenPhoto(dato.foto))
+        // listaUsuarios.forEach(usuario => {
+        //     let fila = cuerpoTabla.insertRow();
+        //     fila.insertCell().innerText = usuario.nombre;
+        //     fila.insertCell().innerText = moment(usuario.nacimiento).add(1, 'days').format('MM-DD-YYYY');
+        //     fila.insertCell().innerText = usuario.estatura;
+        //     fila.insertCell().innerText = usuario.genero;
+        //     fila.insertCell().innerText = usuario.correo;
+        //     fila.insertCell().innerText = usuario.pesoMeta;
+        //     fila.insertCell().innerText = agua(usuario.pesoMeta);
+        //     fila.insertCell().innerText = proteina(usuario.genero, usuario.actividad, usuario.pesoMeta);
+        //     fila.insertCell().innerText = usuario.imcdesdeotrapagina;
+        //     fila.insertCell().innerText = usuario.actividad;
+        //     fila.insertCell().appendChild(imagenPhoto(usuario.foto))
+        // });
 };
 
 cargarLista();
