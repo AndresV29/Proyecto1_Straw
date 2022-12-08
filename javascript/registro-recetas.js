@@ -6,19 +6,9 @@ const fileFotoReceta = document.getElementById("file-foto-receta");
 const txtPasosReceta = document.getElementById("txt-pasos-receta");
 const txtTipoComida = document.getElementById("txt-tipo-comida");
 const txtCategoriaReceta = document.getElementById("txt-categoria-receta");
-// const tblRecetas = document.querySelector("#tbl-recetas");
+const selectFiltro = document.getElementById("filtro-tipo-comida");
 let receta = {};
 
-// const imprimirTablaRecetas = () => {
-//     let fila = tblRecetas.insertRow();
-//     fila.insertCell().innerText = receta.nombreReceta;
-//     fila.insertCell().innerText = receta.ingredientes;
-//     fila.insertCell().innerText = receta.pasosReceta;
-//     fila.insertCell().innerText = receta.tipoComida;
-//     fila.insertCell().innerText = receta.categoriaComida;
-//     // falta agregar foto que no es innerText
-
-// };
 
 const cuerpoTabla = document.querySelector("#tbl-recetas tbody");
 let listaRecetas = [];
@@ -31,9 +21,20 @@ const cargarLista = async() => {
 
 const mostrarRecetas = () => {
     cuerpoTabla.innerHTML = "";
-    listaRecetas.forEach(receta => {
+    const copiaLista = [...listaRecetas]
+    let listaFiltrada;
+    if (selectFiltro.value != "") {
+        listaFiltrada = copiaLista.filter((receta) => {
+            return receta.tipoComida === selectFiltro.value
+        });
+
+    } else {
+        listaFiltrada = copiaLista
+    };
+
+    listaFiltrada.forEach(receta => {
         let fila = cuerpoTabla.insertRow();
-        fila.insertCell().innerText = receta.nombreReceta;
+        fila.insertCell().innerText = receta.nombre;
         fila.insertCell().innerText = receta.ingredientes;
         fila.insertCell().innerText = receta.pasosReceta;
         fila.insertCell().innerText = receta.tipoComida;
@@ -102,3 +103,4 @@ validarRecetas = () => {
 
 };
 btnAgregarReceta.addEventListener("click", validarRecetas);
+selectFiltro.addEventListener("change", mostrarRecetas);
