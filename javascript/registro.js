@@ -9,7 +9,6 @@ const txtPesoMeta = document.getElementById("txt-peso-meta");
 const txtActividad = document.getElementById("txt-actividad");
 const btnRegistrar = document.getElementById("btn-registrar");
 let registro = {};
-
 const limpiar = () => {
     usuario = {
         nombre: txtNombre.value = '',
@@ -21,7 +20,6 @@ const limpiar = () => {
         pesoMeta: txtPesoMeta.value = ''
     }
 }
-
 const validar = () => {
     let error = false;
     if (txtNombre.value == "") {
@@ -36,21 +34,18 @@ const validar = () => {
     } else {
         txtFechaNacimiento.classList.remove("vacio");
     }
-
     if (txtEstatura.value == "") {
         error = true;
         txtEstatura.classList.add("vacio");
     } else {
         txtEstatura.classList.remove("vacio");
     }
-
     if (txtGenero.value == "") {
         error = true;
         txtGenero.classList.add("vacio");
     } else {
         txtGenero.classList.remove("vacio");
     }
-
     if (txtCorreo.value == "") {
         error = true;
         txtCorreo.classList.add("vacio");
@@ -63,21 +58,18 @@ const validar = () => {
     } else {
         txtActividad.classList.remove("vacio");
     }
-
     // if (txtFoto.value == "") {
     //     error = true;
     //     txtFoto.classList.add("vacio");
     // } else {
     //     txtFoto.classList.remove("vacio");
     // }
-
     if (txtPesoMeta.value == "") {
         error = true;
         txtPesoMeta.classList.add("vacio");
     } else {
         txtPesoMeta.classList.remove("vacio");
     }
-
     if (error) {
         Swal.fire({
             'icon': 'error',
@@ -104,7 +96,5 @@ const validar = () => {
         registrarDatos(usuario, '/registro-usuario');
         limpiar();
     }
-
-
 };
 btnRegistrar.addEventListener('click', validar);
