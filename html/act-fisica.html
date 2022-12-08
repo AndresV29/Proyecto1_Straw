@@ -31,7 +31,7 @@
             </a>
         </nav>
     </header>
-    <h1 id="titulo">Registrar Activdad Física</h1>
+    <h1 id="titulo">Registrar Actividad Física</h1>
     <div id="sct-formDatos">
         <div id="formulario">
             <table class="tabla1">
@@ -48,8 +48,24 @@
                     <td><input type="time" id="h-final" name="hFinal" class="entrada" onblur="validaHoraFinal()"></td>
                 </tr>
                 <tr>
+                    <td>Fecha:</td>
+                    <td><input type="date" name="fecha" id="fecha" onblur=""></td>
+                </tr>
+                <tr>
                     <td>Nombre:</td>
                     <td><input type="String" id="nombre" name="nombre" class="entrada" onblur="validaNombre()"></td>
+                </tr>
+                <tr>
+                    <td><label for="tipo">Tipo:</label></td>
+                    <td><select name="tipo" id="tipo" class="entrada" onblur="validaTipo()">
+                        <option value="">Seleccione un tipo</option>
+                        <option value="cardio">Cardio</option>
+                        <option value="fuerza">Fuerza</option>
+                        <option value="natacion">Natación</option>
+                        <option value="ciclismo">Ciclismo</option>
+                        <option value="yoga">Yoga</option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
                     <td>Subir Icono:</td>
@@ -68,9 +84,39 @@
                     <td><button type="button" value="Registrar" id="registro">Registrar</button></td>
                 </tr>
             </table>
-
+        </div>
+        <div id="chart">
+            <canvas id="myChart"></canvas>
         </div>
     </div>
+    <div>
+        <section class="tabla-actividades">
+            <h2>Mis actividades :</h2>
+            <table id="tbl-actividades" class="table">
+                <thead>
+                    <tr>
+                        <td>Hora de inicio: </td>
+                        <td>Hora de finalizado: </td>
+                        <td>Nombre de la actividad: </td>
+                        <td>Tipo de actividad: </td>
+                        <td>Peso: </td>
+                        <td>IMC: </td>
+                    </tr>
+                </thead>
+
+
+                <tbody>
+
+                </tbody>
+
+            </table>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.min.js" integrity="sha512-tQYZBKe34uzoeOjY9jr3MX7R/mo7n25vnqbnrkskGr4D6YOoPYSpyafUAzQVjV6xAozAqUFIEFsCO4z8mnVBXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/javascript/alert.js"></script>
+
+    <script src="/javascript/servicio-general.js"></script>
     <script src="../javascript/actFisics.js"></script>
 </body>
 
