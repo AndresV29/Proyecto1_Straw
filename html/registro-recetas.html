@@ -81,8 +81,22 @@
             <button id="btn-agregar-receta" type="button">Agregar receta</button>
         </form>
 
+        <div>
+            <label for="filtro-tipo-comida">Tipo de comida:</label>
+            <select name="filtro-tipo-comida" id="filtro-tipo-comida">
+                <option value="">--Sin filtros--</option>
+                <option value="desayuno">Desayuno</option>
+                <option value="almuerzo">Almuerzo</option>
+                <option value="cena">Cena</option>
+                <option value="postre">Postre</option>
+                <option value="merienda">Merienda</option>
+                <option value="snack">Snack</option>
+                <option value="bebida">Bebida</option>
+            </select>
+        </div>
+
+        <h2>Mis recetas:</h2>
         <section class="tabla-recetas">
-            <h2>Mis recetas:</h2>
             <table id="tbl-recetas" class="table">
                 <thead>
                     <tr>
