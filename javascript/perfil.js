@@ -41,8 +41,8 @@ const proteina = (genero, actividad, peso) => {
     return resultado;
 };
 const imc = (peso, estatura) => {
-    const indice = peso * estatura;
-    return indice
+    const indice = peso / Math.pow(estatura, 2);
+    return indice.toFixed(2);
 };
 
 const mostrarTabla = async() => {
