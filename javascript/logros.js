@@ -97,12 +97,12 @@ const validar = () => {
         });
     } else {
         logro = {
-            objetivo: (txtObjetivo.value = "."),
-            nombreLogro: (txtObj.value = "."),
-            horaMeta: (txtHoras.value = "."),
-            pesoMeta: (txtPesoMeta.value = "."),
-            imcDeseado: (txtImc.value = "."),
-            dificultad: (txtDificultad.value = "."),
+            objetivo: txtObjetivo.value,
+            nombreLogro: txtObj.value,
+            horaMeta: txtHoras.value,
+            pesoMeta: txtPesoMeta.value,
+            imcDeseado: txtImc.value,
+            dificultad: txtDificultad.value,
         };
         Swal.fire({
             icon: "success",
