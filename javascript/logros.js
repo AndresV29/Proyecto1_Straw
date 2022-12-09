@@ -6,10 +6,10 @@ const txtImc = document.getElementById("txt-imc");
 const txtDificultad = document.getElementById("txt-dificultad");
 
 let objetivo = txtObjetivo.value;
-let obj = txtObj.value;
-let horas = txtHoras.value;
+let nombreLogro = txtObj.value;
+let horaMeta = txtHoras.value;
 let pesoMeta = txtPesoMeta.value;
-let imc = txtImc.value;
+let imcDeseado = txtImc.value;
 let dificultad = txtDificultad.value;
 
 const btnRegistrar = document.getElementById("btn-registrar-logros");
@@ -27,20 +27,20 @@ const imprimirTabla = () => {
     listaLogros.forEach((logro) => {
         let fila = tblLogros.insertRow();
         fila.insertCell().innerText = logro.objetivo;
-        fila.insertCell().innerText = logro.obj;
-        fila.insertCell().innerText = logro.horas;
-        fila.insertCell().innerText = logro.peso;
-        fila.insertCell().innerText = logro.imc;
+        fila.insertCell().innerText = logro.nombreLogro;
+        fila.insertCell().innerText = logro.horaMeta;
+        fila.insertCell().innerText = logro.pesoMeta;
+        fila.insertCell().innerText = logro.imcDeseado;
         fila.insertCell().innerText = logro.dificultad;
     });
 };
 const limpiar = () => {
     logro = {
         objetivo: (txtObjetivo.value = "."),
-        obj: (txtObj.value = "."),
-        horas: (txtHoras.value = "."),
-        peso: (txtPesoMeta.value = "."),
-        imc: (txtImc.value = "."),
+        nombreLogro: (txtObj.value = "."),
+        horaMeta: (txtHoras.value = "."),
+        pesoMeta: (txtPesoMeta.value = "."),
+        imcDeseado: (txtImc.value = "."),
         dificultad: (txtDificultad.value = "."),
     };
 };
@@ -98,10 +98,10 @@ const validar = () => {
     } else {
         logro = {
             objetivo: (txtObjetivo.value = "."),
-            obj: (txtObj.value = "."),
-            horas: (txtHoras.value = "."),
-            peso: (txtPesoMeta.value = "."),
-            imc: (txtImc.value = "."),
+            nombreLogro: (txtObj.value = "."),
+            horaMeta: (txtHoras.value = "."),
+            pesoMeta: (txtPesoMeta.value = "."),
+            imcDeseado: (txtImc.value = "."),
             dificultad: (txtDificultad.value = "."),
         };
         Swal.fire({
@@ -110,7 +110,7 @@ const validar = () => {
             title: "",
             text: "Logro registrado exitosamente",
         });
-        registrarDatos(logro, "/registrar-logro");
+        registrarDatos(logro, "/registro-logro");
         limpiar();
     }
 };
