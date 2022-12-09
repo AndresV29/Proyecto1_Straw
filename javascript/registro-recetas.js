@@ -91,15 +91,21 @@ validarRecetas = () => {
         receta.pasosReceta = txtPasosReceta.value;
         receta.tipoComida = txtTipoComida.value;
         receta.categoriaComida = txtCategoriaReceta.value;
+        Swal.fire({
+            'icon': 'success',
+            'title': '',
+            'text': 'Receta registrada exitosamente'
+        });
+        registrarDatos(receta, "/registrar-recetas", "mis-recetas.html");
 
     } else {
         swal.fire({
-            "icon": "warning",
+            "icon": "error",
             "title": "No se ha registrado la receta",
-            "text": "Revise los campos resaltados"
+            "text": "Complete los campos resaltados para continuar con el registro"
         })
     };
-    registrarDatos(receta, "/registrar-recetas");
+
 
 };
 btnAgregarReceta.addEventListener("click", validarRecetas);
