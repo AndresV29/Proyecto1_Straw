@@ -28,6 +28,12 @@ img {
     height: 55px;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 .links-nav {
     text-align: center;
     align-self: center;
@@ -42,12 +48,6 @@ img {
     background-color: #1e90ff;
     height: 100%;
     width: 100%;
-}
-
-label {
-    display: inline-block;
-    width: 250px;
-    height: 30px;
 }
 
 .formulario div input,
@@ -72,13 +72,10 @@ h1 {
 }
 
 
-/* .formulario {
-    display: flex;
-    flex-direction: column;
-    height: 600px;
-    justify-content: space-around;
-    font-size: 22px;
-} */
+/* FIN ESTILOS GENERALES */
+
+
+/* Boton de registro de recetas*/
 
 button:hover {
     background-color: #ef8121;
@@ -91,7 +88,7 @@ button:hover {
 
 button {
     height: 45px;
-    width: 140px;
+    width: 200px;
     color: white;
     background-color: #92b7ee;
     font-size: 19px;
@@ -100,23 +97,33 @@ button {
     border: none;
 }
 
-.main-principal-registro {
-    display: flex;
-    flex-direction: row;
-}
+
+/* FINAL DEL BOTON DE REGISTRO */
+
+
+/* Validacion de casillas vacias: */
 
 .vacio {
     border: solid 2px red;
     border-radius: 3px;
 }
 
+
+/* FINAL VALIDACION*/
+
+
+/* SECCION PRINCIPAL */
+
 main {
     margin: 0 50px;
 }
 
-h1 {
-    font-weight: bold;
-    font-size: 40px;
+#title-regis-recipe {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .formulario {
@@ -132,45 +139,29 @@ h1 {
     width: fit-content;
 }
 
+#menu-pt-1 {
+    width: 1650px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
 
-/* ESTILOS TABLA DE RECETAS */
+#menu-pt-2 {
+    width: 1650px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
 
-.tabla-recetas {
-    width: 100%;
+#boton-registro {
+    margin: 20px;
+    width: 98%;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-table,
-th,
-td {
-    border: solid 1px #000;
-    background-color: white;
-}
 
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 80%;
-}
-
-th {
-    font-size: 19px;
-    height: 50px;
-    padding: 15px;
-}
-
-td {
-    padding: 15px;
-    text-align: center;
-    height: 1 0px;
-    vertical-align: center;
-}
-
-td:hover {
-    background-color: rgb(239, 157, 128);
-}
-
-
-/* FINAL ESTILOS TABLAS RECETAS */
+/* FIN SECCION PRINCIPAL */
