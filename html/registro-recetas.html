@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/imagenes/straw_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/registro-recetas.css">
+    <link rel="stylesheet" href="/css/mis-recetas.css">
     <link rel="stylesheet" href="/css/responsive.css">
     <title>{Straw} Registro de recetas</title>
 </head>
@@ -22,6 +23,7 @@
             <a href="/html/ayuno.html" class="links-nav">Ayunos</a>
             <a href="/html/act-fisica.html" class="links-nav" id="act-fisica">Actividad física</a>
             <a href="/html/registro-recetas.html" class="links-nav">Recetas</a>
+            <a href="/html/mis-recetas.html" class="links-nav">Mis recetas</a>
             <a href="/html/registro-enfermedades.html" class="links-nav">Enfermedades</a>
             <a href="/html/logros.html" class="links-nav">Logros</a>
             <a href="/html/editar.html" class="links-nav">Editar perfil</a>
@@ -29,47 +31,52 @@
                 <img src="/imagenes/straw_logo.png" alt="imagen de logo straw">
             </a>
         </nav>
+
     </header>
+    <div id="title-regis-recipe">
+        <h1>Registro de recetas</h1>
+    </div>
     <main class="main-recetas">
-        <h1>Registrar recetas</h1>
         <form class="receta-nueva formulario">
-            <div>
-                <label for="txt-nombre-receta">Nombre de la receta:</label>
-                <input type="text" name="txt-nombre-receta" id="txt-nombre-receta">
-            </div>
-            <div>
-                <label for="txt-ingredientes">Ingredientes:</label>
-                <input type="text" name="txt-ingredientes" id="txt-ingredientes" placeholder="-Separados por comas-">
-            </div>
+            <div id="menu-pt-1">
+                <div>
+                    <label for="txt-nombre-receta">Nombre de la receta:</label>
+                    <input type="text" name="txt-nombre-receta" id="txt-nombre-receta">
+                </div>
 
-            <div>
-                <label for="file-foto-receta">Imagen:</label>
-                <input type="file" accept="image/*" name="file-foto-receta" id="file-foto-receta">
-            </div>
+                <div>
+                    <label for="txt-ingredientes">Ingredientes:</label>
+                    <input type="text" name="txt-ingredientes" id="txt-ingredientes" placeholder="-Separados por comas-">
+                </div>
 
-            <div>
-                <label for="txt-pasos-receta">Pasos de la receta:</label>
-                <input type="text" name="txt-pasos-receta" id="txt-pasos-receta" placeholder="-Separados por puntos-">
+                <div>
+                    <label for="file-foto-receta">Imagen:</label>
+                    <input type="file" accept="image/*" name="file-foto-receta" id="file-foto-receta">
+                </div>
             </div>
 
-
-            <div>
-                <label for="txt-tipo-comida">Tipo de comida:</label>
-                <select name="txt-tipo-comida" id="txt-tipo-comida">
+            <div id="menu-pt-2">
+                <div>
+                    <label for="txt-pasos-receta">Pasos de la receta:</label>
+                    <input type="text" name="txt-pasos-receta" id="txt-pasos-receta" placeholder="-Separados por puntos-">
+                </div>
+                <div>
+                    <label for="txt-tipo-comida">Tipo de comida:</label>
+                    <select name="txt-tipo-comida" id="txt-tipo-comida">
                     <option value="">--Tipo de comida...--</option>
-                    <option value="desayuno">Desayuno</option>
                     <option value="almuerzo">Almuerzo</option>
-                    <option value="cena">Cena</option>
-                    <option value="postre">Postre</option>
-                    <option value="merienda">Merienda</option>
-                    <option value="snack">Snack</option>
                     <option value="bebida">Bebida</option>
+                    <option value="cena">Cena</option>
+                    <option value="desayuno">Desayuno</option>
+                    <option value="merienda">Merienda</option>
+                    <option value="postre">Postre</option>
+                    <option value="snack">Snack</option>
+                    
                 </select>
-            </div>
-
-            <div>
-                <label for="txt-categoria-receta">Categoría de comida:</label>
-                <select name="txt-categoria-receta" id="txt-categoria-receta">
+                </div>
+                <div>
+                    <label for="txt-categoria-receta">Categoría de comida:</label>
+                    <select name="txt-categoria-receta" id="txt-categoria-receta">
                     <option value="">--Categoría de comida...--</option>
                     <option value="normal">Sin restricciones</option>
                     <option value="vegetariana">Vegetariana</option>
@@ -77,46 +84,16 @@
                     <option value="sin-gluten">Sin gluten</option>
                     <option value="vegana">Vegana</option>
                 </select>
-            </div>
-            <button id="btn-agregar-receta" type="button">Agregar receta</button>
-        </form>
+                </div>
 
-        <!-- categoria, tipo y nombre (filtros) -->
-        <div>
-            <label for="filtro-tipo-comida">Tipo de comida:</label>
-            <select name="filtro-tipo-comida" id="filtro-tipo-comida">
-                <option value="">--Sin filtros--</option>
-                <option value="desayuno">Desayuno</option>
-                <option value="almuerzo">Almuerzo</option>
-                <option value="cena">Cena</option>
-                <option value="postre">Postre</option>
-                <option value="merienda">Merienda</option>
-                <option value="snack">Snack</option>
-                <option value="bebida">Bebida</option>
-            </select>
+            </div>
+
+        </form>
+        <div id="boton-registro">
+            <button id="btn-agregar-receta" type="button">Agregar receta</button>
         </div>
 
-        <h2>Mis recetas:</h2>
-        <section class="tabla-recetas">
-            <table id="tbl-recetas" class="table">
-                <thead>
-                    <tr>
-                        <td>Nombre de la receta: </td>
-                        <td>Ingredientes: </td>
-                        <td>Pasos de la receta: </td>
-                        <td>Tipo de comida: </td>
-                        <td>Categoría de comida: </td>
-                        <td>Imagen: </td>
-                    </tr>
-                </thead>
 
-
-                <tbody>
-
-                </tbody>
-
-            </table>
-        </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/javascript/alert.js"></script>
