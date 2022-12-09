@@ -1,31 +1,52 @@
+const txtObjetivo = document.getElementById("txt-objetivo");
+const txtObj = document.getElementById("txt-obj");
+const txtHoras = document.getElementById("txt-horas");
+const txtPesoMeta = document.getElementById("txt-pesometa");
+const txtImc = document.getElementById("txt-imc");
+const txtDificultad = document.getElementById("txt-dificultad");
+
+let objetivo = txtObjetivo.value;
+let nombreLogro = txtObj.value;
+let horaMeta = txtHoras.value;
+let pesoMeta = txtPesoMeta.value;
+let imcDeseado = txtImc.value;
+let dificultad = txtDificultad.value;
+
 const btnRegistrar = document.getElementById("btn-registrar-logros");
 const tblLogros = document.querySelector("#tbl-logro tbody");
+let listaLogros = [];
 let logro = {};
+
+const listarLogro = async() => {
+    listaLogros = await obtenerDatos("/obtener-logro");
+    imprimirTabla();
+};
+
 const imprimirTabla = () => {
-    let fila = tblLogros.insertRow();
-    fila.insertCell().innerText = logro.objetivo;
-    fila.insertCell().innerText = logro.obj;
-    fila.insertCell().innerText = logro.horas;
-    fila.insertCell().innerText = logro.peso;
-    fila.insertCell().innerText = logro.imc;
-    fila.insertCell().innerText = logro.dificultad;
+    tblLogros.innerHTML = "";
+    listaLogros.forEach((logro) => {
+        let fila = tblLogros.insertRow();
+        fila.insertCell().innerText = logro.objetivo;
+        fila.insertCell().innerText = logro.nombreLogro;
+        fila.insertCell().innerText = logro.horaMeta;
+        fila.insertCell().innerText = logro.pesoMeta;
+        fila.insertCell().innerText = logro.imcDeseado;
+        fila.insertCell().innerText = logro.dificultad;
+    });
+};
+const limpiar = () => {
+    logro = {
+        objetivo: (txtObjetivo.value = "."),
+        nombreLogro: (txtObj.value = "."),
+        horaMeta: (txtHoras.value = "."),
+        pesoMeta: (txtPesoMeta.value = "."),
+        imcDeseado: (txtImc.value = "."),
+        dificultad: (txtDificultad.value = "."),
+    };
 };
 
 const validar = () => {
     let error = false;
-    const txtObjetivo = document.getElementById("txt-objetivo");
-    const txtObj = document.getElementById("txt-obj");
-    const txtHoras = document.getElementById("txt-horas");
-    const txtPesoMeta = document.getElementById("txt-pesometa");
-    const txtImc = document.getElementById("txt-imc");
-    const txtDificultad = document.getElementById("txt-dificultad");
-
-    let objetivo = txtObjetivo.value;
-    let obj = txtObj.value;
-    let horas = txtHoras.value;
-    let pesoMeta = txtPesoMeta.value;
-    let imc = txtImc.value;
-    let dificultad = txtDificultad.value;
 
     if (txtObjetivo.value == "") {
         error = true;
@@ -68,23 +89,31 @@ const validar = () => {
     } else {
         txtDificultad.classList.remove("vacio");
     }
-
-    if (error == false) {
-        logro.objetivo = txtObjetivo.value;
-        logro.obj = txtObj.value;
-        logro.horas = txtHoras.value;
-        logro.peso = txtPesoMeta.value;
-        logro.imc = txtImc.value;
-        logro.dificultad = txtDificultad.value;
-
-        imprimirTabla();
-    } else {
-        swal.fire({
-            icon: "warning",
-            title: "No se ha registrado el Logro",
-            text: "Revise los campos resaltados",
+    if (error) {
+        Swal.fire({
+            icon: "error",
+            title: "No es posible registrar el logro",
+            text: "Favor rellene los campos resaltados",
         });
+    } else {
+        logro = {
+            objetivo: txtObjetivo.value,
+            nombreLogro: txtObj.value,
+            horaMeta: txtHoras.value,
+            pesoMeta: txtPesoMeta.value,
+            imcDeseado: txtImc.value,
+            dificultad: txtDificultad.value,
+        };
+        Swal.fire({
+            icon: "success",
+            //pendiente un title para cuando el registro es exitoso
+            title: "",
+            text: "Logro registrado exitosamente",
+        });
+        registrarDatos(logro, "/registro-logro");
+        limpiar();
     }
 };
 
 btnRegistrar.addEventListener("click", validar);
+listarLogro();

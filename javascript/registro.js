@@ -11,15 +11,15 @@ const btnRegistrar = document.getElementById("btn-registrar");
 let registro = {};
 const limpiar = () => {
     usuario = {
-        nombre: txtNombre.value = '',
-        nacimiento: txtFechaNacimiento.value = '',
-        estatura: txtEstatura.value = '',
-        genero: txtGenero.value = '',
-        correo: txtCorreo.value = '',
-        foto: imgPerfil.value = '',
-        pesoMeta: txtPesoMeta.value = ''
-    }
-}
+        nombre: (txtNombre.value = ""),
+        nacimiento: (txtFechaNacimiento.value = ""),
+        estatura: (txtEstatura.value = ""),
+        genero: (txtGenero.value = ""),
+        correo: (txtCorreo.value = ""),
+        foto: (imgPerfil.value = ""),
+        pesoMeta: (txtPesoMeta.value = ""),
+    };
+};
 const validar = () => {
     let error = false;
     if (txtNombre.value == "") {
@@ -72,9 +72,9 @@ const validar = () => {
     }
     if (error) {
         Swal.fire({
-            'icon': 'error',
-            'title': 'No es posible avanzar',
-            'text': 'Favor rellene los campos resaltados'
+            icon: "error",
+            title: "No es posible avanzar",
+            text: "Favor rellene los campos resaltados",
         });
     } else {
         let usuario = {
@@ -85,16 +85,16 @@ const validar = () => {
             correo: txtCorreo.value,
             foto: imgPerfil.src,
             pesoMeta: txtPesoMeta.value,
-            actividad: txtActividad.value
+            actividad: txtActividad.value,
         };
         Swal.fire({
-            'icon': 'success',
+            icon: "success",
             //pendiente un title para cuando el registro es exitoso
-            'title': '',
-            'text': 'Usuario registrado exitosamente'
+            title: "",
+            text: "Usuario registrado exitosamente",
         });
-        registrarDatos(usuario, '/registro-usuario');
+        registrarDatos(usuario, "/registro-usuario");
         limpiar();
     }
 };
-btnRegistrar.addEventListener('click', validar);
+btnRegistrar.addEventListener("click", validar);
