@@ -181,3 +181,45 @@ html>* {
     font-family: 'Montserrat', sans-serif;
     background-color: #f5f6fa;
 }
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.columnas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    height: 375px;
+    justify-content: space-around;
+    font-size: 22px;
+}
+
+button:hover {
+    background-color: #92b7ee;
+    color: black;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 19px;
+    transition: 0.5s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    height: 45px;
+    width: 140px;
+    color: white;
+    background-color: #1e90ff;
+    font-size: 19px;
+    font-weight: bold;
+    border-radius: 3px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+}
