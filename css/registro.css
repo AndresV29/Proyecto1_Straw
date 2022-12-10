@@ -80,7 +80,7 @@ h1 {
 .formulario {
     display: flex;
     flex-direction: column;
-    height: 600px;
+    height: 490px;
     justify-content: space-around;
     font-size: 22px;
 }
