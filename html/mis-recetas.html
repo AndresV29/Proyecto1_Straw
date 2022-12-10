@@ -38,28 +38,13 @@
         <div id="titulo-tabla">
             <h1>Mis recetas:</h1>
         </div>
-        <section class="tabla-recetas">
-            <table id="tbl-recetas" class="table">
-                <thead>
-                    <tr>
-                        <td>Nombre de la receta: </td>
-                        <td>Ingredientes: </td>
-                        <td>Pasos de la receta: </td>
-                        <td>Tipo de comida: </td>
-                        <td>Categoría de comida: </td>
-                        <td>Imagen: </td>
-                    </tr>
-                </thead>
-
-
-                <tbody>
-
-                </tbody>
-
-            </table>
-        </section>
-        <!-- TIPOS DE FILTROS: categoria, tipo y nombre (filtros) -->
         <div id="filtros">
+            <div>
+                <label for="txt-nombre-receta">Nombre de la receta:</label>
+                <input type="text" name="txt-nombre-receta" id="txt-nombre-receta">
+            </div>
+
+
             <div>
                 <label for="filtro-tipo-comida">Tipo de comida:</label>
                 <select name="filtro-tipo-comida" id="filtro-tipo-comida">
@@ -84,7 +69,32 @@
                     <option value="vegana">Vegana</option>
                 </select>
             </div>
+            <div id="boton-limpiar-filtro">
+                <button id="btn-limpiar-filtro" type="button">Limpiar filtro</button>
+            </div>
         </div>
+        <section class="tabla-recetas">
+            <table id="tbl-recetas" class="table">
+                <thead>
+                    <tr>
+                        <td>Nombre de la receta: </td>
+                        <td>Ingredientes: </td>
+                        <td>Pasos de la receta: </td>
+                        <td>Tipo de comida: </td>
+                        <td>Categoría de comida: </td>
+                        <td>Imagen: </td>
+                    </tr>
+                </thead>
+
+
+                <tbody>
+
+                </tbody>
+
+            </table>
+        </section>
+        <!-- TIPOS DE FILTROS: categoria, tipo y nombre (filtros) -->
+
     </main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
