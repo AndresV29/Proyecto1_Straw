@@ -18,23 +18,6 @@
 </head>
 
 <body>
-    <!-- <header>
-        <nav class="nav">
-            <a href="/html/registro.html" class="links-nav">Registro</a>
-            <a href="/html/pesos.html" class="links-nav">Pesos</a>
-            <a href="/html/ayuno.html" class="links-nav">Ayunos</a>
-            <a href="/html/act-fisica.html" class="links-nav" id="act-fisica">Actividad física</a>
-            <a href="/html/registro-recetas.html" class="links-nav">Recetas</a>
-            <a href="/html/mis-recetas.html" class="links-nav">Mis recetas</a>
-            <a href="/html/registro-enfermedades.html" class="links-nav">Enfermedades</a>
-            <a href="/html/logros.html" class="links-nav">Logros</a>
-            <a href="/html/editar.html" class="links-nav">Editar perfil</a>
-            <a href="/html/perfil.html">
-                <img src="/imagenes/straw_logo.png" alt="imagen de logo straw">
-            </a>
-        </nav>
-
-    </header> -->
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -94,15 +77,15 @@
         </div>
         <div id="filtros">
             <div>
-                <label for="txt-nombre-receta">Nombre de la receta:</label>
+                <label for="txt-nombre-receta">Filtrar por nombre</label>
                 <input type="text" name="txt-nombre-receta" id="txt-nombre-receta">
             </div>
 
 
             <div>
-                <label for="filtro-tipo-comida">Tipo de comida:</label>
-                <select name="filtro-tipo-comida" id="filtro-tipo-comida">
-                    <option value="">--Tipo de comida...--</option>
+                <label for="filtro-tipo-comida">Filtrar por tipo</label>
+                <select name="filtro-tipo-comida" id="filtro-tipo-comida" placeholder="-Separados por comas-">
+                    <option value=""></option>
                     <option value="almuerzo">Almuerzo</option>
                     <option value="bebida">Bebida</option>
                     <option value="cena">Cena</option>
@@ -113,18 +96,15 @@
                 </select>
             </div>
             <div>
-                <label for="filtro-categoria-receta">Categoría de comida:</label>
+                <label for="filtro-categoria-receta">Filtrar por categoría</label>
                 <select name="filtro-categoria-receta" id="filtro-categoria-receta">
-                    <option value="">--Sin filtros--</option>
+                    <option value=""></option>
                     <option value="normal">Sin restricciones/Normal</option>
                     <option value="vegetariana">Vegetariana</option>
                     <option value="keto">Keto</option>
                     <option value="sin-gluten">Sin gluten</option>
                     <option value="vegana">Vegana</option>
                 </select>
-            </div>
-            <div id="boton-limpiar-filtro">
-                <button id="btn-limpiar-filtro" type="button">Limpiar filtro</button>
             </div>
         </div>
         <section class="tabla-recetas">
@@ -146,7 +126,11 @@
                 </tbody>
 
             </table>
+
         </section>
+        <div id="boton-limpiar-filtro">
+            <button id="btn-limpiar-filtro" type="button">Limpiar filtros</button>
+        </div>
         <!-- TIPOS DE FILTROS: categoria, tipo y nombre (filtros) -->
 
     </main>
