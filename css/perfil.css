@@ -9,7 +9,8 @@ html>* {
     border-radius: 3px;
 }
 
-.nav {
+
+/* .nav {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -18,6 +19,15 @@ html>* {
     align-items: center;
     margin-bottom: 30px;
     background-color: #1e90ff;
+} */
+
+.navbar {
+    background-color: #1e90ff;
+}
+
+.nav-link {
+    color: #f5f6fa !important;
+    font-size: 20px;
 }
 
 a:hover {
