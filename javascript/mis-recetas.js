@@ -3,6 +3,12 @@ const filtroCatComida = document.getElementById("filtro-categoria-receta");
 const cuerpoTabla = document.querySelector("#tbl-recetas tbody");
 let listaRecetas = [];
 
+const imagenPhoto = (imagen) => {
+    let img = document.createElement('img');
+    img.src = imagen;
+    return img
+};
+
 const cargarLista = async() => {
     listaRecetas = await obtenerDatos("/obtener-recetas");
     mostrarRecetas();
@@ -34,7 +40,7 @@ const mostrarRecetas = () => {
         fila.insertCell().innerText = receta.pasosReceta;
         fila.insertCell().innerText = receta.tipoComida;
         fila.insertCell().innerText = receta.categoriaComida;
-        fila.insertCell().innerText = receta.imagen;
+        fila.insertCell().appendChild(imagenPhoto(receta.imagen));
     });
 };
 
