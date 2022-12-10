@@ -11,8 +11,10 @@ const cargarLista = async() => {
 
 const mostrarRecetas = () => {
     cuerpoTabla.innerHTML = "";
+
     const copiaLista = [...listaRecetas]
     let listaFiltrada;
+
     if (filtroTipoComida.value != "") {
         listaFiltrada = copiaLista.filter((receta) => {
             return receta.tipoComida === filtroTipoComida.value
