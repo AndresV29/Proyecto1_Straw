@@ -80,17 +80,8 @@ h1 {
     font-size: 40px;
 }
 
-
-/* .formulario {
-    display: flex;
-    flex-direction: column;
-    height: 600px;
-    justify-content: space-around;
-    font-size: 22px;
-} */
-
 button:hover {
-    background-color: #ef8121;
+    background-color: #ffa657;
     color: #000;
     border-radius: 3px;
     font-weight: bold;
