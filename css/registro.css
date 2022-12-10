@@ -92,6 +92,7 @@ button:hover {
     font-weight: bold;
     font-size: 19px;
     transition: 0.5s;
+    font-family: 'Montserrat', sans-serif;
 }
 
 button {
@@ -103,11 +104,14 @@ button {
     font-weight: bold;
     border-radius: 3px;
     border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
 }
 
-.main-principal-registro {
+.columnas {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 
 thead {
@@ -115,4 +119,10 @@ thead {
     flex-direction: row;
     justify-content: space-around;
     width: 800px;
+}
+
+h1,
+.button {
+    text-align: center;
+    margin-bottom: 30px;
 }
