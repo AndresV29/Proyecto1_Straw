@@ -71,15 +71,15 @@ validarEnfermedades = () => {
         enfermedad.descripcionEnfermedad = txtDescripcionEnfermedad.value;
         enfermedad.estadoEnfermedad = txtEstadoEnfermedad.value;
         enfermedad.medicamentos = txtMedicamentos.value;
-        // imprimirTablaEnfermedades();
+        registrarDatos(enfermedad, "/registrar-enfermedad", "registro-enfermedades.html");
     } else {
         swal.fire({
-            "icon": "warning",
+            "icon": "error",
             "title": "No se ha registrado la enfermedad",
             "text": "Revise los campos resaltados"
         })
     };
-    registrarDatos(enfermedad, "/registrar-enfermedad");
+
 };
 
 btnAgregarEnfermedad.addEventListener("click", validarEnfermedades);
