@@ -5,22 +5,11 @@ const txtNombreEnfermedad = document.getElementById("txt-nombre-enfermedad");
 const txtDescripcionEnfermedad = document.getElementById("txt-descripcion-enfermedad");
 const txtEstadoEnfermedad = document.getElementById("txt-estado-enfermedad");
 const txtMedicamentos = document.getElementById("txt-medicamento");
-// const tblEnfermedades = document.querySelector("#tbl-enfermedades");
 let enfermedad = {};
-
-// const imprimirTablaEnfermedades = () => {
-//     let fila = tblEnfermedades.insertRow();
-//     fila.insertCell().innerText = enfermedad.nombreEnfermedad;
-//     fila.insertCell().innerText = enfermedad.descripcionEnfermedad;
-//     fila.insertCell().innerText = enfermedad.estadoEnfermedad;
-//     fila.insertCell().innerText = enfermedad.medicamentos;
-
-
-// };
 
 const cuerpoTabla = document.querySelector("#tbl-enfermedades tbody");
 let listaEnfermedades = [];
-
+let ninguno = ("Vacio");
 const cargarLista = async() => {
     listaEnfermedades = await obtenerDatos("/obtener-enfermedades");
     mostrarEnfermedades();
