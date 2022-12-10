@@ -5,10 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{Straw} Página de inicio</title>
+    <title>{Straw} Actividad física</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/imagenes/straw_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/act-fisica.css">
@@ -35,15 +35,9 @@
     <div id="sct-formDatos">
         <div id="formulario">
             <table class="tabla1">
-                <tr>
-                    <th>
-                        <h2>Datos actividad física</h2>
-                    </th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td>Hora de inicio:</td>
-                    <td><input type="time" id="h-inicio" name="hora-inicio" class="entrada" onblur="validaHoraInicio()"></td>
+                <h2>Datos actividad física</h2>
+                <label>Hora de inicio</td>
+                <td><input type="time" id="h-inicio" name="hora-inicio" class="entrada" onblur="validaHoraInicio()"></td>
                 </tr>
                 <tr>
                     <td>Hora de Finalizado:</td>
@@ -59,7 +53,7 @@
                 </tr>
                 <tr>
                     <td><label for="tipo">Tipo:</label></td>
-                    <td><select name="tipo" id="tipo" class="entrada" onblur="validaTipo()">
+                <td><select name="tipo" id="tipo" class="entrada" onblur="validaTipo()">
                         <option value="">Seleccione un tipo</option>
                         <option value="cardio">Cardio</option>
                         <option value="fuerza">Fuerza</option>
@@ -67,7 +61,7 @@
                         <option value="ciclismo">Ciclismo</option>
                         <option value="yoga">Yoga</option>
                         </select>
-                    </td>
+                </td>
                 </tr>
                 <tr>
                     <td>Subir Icono:</td>
@@ -105,12 +99,8 @@
                         <td>IMC: </td>
                     </tr>
                 </thead>
-
-
                 <tbody>
-
                 </tbody>
-
             </table>
         </section>
     </div>
