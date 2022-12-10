@@ -93,7 +93,7 @@ const validar = () => {
             title: "",
             text: "Usuario registrado exitosamente",
         });
-        registrarDatos(usuario, "/registro-usuario");
+        registrarDatos(usuario, "/registro-usuario", "pesos.html");
         limpiar();
     }
 };
