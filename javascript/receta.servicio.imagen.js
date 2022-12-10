@@ -10,6 +10,9 @@ let widget_cloudinary = cloudinary.createUploadWidget({
         imagen.src = result.info.secure_url;
     }
 });
-botonGuardar.addEventListener('click', () => {
-    widget_cloudinary.open();
-}, false);
+
+if (botonGuardar) {
+    botonGuardar.addEventListener('click', () => {
+        widget_cloudinary.open();
+    }, false);
+}
