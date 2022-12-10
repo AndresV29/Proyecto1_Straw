@@ -31,16 +31,16 @@
             </a>
         </nav>
     </header>
-    <h1 id="titulo">Registrar Actividad Física</h1>
+    <h1>Registrar Actividad Física</h1>
     <h2>Datos actividad física</h2>
     <form class="columnas">
         <div class="formulario">
             <div>
-                <label>Nombre:</label>
+                <label>Nombre</label>
                 <input type="String" id="nombre" name="nombre" class="entrada" onblur="validaNombre()">
             </div>
             <div>
-                <label for="tipo">Tipo:</label>
+                <label for="tipo">Tipo</label>
                 <select name="tipo" id="tipo" class="entrada" onblur="validaTipo()">
                         <option value="">Seleccione un tipo</option>
                         <option value="cardio">Cardio</option>
@@ -78,10 +78,8 @@
             </div>
         </div>
     </form>
-    <div>
-        <button type="button" class="button" value="Registrar" id="registro">Registrar</button>
-    </div>
-    </table>
+    <div class="button">
+        <button type="button" value="Registrar" id="registro">Registrar</button>
     </div>
     <div id="chart">
         <canvas id="myChart"></canvas>
