@@ -31,45 +31,55 @@
         </nav>
     </header>
 
-    <main class="main-enfermedades">
+    <div id="title-regis-enfer">
         <h1>Registrar enfermedades</h1>
+    </div>
+    <main class="main-enfermedades">
         <form class="agregar-enfermedad formulario">
-            <div>
-                <label for="txt-nombre-enfermedad">Nombre de la enfermedad:</label>
-                <input type="text" name="txt-nombre-enfermedad" id="txt-nombre-enfermedad">
+            <div id="menu-pt-1">
+                <div>
+                    <label for="txt-nombre-enfermedad">Nombre de la enfermedad:</label>
+                    <input type="text" name="txt-nombre-enfermedad" id="txt-nombre-enfermedad">
+                </div>
+
+                <div>
+                    <label for="txt-descripcion-enfermedad">Descripción:</label>
+                    <input type="text" name="txt-descripcion-enfermedad" id="txt-descripcion-enfermedad">
+                </div>
             </div>
 
-            <div>
-                <label for="txt-descripcion-enfermedad">Descripción:</label>
-                <input type="text" name="txt-descripcion-enfermedad" id="txt-descripcion-enfermedad">
-            </div>
-
-            <div>
-                <label for="txt-estado-enfermedad">Estado de la enfermedad:</label>
-                <select name="txt-estado-enfermedad" id="txt-estado-enfermedad">
+            <div id="menu-pt-2">
+                <div>
+                    <label for="txt-estado-enfermedad">Estado de la enfermedad:</label>
+                    <select name="txt-estado-enfermedad" id="txt-estado-enfermedad">
                     <option value="">--Mi enfermedad está...--</option>
                     <option value="activa">Activa</option>
                     <option value="controlada">Controlada</option>
                 </select>
-            </div>
+                </div>
+                <div>
+                    <label for="txt-medicamento">Medicamento:</label>
+                    <input type="text" name="txt-medicamento" id="txt-medicamento" placeholder="-Opcional-">
+                </div>
 
-            <div>
-                <label for="txt-medicamento">Medicamento:</label>
-                <input type="text" name="txt-medicamento" id="txt-medicamento" placeholder="-Opcional-">
             </div>
-
-            <button id="btn-agregar-enfermedad" type="button">Registrar enfermedad</button>
         </form>
 
+        <div id="boton-registro">
+            <button id="btn-agregar-enfermedad" type="button">Registrar enfermedad</button>
+        </div>
+
+        <div id="titulo-tabla">
+            <h2>Mis enfermedades</h2>
+        </div>
         <section class="tabla-enfermedades">
-            <h2>Mis enfermedades :</h2>
             <table id="tbl-enfermedades" class="table">
                 <thead>
                     <tr>
-                        <td>Nombre de la enfermedad: </td>
-                        <td>Descripción: </td>
-                        <td>Estado de la enfermedad: </td>
-                        <td>Medicamento: </td>
+                        <td class="titulo">Nombre de la enfermedad: </td>
+                        <td class="titulo">Descripción: </td>
+                        <td class="titulo">Estado de la enfermedad: </td>
+                        <td class="titulo">Medicamento: </td>
                     </tr>
                 </thead>
 
