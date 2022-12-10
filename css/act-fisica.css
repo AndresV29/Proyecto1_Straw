@@ -1,5 +1,5 @@
 body {
-    background-color: #EAE3D2;
+    background-color: #f5f6fa;
 }
 
 #titulo {
@@ -8,16 +8,40 @@ body {
     padding-bottom: 50px;
 }
 
+h2 {
+    font-size: 30px;
+    padding-left: 50px;
+}
+
 .vacio {
     border-color: red;
+    border-radius: 3px;
 }
 
 input {
-    margin: 5px;
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+    height: 30px;
+    font-size: 18px;
+    padding: 20;
+    margin: 20;
+    border: 0.5;
+}
+
+label {
+    display: inline-block;
+    width: 250px;
+    height: 30px;
 }
 
 .tabla1 {
-    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    justify-content: space-around;
+    font-size: 22px;
+    padding: 20px;
 }
 
 .peso {
@@ -30,6 +54,27 @@ input {
 #registro {
     background-color: #1C3879;
     color: white;
+}
+
+#registro:hover {
+    background-color: #ef8121;
+    color: rgb(255, 255, 255);
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 19px;
+    transition: 0.5s;
+}
+
+input,
+select {
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+    height: 30px;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    border: 0.5;
 }
 
 .links-nav {
@@ -81,15 +126,6 @@ h1 {
     font-size: 40px;
 }
 
-button:hover {
-    background-color: #ef8121;
-    color: rgb(255, 255, 255);
-    border-radius: 3px;
-    font-weight: bold;
-    font-size: 19px;
-    transition: 0.5s;
-}
-
 button {
     height: 45px;
     width: 140px;
@@ -111,6 +147,7 @@ button {
 .tabla-actividades td {
     border: solid 1px #000;
     background-color: white;
+    max-width: fit-content;
 }
 
 .tabla-actividades {
