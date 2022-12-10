@@ -95,11 +95,24 @@ main {
     width: fit-content;
 }
 
+
+/* filtros */
+
 #filtros {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin-bottom: 30px;
+}
+
+#boton-limpiar-filtro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#btn-limpiar-filtro {
+    height: 35px;
 }
 
 
