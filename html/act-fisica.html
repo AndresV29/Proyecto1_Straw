@@ -32,28 +32,16 @@
         </nav>
     </header>
     <h1 id="titulo">Registrar Actividad Física</h1>
-    <div id="sct-formDatos">
-        <div id="formulario">
-            <table class="tabla1">
-                <h2>Datos actividad física</h2>
-                <label>Hora de inicio</td>
-                <td><input type="time" id="h-inicio" name="hora-inicio" class="entrada" onblur="validaHoraInicio()"></td>
-                </tr>
-                <tr>
-                    <td>Hora de Finalizado:</td>
-                    <td><input type="time" id="h-final" name="hFinal" class="entrada" onblur="validaHoraFinal()"></td>
-                </tr>
-                <tr>
-                    <td>Fecha:</td>
-                    <td><input type="date" name="fecha" id="fecha" onblur=""></td>
-                </tr>
-                <tr>
-                    <td>Nombre:</td>
-                    <td><input type="String" id="nombre" name="nombre" class="entrada" onblur="validaNombre()"></td>
-                </tr>
-                <tr>
-                    <td><label for="tipo">Tipo:</label></td>
-                <td><select name="tipo" id="tipo" class="entrada" onblur="validaTipo()">
+    <h2>Datos actividad física</h2>
+    <form class="columnas">
+        <div class="formulario">
+            <div>
+                <label>Nombre:</label>
+                <input type="String" id="nombre" name="nombre" class="entrada" onblur="validaNombre()">
+            </div>
+            <div>
+                <label for="tipo">Tipo:</label>
+                <select name="tipo" id="tipo" class="entrada" onblur="validaTipo()">
                         <option value="">Seleccione un tipo</option>
                         <option value="cardio">Cardio</option>
                         <option value="fuerza">Fuerza</option>
@@ -61,29 +49,43 @@
                         <option value="ciclismo">Ciclismo</option>
                         <option value="yoga">Yoga</option>
                         </select>
-                </td>
-                </tr>
-                <tr>
-                    <td>Subir Icono:</td>
-                    <td><input type="file" name="subir-icono" id="subir-icono" accept="image/png, image/jpeg"></td>
-                </tr>
-                <tr>
-                    <td>Peso:</td>
-                    <td><input type="number" class="peso" name="peso" id="peso" onblur="validaPeso()"></td>
-                </tr>
-                <tr>
-                    <td>IMC Actual:</td>
-                    <td><input type="number" class="peso" name="imc" id="imc" onblur="validaIMC()"></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><button type="button" value="Registrar" id="registro">Registrar</button></td>
-                </tr>
-            </table>
+            </div>
+            <div>
+                <label id="h-inicio">Hora de inicio</label>
+                <input type="time" id="h-inicio" name="hora-inicio" class="entrada" onblur="validaHoraInicio()">
+            </div>
+            <div>
+                <label id="h-final">Hora de Finalizado</label>
+                <input type="time" id="h-final" name="hFinal" class="entrada" onblur="validaHoraFinal()">
+            </div>
         </div>
-        <div id="chart">
-            <canvas id="myChart"></canvas>
+        <div class="formulario">
+            <div>
+                <label>Fecha</label>
+                <input type="date" name="fecha" id="fecha" onblur="">
+            </div>
+            <div>
+                <label id="subir-icono">Subir Icono</label>
+                <input type="file" name="subir-icono" id="subir-icono" accept="image/png, image/jpeg">
+            </div>
+            <div>
+                <label id="peso">Peso</label>
+                <input type="number" class="peso" name="peso" id="peso" onblur="validaPeso()">
+            </div>
+            <div>
+                <label id="imc">IMC Actual</label>
+                <input type="number" class="peso" name="imc" id="imc" onblur="validaIMC()">
+            </div>
         </div>
+    </form>
+    <div>
+        <button type="button" class="button" value="Registrar" id="registro">Registrar</button>
+    </div>
+    </table>
+    </div>
+    <div id="chart">
+        <canvas id="myChart"></canvas>
+    </div>
     </div>
     <div>
         <section class="tabla-actividades">
