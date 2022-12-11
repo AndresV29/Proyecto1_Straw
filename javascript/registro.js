@@ -11,13 +11,14 @@ const btnRegistrar = document.getElementById("btn-registrar");
 let registro = {};
 const limpiar = () => {
     usuario = {
-        nombre: (txtNombre.value = ""),
-        nacimiento: (txtFechaNacimiento.value = ""),
-        estatura: (txtEstatura.value = ""),
-        genero: (txtGenero.value = ""),
-        correo: (txtCorreo.value = ""),
-        foto: (imgPerfil.value = ""),
-        pesoMeta: (txtPesoMeta.value = ""),
+        nombre: txtNombre.value = "",
+        nacimiento: txtFechaNacimiento.value = "",
+        estatura: txtEstatura.value = "",
+        genero: txtGenero.value = "",
+        correo: txtCorreo.value = "",
+        foto: imgPerfil.value = "",
+        pesoMeta: txtPesoMeta.value = "",
+        actividad: txtActividad.value = ""
     };
 };
 const validar = () => {
@@ -87,12 +88,6 @@ const validar = () => {
             pesoMeta: txtPesoMeta.value,
             actividad: txtActividad.value,
         };
-        Swal.fire({
-            icon: "success",
-            //pendiente un title para cuando el registro es exitoso
-            title: "",
-            text: "Usuario registrado exitosamente",
-        });
         registrarDatos(usuario, "/registro-usuario", "pesos.html");
         limpiar();
     }
