@@ -7,34 +7,12 @@ const txtEstadoEnfermedad = document.getElementById("txt-estado-enfermedad");
 const txtMedicamentos = document.getElementById("txt-medicamento");
 let enfermedad = {};
 
-const cuerpoTabla = document.querySelector("#tbl-enfermedades tbody");
-let listaEnfermedades = [];
-let ninguno = ("Vacio");
-const cargarLista = async() => {
-    listaEnfermedades = await obtenerDatos("/obtener-enfermedades");
-    mostrarEnfermedades();
-
-};
-
-const mostrarEnfermedades = () => {
-    cuerpoTabla.innerHTML = "";
-    listaEnfermedades.forEach(enfermedad => {
-        let fila = cuerpoTabla.insertRow();
-        fila.insertCell().innerText = enfermedad.nombre;
-        fila.insertCell().innerText = enfermedad.descripcion;
-        fila.insertCell().innerText = enfermedad.estado;
-        fila.insertCell().innerText = enfermedad.medicamento;
-    });
-};
-
-cargarLista();
 
 
 validarEnfermedades = () => {
     let nombreEnfermedad = txtNombreEnfermedad.value;
     let descripcionEnfermedad = txtDescripcionEnfermedad.value;
     let estadoEnfermedad = txtEstadoEnfermedad.value;
-    let medicamentos = txtMedicamentos.value;
     let error = false;
 
     if (nombreEnfermedad == "") {
@@ -60,7 +38,7 @@ validarEnfermedades = () => {
         enfermedad.descripcionEnfermedad = txtDescripcionEnfermedad.value;
         enfermedad.estadoEnfermedad = txtEstadoEnfermedad.value;
         enfermedad.medicamentos = txtMedicamentos.value;
-        registrarDatos(enfermedad, "/registrar-enfermedad", "registro-enfermedades.html");
+        registrarDatos(enfermedad, "/registrar-enfermedad", "mis-enfermedades.html");
     } else {
         swal.fire({
             "icon": "error",
