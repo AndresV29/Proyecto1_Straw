@@ -63,12 +63,13 @@ const mostrarTabla = async() => {
     fila.insertCell().innerText = dato.actividad;
     // fila.insertCell().appendChild(imagenPhoto(dato.foto))
 };
-const mostrarFoto = async(identificador) => {
+const mostrarFoto = async() => {
     const dato = listaUsuarios[listaUsuarios.length - 1];
     let foto = imagenPhoto(dato.foto);
-    let identificador = document.createElement('img');
-    identificador = identificador.src(foto);
+    let identificador = document.createElement('img').fotoPerfil.src = foto;
+    return identificador;
 };
 
-cargarLista();
-mostrarFoto(fotoPerfil);
+fotoPerfil = cargarLista();
+mostrarFoto();
+image.png
