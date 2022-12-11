@@ -8,18 +8,6 @@ html>* {
 }
 
 
-/* .nav {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 60px;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 30px;
-    background-color: #1e90ff;
-} */
-
-
 /* reemplazar el estilo de clase navbar de bootstrap */
 
 .navbar {
@@ -132,7 +120,7 @@ main {
 }
 
 #title-regis-recipe {
-    margin-top: 100px;
+    margin-top: 150px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -156,12 +144,12 @@ main {
     width: 1650px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
 #menu-pt-2 {
-    width: 1650px;
+    width: 1635px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -174,6 +162,10 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+#btn-agregar-receta {
+    width: fit-content;
 }
 
 
