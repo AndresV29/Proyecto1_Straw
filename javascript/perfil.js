@@ -66,9 +66,10 @@ const mostrarTabla = async() => {
 const mostrarFoto = async() => {
     const dato = listaUsuarios[listaUsuarios.length - 1];
     let foto = imagenPhoto(dato.foto);
-    fotoPerfil = fotoPerfil.src(foto);
-    return fotoPerfil;
+    let identificador = document.createElement('img').fotoPerfil.src = foto;
+    return identificador;
 };
 
-cargarLista();
+fotoPerfil = cargarLista();
 mostrarFoto();
+image.png
