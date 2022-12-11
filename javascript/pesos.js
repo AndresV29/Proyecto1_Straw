@@ -105,7 +105,7 @@ const validarPesos = () => {
             estatura: txtEstatura.value,
         };
 
-        registrarDatos(nuevoPeso, "/registrar-peso");
+        registrarDatos(nuevoPeso, "/registrar-peso", "pesos.html");
     }
 };
 
