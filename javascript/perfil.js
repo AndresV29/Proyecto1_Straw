@@ -1,6 +1,6 @@
 moment.locale('es');
 const cuerpoTabla = document.querySelector('#tbl-perfil tbody');
-const fotoPerfil = document.getElementById('fotoPerfil');
+const fotoPerfil = document.getElementById('imagenPerfil');
 let listaUsuarios = [];
 let listaPesos = []
 
@@ -17,7 +17,7 @@ const cargarListapesos = async() => {
 const imagenPhoto = (imagen) => {
     let img = document.createElement('img');
     img.src = imagen;
-    return img
+    return imagen
 };
 
 const agua = (peso) => {
@@ -61,7 +61,14 @@ const mostrarTabla = async() => {
     fila.insertCell().innerText = proteina(dato.genero, dato.actividad, ultimoPeso.peso);
     fila.insertCell().innerText = indice;
     fila.insertCell().innerText = dato.actividad;
-    fila.insertCell().appendChild(imagenPhoto(dato.foto))
+    // fila.insertCell().appendChild(imagenPhoto(dato.foto))
+};
+const mostrarFoto = async() => {
+    const dato = listaUsuarios[listaUsuarios.length - 1];
+    let foto = imagenPhoto(dato.foto);
+    fotoPerfil = fotoPerfil.src(foto);
+    return fotoPerfil;
 };
 
 cargarLista();
+mostrarFoto();
