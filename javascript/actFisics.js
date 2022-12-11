@@ -150,9 +150,18 @@ new Chart(ctx, {
     },
     options: {
         scales: {
+
             y: {
                 beginAtZero: true
+
             }
-        }
+        },
+        responsive: false,
+        maintainAspectRatio: false,
+        width: 600,
+        height: 600
+
     }
 });
+// ctx.canvas.width = 600;
+// ctx.canvas.height = 600;

@@ -110,45 +110,30 @@
                     <button id="btn-detener" type="button">Detener</button>
                 </div>
             </form>
+            <section class="tbl-ayuno">
+                <h2>Mis ayunos:</h2>
+                <div>
+                    <table id="tbl-info">
+                        <thead>
+                            <tr>
+                                <th style="width: 33%">Plan de ayuno</th>
+                                <th style="width: 33%">Fecha de inicio</th>
+                                <th style="width: 33%">Fecha de finalización</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </section>
     </main>
-    <section class="tbl-ayuno">
-        <h2>Mis ayunos:</h2>
-        <table id="tbl-info">
-            <thead>
-                <tr>
-                    <td>Ayuno</td>
-                    <td>Inicio</td>
-                    <td>Fin</td>
-                    <td>Plan</td>
-                    <td>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>Lunes</td>
-                                    <td>Martes</td>
-                                    <td>Miércoles</td>
-                                    <td>Jueves</td>
-                                    <td>Viernes</td>
-                                    <td>Sábado</td>
-                                    <td>Domingo</td>
-                                </tr>
-                                <tr>
-                                    <td>14/11/2022</td>
-                                    <td>15/11/2022</td>
-                                    <td>16/11/2022</td>
-                                    <td>17/11/2022</td>
-                                    <td>18/11/2022</td>
-                                    <td>19/11/2022</td>
-                                    <td>20/11/2022</td>
-                                </tr>
-                            </thead>
-                        </table>
-                    </td>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
-    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/javascript/servicio-general.js"></script>
+    <script src="/javascript/alert.js"></script>
     <script src="/javascript/ayuno.js"></script>
 </body>
 
