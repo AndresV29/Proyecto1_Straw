@@ -44,7 +44,14 @@ const validar = () => {
         ayuno.inicio = txtInicio.value;
         ayuno.finalizacion = txtFinalizacion.value;
         ayuno.plan = txtPlan.value;
+        Swal.fire({
+            'icon': 'success',
+            'title': '',
+            'text': 'Ayuno registrado exitosamente'
+        });
+        registrarDatos(ayuno, "/registrar-ayuno", "ayuno.html");
         imprimirTabla();
+
     } else {
         swal.fire({
             "icon": "error",
