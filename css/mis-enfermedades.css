@@ -1,0 +1,259 @@
+/* Estilos principales */
+
+html>* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f6fa;
+}
+
+
+/* .nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60px;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #1e90ff;
+} */
+
+.navbar {
+    background-color: #1e90ff;
+}
+
+.nav-link {
+    color: #f5f6fa !important;
+    font-size: 20px;
+}
+
+a:hover {
+    background-color: #92b7ee;
+    color: black;
+    transition: 0.5s;
+}
+
+img {
+    height: 55px;
+}
+
+.links-nav {
+    text-align: center;
+    align-self: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e90ff;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+label {
+    display: inline-block;
+    width: 250px;
+    height: 30px;
+}
+
+.formulario div input,
+select {
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+    height: 30px;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    border: 0.5;
+}
+
+#txt-foto {
+    width: fit-content;
+}
+
+main {
+    margin: 0 50px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+button:hover {
+    background-color: #ffa657;
+    color: #000;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 19px;
+    transition: 0.5s;
+}
+
+button {
+    height: 45px;
+    width: 140px;
+    color: white;
+    background-color: #92b7ee;
+    font-size: 19px;
+    font-weight: bold;
+    border-radius: 3px;
+    border: none;
+}
+
+.main-principal-registro {
+    display: flex;
+    flex-direction: row;
+}
+
+.vacio {
+    border: solid 2px red;
+    border-radius: 3px;
+}
+
+main {
+    margin: 0 50px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    width: 50%;
+    justify-content: space-around;
+    font-size: 22px;
+}
+
+
+/* Fin estilos principales */
+
+
+/* ESTILOS TABLA DE ENFERMEDADES */
+
+.tabla-enfermedades {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+table,
+th,
+td {
+    border: solid 1px #000;
+    background-color: white;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 80%;
+}
+
+th {
+    font-size: 19px;
+    height: 50px;
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+    height: 10px;
+    vertical-align: center;
+}
+
+td:hover {
+    background-color: rgb(182, 182, 182);
+}
+
+#title-mis-enfer {
+    font-size: 40px;
+    margin-top: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#menu-pt-1 {
+    width: 1650px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#menu-pt-2 {
+    width: 1650px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#boton-registro {
+    margin: 20px;
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#titulo-tabla {
+    font-size: 35px;
+    margin-top: 100px;
+    color: #000;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#btn-agregar-enfermedad {
+    width: 200px;
+    font-family: 'Montserrat', sans-serif;
+    height: 55px;
+}
+
+.titulo {
+    background-color: #74b9ff,
+}
+
+#filtros {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#boton-limpiar-filtro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#btn-limpiar-filtro {
+    height: 35px;
+    width: fit-content;
+}
+
+
+/* FINAL ESTILOS TABLAS RECETAS */
