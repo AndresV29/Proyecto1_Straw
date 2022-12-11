@@ -109,10 +109,3 @@ button {
     display: flex;
     flex-direction: row;
 }
-
-thead {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 800px;
-}
