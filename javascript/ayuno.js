@@ -46,8 +46,11 @@ const validar = () => {
         ayuno.plan = txtPlan.value;
         imprimirTabla();
     } else {
-        console.log("Por favor, rellene los campos resaltados.");
-    }
+        swal.fire({
+            "icon": "error",
+            "text": "Complete los campos resaltados para continuar con el registro"
+        })
+    };
 };
 
 btnIniciar.addEventListener("click", validar);
