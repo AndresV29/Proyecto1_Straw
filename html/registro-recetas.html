@@ -87,21 +87,15 @@
                 </div>
 
                 <div>
-                    <label for="txt-ingredientes">Ingredientes:</label>
-                    <input type="text" name="txt-ingredientes" id="txt-ingredientes" placeholder="-Separados por comas-">
-                </div>
-
-                <div>
-                    <label for="file-foto-receta">Imagen:</label>
-                    <button type="button" accept="image/*" name="file-foto-receta" id="file-foto-receta">Agregar imagen</button>
-                    <img id="foto-receta">
-                </div>
-            </div>
-
-            <div id="menu-pt-2">
-                <div>
-                    <label for="txt-pasos-receta">Pasos de la receta:</label>
-                    <input type="text" name="txt-pasos-receta" id="txt-pasos-receta" placeholder="-Separados por puntos-">
+                    <label for="txt-categoria-receta">Categoría de comida:</label>
+                    <select name="txt-categoria-receta" id="txt-categoria-receta">
+                    <option value="">--Categoría de comida...--</option>
+                    <option value="normal">Sin restricciones</option>
+                    <option value="vegetariana">Vegetariana</option>
+                    <option value="keto">Keto</option>
+                    <option value="sin-gluten">Sin gluten</option>
+                    <option value="vegana">Vegana</option>
+                </select>
                 </div>
                 <div>
                     <label for="txt-tipo-comida">Tipo de comida:</label>
@@ -117,16 +111,21 @@
                     
                 </select>
                 </div>
+            </div>
+
+            <div id="menu-pt-2">
                 <div>
-                    <label for="txt-categoria-receta">Categoría de comida:</label>
-                    <select name="txt-categoria-receta" id="txt-categoria-receta">
-                    <option value="">--Categoría de comida...--</option>
-                    <option value="normal">Sin restricciones</option>
-                    <option value="vegetariana">Vegetariana</option>
-                    <option value="keto">Keto</option>
-                    <option value="sin-gluten">Sin gluten</option>
-                    <option value="vegana">Vegana</option>
-                </select>
+                    <label for="txt-ingredientes">Ingredientes:</label>
+                    <input type="text" name="txt-ingredientes" id="txt-ingredientes" placeholder="-Separados por comas-">
+                </div>
+                <div>
+                    <label for="txt-pasos-receta">Pasos de la receta:</label>
+                    <input type="text" name="txt-pasos-receta" id="txt-pasos-receta" placeholder="-Separados por puntos-">
+                </div>
+                <div>
+                    <label for="file-foto-receta">Imagen:</label>
+                    <button type="button" accept="image/*" name="file-foto-receta" id="file-foto-receta">Agrega una imagen</button>
+                    <img id="foto-receta">
                 </div>
 
             </div>
