@@ -2,7 +2,7 @@
 const btnAgregarReceta = document.getElementById("btn-agregar-receta");
 const txtNombreReceta = document.getElementById("txt-nombre-receta");
 const txtIngredientes = document.getElementById("txt-ingredientes");
-const fileFotoReceta = document.getElementById("file-foto-receta");
+const fileFotoReceta = document.getElementById("foto-receta");
 const txtPasosReceta = document.getElementById("txt-pasos-receta");
 const txtTipoComida = document.getElementById("txt-tipo-comida");
 const txtCategoriaReceta = document.getElementById("txt-categoria-receta");
@@ -11,7 +11,7 @@ let receta = {};
 validarRecetas = () => {
     let nombreReceta = txtNombreReceta.value;
     let ingredientes = txtIngredientes.value;
-    let fotoReceta = fileFotoReceta.value;
+    let imagen = fileFotoReceta.value;
     let pasosReceta = txtPasosReceta.value;
     let tipoComida = txtTipoComida.value;
     let categoriaComida = txtCategoriaReceta.value;
@@ -53,6 +53,7 @@ validarRecetas = () => {
         receta.pasosReceta = txtPasosReceta.value;
         receta.tipoComida = txtTipoComida.value;
         receta.categoriaComida = txtCategoriaReceta.value;
+        receta.imagen = fileFotoReceta.src;
         Swal.fire({
             'icon': 'success',
             'title': '',

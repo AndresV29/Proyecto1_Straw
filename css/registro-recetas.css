@@ -7,7 +7,8 @@ html>* {
     background-color: #f5f6fa;
 }
 
-.nav {
+
+/* .nav {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -16,6 +17,18 @@ html>* {
     align-items: center;
     margin-bottom: 30px;
     background-color: #1e90ff;
+} */
+
+
+/* reemplazar el estilo de clase navbar de bootstrap */
+
+.navbar {
+    background-color: #1e90ff;
+}
+
+.nav-link {
+    color: #f5f6fa !important;
+    font-size: 20px;
 }
 
 a:hover {
@@ -78,8 +91,8 @@ h1 {
 /* Boton de registro de recetas*/
 
 button:hover {
-    background-color: #ef8121;
-    color: rgb(255, 255, 255);
+    background-color: #ffa657;
+    color: #000;
     border-radius: 3px;
     font-weight: bold;
     font-size: 19px;
