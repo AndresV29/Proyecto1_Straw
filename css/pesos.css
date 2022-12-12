@@ -95,7 +95,7 @@ h2 {
     display: flex;
     flex-direction: column;
     height: 600px;
-    justify-content: space-around;
+    justify-content: spacece-around;
     font-size: 22px;
 }
 
@@ -206,4 +206,9 @@ td {
     justify-content: right;
     font-size: 22px;
     margin-top: 5%;
+}
+
+#txt-fecha-registro {
+    width: 276px;
+    height: 43px;
 }
