@@ -2,7 +2,7 @@ moment.locale('es');
 const cuerpoTabla = document.querySelector('#tbl-perfil tbody');
 const fotoPerfil = document.getElementById('fotoPerfil');
 let listaUsuarios = [];
-let listaPesos = []
+let listaPesos = [];
 
 const cargarLista = async() => {
     listaUsuarios = await obtenerDatos('/obtener-usuario');
