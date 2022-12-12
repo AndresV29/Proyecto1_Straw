@@ -47,7 +47,7 @@ let llenarCampos = async() => {
     console.log(persona);
 }
 
-llenarCampos();
+
 const limpiar = () => {
     usuario = {
         nombre: txtNombre.value = "",
@@ -127,8 +127,9 @@ const validar = () => {
             pesoMeta: txtPesoMeta.value,
             actividad: txtActividad.value,
         };
-        modificarPersona(_id, usuario, "/editar-usuario");
+        modificarPersona(_id, usuario);
         limpiar();
     }
 };
 btnRegistrar.addEventListener("click", validar);
+llenarCampos();
