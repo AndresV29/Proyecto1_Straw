@@ -88,7 +88,7 @@ const validar = () => {
             pesoMeta: txtPesoMeta.value,
             actividad: txtActividad.value,
         };
-        registrarDatos(usuario, "/registro-usuario", "perfil.html");
+        registrarDatos(usuario, "/editar-usuario", "perfil.html");
         limpiar();
     }
     // };
