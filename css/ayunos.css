@@ -81,22 +81,25 @@ main {
 }
 
 .main-registro {
+    margin: 40px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    width: 1900px;
+    width: 100%;
+    height: 100%;
 }
 
-.formulario {
-    align-items: center;
-}
+
+/* .formulario {
+    height: 200px;
+} */
 
 #h3 {
     font-size: 17px;
 }
 
 #titulo-registro {
+    margin-top: 50px;
     margin-left: 120px;
     display: flex;
     flex-direction: row;
@@ -104,7 +107,6 @@ main {
 }
 
 #titulo-tabla {
-    margin-top: 100px;
     color: #000;
     height: 100px;
     width: 100%;
@@ -114,7 +116,8 @@ main {
 }
 
 .tabla-ayunos {
-    width: 100%;
+    width: 95%;
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -158,21 +161,15 @@ h2 {
 }
 
 #filtros {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 20px;
+    height: 10px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-#boton-limpiar-filtro {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-#btn-limpiar-filtro {
-    height: 35px;
-    width: fit-content;
+    align-items: center;
 }
 
 .formulario div input,
@@ -186,13 +183,34 @@ select {
     border: 0.5;
 }
 
-.seccion1 {
+.txt-planes {
+    margin-top: 100px;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.txt-planes {
+#boton-registrar {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#txt-plan {
+    margin: 50px;
+}
+
+#txt-inicio {
+    margin: 50px;
+}
+
+#txt-finalizacion {
+    margin: 50px;
+}
+
+#titulo-tbl {
+    margin-left: 60px;
     display: flex;
     flex-direction: row;
     justify-content: center;

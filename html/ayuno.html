@@ -74,6 +74,7 @@
             </div>
         </nav>
     </header>
+
     <div id="titulo-registro">
         <h1>Registro de ayunos</h1>
     </div>
@@ -81,6 +82,7 @@
 
     <main class="main-registro">
         <form class="formulario">
+
             <div>
                 <label for="txt-plan">Plan de ayuno:</label>
                 <select name="txt-plan" id="txt-plan">
@@ -90,33 +92,39 @@
                 <option value="18/6">18/6</option>
                 <option value="20/4">20/4</option>
             </select>
-            </div>
 
-            <div>
                 <label for="txt-inicio">Fecha y hora de inicio:</label>
                 <input type="datetime-local" name="txt-inicio" id="txt-inicio" value="mm/dd/aaaa">
-            </div>
 
-            <div>
                 <label for="txt-finalizacion">Fecha y hora de finalización:</label>
                 <input type="datetime-local" name="txt-finalizacion" id="txt-finalizacion" value="mm/dd/aaaa">
+
             </div>
-            </div>
+
             <div>
-                <button id="btn-iniciar" type="button">Registrar ayuno</button>
-                <!-- <button id="btn-detener" type="button">Detener</button> -->
+
             </div>
+
+            <div class="txt-planes">
+                <h3 id="h3">*Los planes se componen de un primer valor correspondiente a horas de ayuno y un segundo valor que corresponde a la ventana de alimentación*</h3>
+            </div>
+
+            <div id="boton-registrar">
+                <button id="btn-iniciar" type="button">Registrar ayuno</button>
+            </div>
+
+
+
         </form>
+
     </main>
 
-    <div class="txt-planes">
-        <h3 id="h3">*Los planes se componen de un primer valor correspondiente a horas de ayuno y un segundo valor que corresponde a la ventana de alimentación*</h3>
-    </div>
 
-    <div id="titulo-tabla">
+    <div id="titulo-tbl">
         <h1>Ayunos registrados</h1>
     </div>
     <div id="filtros">
+
         <div>
             <label for="filtro-plan">Filtrar por tipo de plan</label>
             <select name="txt-plan" id="txt-plan">
@@ -128,7 +136,8 @@
                 </select>
         </div>
 
-        <div id="boton-limpiar-filtro">
+
+        <div>
             <button id="btn-limpiar-filtro" type="button">Limpiar filtros</button>
         </div>
     </div>
