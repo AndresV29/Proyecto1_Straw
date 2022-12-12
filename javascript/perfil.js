@@ -73,11 +73,11 @@ const mostrarTabla = async() => {
     cuerpoTabla.innerHTML = '';
     const dato = listaUsuarios[listaUsuarios.length - 1]
     const ultimoPeso = await cargarListapesos();
-    const indice = imc(ultimoPeso.peso, dato.estatura);
+    const indice = imc(ultimoPeso.peso, ultimoPeso.estatura);
     let fila = cuerpoTabla.insertRow();
     fila.insertCell().innerText = dato.nombre;
     fila.insertCell().innerText = moment(dato.nacimiento).add(1, 'days').format('MM-DD-YYYY');
-    fila.insertCell().innerText = dato.estatura;
+    fila.insertCell().innerText = ultimoPeso.estatura;
     fila.insertCell().innerText = dato.genero;
     fila.insertCell().innerText = dato.correo;
     fila.insertCell().innerText = ultimoPeso.peso;
