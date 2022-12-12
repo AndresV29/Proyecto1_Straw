@@ -109,11 +109,6 @@ h2 {
     margin-bottom: 10px;
 }
 
-.foto-perfil {
-    height: 150px;
-    margin-bottom: 50px;
-}
-
 td:hover {
     background-color: rgb(239, 157, 128);
 }
@@ -126,4 +121,18 @@ td:hover {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.foto {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+#fotoPerfil {
+    height: 200px;
+    border-radius: 100px;
 }
