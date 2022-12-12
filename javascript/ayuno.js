@@ -2,7 +2,8 @@ const btnIniciar = document.getElementById("btn-iniciar");
 const txtPlan = document.getElementById("txt-plan");
 const txtInicio = document.getElementById("txt-inicio");
 const txtFinalizacion = document.getElementById("txt-finalizacion");
-const filtroTipoPlan = document.getElementById("txt-plan");
+const filtroTipoPlan = document.getElementById("filtro-plan");
+const botonLimpiarF = document.querySelector("#btn-limpiar-filtro");
 
 const cuerpoTabla = document.querySelector("#tbl-ayunos tbody");
 
@@ -24,7 +25,7 @@ const mostrarAyunos = () => {
             return true;
         }
         return filtroTipoPlan.value.toLowerCase() == ayuno.plan.toLowerCase()
-    });
+    })
 
     listaFiltrada.forEach(ayuno => {
         let fila = cuerpoTabla.insertRow();
