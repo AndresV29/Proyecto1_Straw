@@ -29,7 +29,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/html/index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="/html/index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/html/registro.html">Registro</a>
@@ -82,7 +82,7 @@
                 <input type="String" id="nombre" name="nombre" class="entrada" onblur="validaNombre()">
             </div>
             <div>
-                <label for="tipo">Tipo</label>
+                <label for="label-tipo">Tipo</label>
                 <select name="tipo" id="tipo" class="entrada" onblur="validaTipo()">
                         <option value="">Seleccione un tipo</option>
                         <option value="cardio">Cardio</option>
@@ -93,11 +93,11 @@
                         </select>
             </div>
             <div>
-                <label id="h-inicio">Hora de inicio</label>
+                <label id="label-h-inicio">Hora de inicio</label>
                 <input type="time" id="h-inicio" name="hora-inicio" class="entrada" onblur="validaHoraInicio()">
             </div>
             <div>
-                <label id="h-final">Hora de Finalizado</label>
+                <label id="label-h-final">Hora de Finalizado</label>
                 <input type="time" id="h-final" name="hFinal" class="entrada" onblur="validaHoraFinal()">
             </div>
         </div>
@@ -111,11 +111,11 @@
                 <input type="file" name="subir-icono" id="subir-icono" accept="image/png, image/jpeg">
             </div>
             <div>
-                <label id="peso">Peso</label>
+                <label id="label-peso">Peso</label>
                 <input type="number" class="peso" name="peso" id="peso" onblur="validaPeso()">
             </div>
             <div>
-                <label id="imc">IMC Actual</label>
+                <label id="label-imc">IMC Actual</label>
                 <input type="number" class="peso" name="imc" id="imc" onblur="validaIMC()">
             </div>
         </div>
