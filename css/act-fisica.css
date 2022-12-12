@@ -40,7 +40,7 @@ label {
 }
 
 #registro:hover {
-    background-color: #ef8121;
+    background-color: #92b7ee;
     color: rgb(255, 255, 255);
     border-radius: 3px;
     font-weight: bold;
@@ -120,7 +120,7 @@ a:hover {
 .tabla-actividades {
     border-collapse: collapse;
     border-spacing: 0;
-    width: 80%;
+    width: fit-content;
 }
 
 .tabla-actividades th {
@@ -128,6 +128,10 @@ a:hover {
     height: 50px;
     padding: 15px;
     max-width: fit-content;
+}
+
+.tabla-actividades tbody td {
+    max-width: 100px;
 }
 
 .tabla-actividades td {
@@ -138,7 +142,7 @@ a:hover {
 }
 
 .tabla-actividades td:hover {
-    background-color: rgb(239, 157, 128);
+    background-color: #92b7ee;
 }
 
 #chart {
