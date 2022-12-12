@@ -49,8 +49,8 @@ const obtenerPersonaId = async(identificacion) => {
     }
 }
 
-const modificarPersona = async(p_id, pdatos, pendPoint) => {
-    let url = `http://localhost:3000/api${pendPoint}`
+const modificarPersona = async(p_id, pdatos) => {
+    let url = `http://localhost:3000/api/editar-usuario`
     await axios({
         method: 'put',
         url: url,
