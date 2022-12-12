@@ -7,15 +7,16 @@ html>* {
     background-color: #f5f6fa;
 }
 
-.nav {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 60px;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 30px;
+
+/* reemplazar el estilo de clase navbar de bootstrap */
+
+.navbar {
     background-color: #1e90ff;
+}
+
+.nav-link {
+    color: #f5f6fa !important;
+    font-size: 20px;
 }
 
 a:hover {
@@ -78,8 +79,8 @@ h1 {
 /* Boton de registro de recetas*/
 
 button:hover {
-    background-color: #ef8121;
-    color: rgb(255, 255, 255);
+    background-color: #ffa657;
+    color: #000;
     border-radius: 3px;
     font-weight: bold;
     font-size: 19px;
@@ -119,7 +120,7 @@ main {
 }
 
 #title-regis-recipe {
-    margin-top: 100px;
+    margin-top: 150px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -143,12 +144,12 @@ main {
     width: 1650px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
 #menu-pt-2 {
-    width: 1650px;
+    width: 1635px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -161,6 +162,10 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+#btn-agregar-receta {
+    width: fit-content;
 }
 
 

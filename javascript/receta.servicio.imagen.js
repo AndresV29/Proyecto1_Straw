@@ -1,5 +1,5 @@
-const botonGuardar = document.getElementById('txt-foto');
-const imagen = document.getElementById('imagenPerfil');
+const botonGuardar = document.getElementById('file-foto-receta');
+const imagen = document.getElementById('foto-receta');
 
 let widget_cloudinary = cloudinary.createUploadWidget({
     cloudName: 'dptivtkvx',
@@ -16,6 +16,3 @@ if (botonGuardar) {
         widget_cloudinary.open();
     }, false);
 }
-// botonGuardar.addEventListener('click', () => {
-//     widget_cloudinary.open();
-// }, false);

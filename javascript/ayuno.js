@@ -1,23 +1,40 @@
 const btnIniciar = document.getElementById("btn-iniciar");
-const btnDetener = document.getElementById("btn-detener");
 const txtPlan = document.getElementById("txt-plan");
 const txtInicio = document.getElementById("txt-inicio");
 const txtFinalizacion = document.getElementById("txt-finalizacion");
-const tblAyunos = document.querySelector('#tbl-info tbody');
+const filtroTipoPlan = document.getElementById("filtro-plan");
+const cuerpoTabla = document.querySelector("#tbl-ayunos tbody");
+let listaAyunos = [];
 let ayuno = {};
 
-imprimirTabla = () => {
-    let fila = tblAyunos.insertRow();
-    let i = 1
-    fila.insertCell().innerText = i;
-    fila.insertCell().innerText = ayuno.inicio;
-    fila.insertCell().innerText = ayuno.finalizacion;
-    fila.insertCell().innerText = ayuno.plan;
+const cargarLista = async() => {
+    listaAyunos = await obtenerDatos("/obtener-ayunos");
+    mostrarAyunos();
 
 };
 
+const mostrarAyunos = () => {
+    cuerpoTabla.innerHTML = "";
 
-validar = () => {
+    const copiaLista = [...listaAyunos]
+    const listaFiltrada = copiaLista.filter((ayuno) => {
+        if (filtroTipoPlan.value == "") {
+            return true;
+        }
+        return filtroTipoPlan.value.toLowerCase() == ayuno.plan.toLowerCase()
+    });
+
+    listaFiltrada.forEach(ayuno => {
+        let fila = cuerpoTabla.insertRow();
+        fila.insertCell().innerText = ayuno.plan;
+        fila.insertCell().innerText = ayuno.inicio;
+        fila.insertCell().innerText = ayuno.finalizacion;
+    });
+};
+
+cargarLista();
+
+const validar = () => {
     let plan = txtPlan.value;
     let inicio = txtInicio.value;
     let finalizacion = txtFinalizacion.value;
@@ -46,12 +63,27 @@ validar = () => {
         ayuno.inicio = txtInicio.value;
         ayuno.finalizacion = txtFinalizacion.value;
         ayuno.plan = txtPlan.value;
-        imprimirTabla();
-    } else {
-        console.log('Por favor, rellene los campos resaltados.')
-    }
+        Swal.fire({
+            'icon': 'success',
+            'title': '',
+            'text': 'Ayuno registrado exitosamente'
+        });
+        registrarDatos(ayuno, "/registrar-ayuno", "ayuno.html");
 
+    } else {
+        swal.fire({
+            "icon": "error",
+            "text": "Complete los campos resaltados para continuar con el registro"
+        })
+    };
 };
 
 btnIniciar.addEventListener("click", validar);
-btnDetener.addEventListener("click", validar);
+
+filtroTipoPlan.addEventListener("change", mostrarAyunos);
+botonLimpiarF.addEventListener("click", () => {
+    filtroTipoPlan.value = "";
+
+    mostrarAyunos();
+
+});

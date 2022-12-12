@@ -30,6 +30,15 @@ img {
     height: 50px;
 }
 
+.navbar {
+    background-color: #1e90ff;
+}
+
+.nav-link {
+    color: #f5f6fa !important;
+    font-size: 20px;
+}
+
 .links-nav {
     text-align: center;
     align-self: center;

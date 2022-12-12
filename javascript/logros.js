@@ -110,7 +110,7 @@ const validar = () => {
             title: "",
             text: "Logro registrado exitosamente",
         });
-        registrarDatos(logro, "/registro-logro");
+        registrarDatos(logro, "/registro-logro", "logros.html");
         limpiar();
     }
 };

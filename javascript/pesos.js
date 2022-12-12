@@ -105,51 +105,83 @@ const validarPesos = () => {
             estatura: txtEstatura.value,
         };
 
-        registrarDatos(nuevoPeso, "/registrar-peso");
+        registrarDatos(nuevoPeso, "/registrar-peso", "pesos.html");
     }
 };
 
 btnRegistrarPeso.addEventListener("click", validarPesos);
 
-let chart = null;
-const updateChart = () => {
-    chartData.push({
-        fecha: txtFecha.value,
-        peso: txtPeso.value,
-    });
-
-    if (chart !== null) {
-        chart.destroy();
-    }
-
-    chart = new Chart(graficoPesos, {
+moment.locale("es");
+const crearGrafico = (arrFechas, arrPesos) => {
+    let contexto = document.getElementById("grafica-pesos").getContext("2d");
+    let grafico = new Chart(contexto, {
         type: "line",
-
         data: {
-            labels: chartData.map((row) => row.fecha),
+            labels: arrFechas,
             datasets: [{
-                label: "Grafica Historial de Pesos",
-                backgroundColor: "rgb(0,0,0,1.0)",
-                borerColor: "rgb(0,255,0)",
-                data: chartData.map((row) => row.peso),
+                label: "Pesos",
+                data: arrPesos,
+                backgroundColor: ["#1289A7"],
             }, ],
         },
-        options: {},
     });
 };
-window.onload = function() {
-    chart = new Chart(graficoPesos, {
-        type: "line",
 
-        data: {
-            labels: chartData.map((row) => row.fecha),
-            datasets: [{
-                label: "Grafica Historial de Pesos",
-                backgroundColor: "rgb(0,0,0,1.0)",
-                borerColor: "rgb(0,255,0)",
-                data: chartData.map((row) => row.peso),
-            }, ],
-        },
-        options: {},
+const obtenerPesos = async() => {
+    // se llama a la funcion obtenerDatos del servicio general
+    let listaMediciones = await obtenerListaPesos("obtener-pesos");
+    let arrFechas = [];
+    let arrPesos = [];
+
+    listaMediciones.forEach((medicion) => {
+        arrFechas.push(moment(medicion.fecha).add(1, "days").format("MM-DD-YYYY"));
+        arrPesos.push(medicion.peso);
     });
+
+    crearGrafico(arrFechas, arrPesos);
 };
+
+obtenerPesos();
+
+//let chart = null;
+//const updateChart = () => {
+//   chartData.push({
+//       fecha: txtFecha.value,
+//     peso: txtPeso.value,
+// });
+
+//  if (chart !== null) {
+//    chart.destroy();
+// }
+
+// chart = new Chart(graficoPesos, {
+//   type: "line",
+
+// data: {
+//   labels: chartData.map((row) => row.fecha),
+// datasets: [{
+//   label: "Grafica Historial de Pesos",
+// backgroundColor: "rgb(0,0,0,1.0)",
+//  borerColor: "rgb(0,255,0)",
+// data: chartData.map((row) => row.peso),
+//  }, ],
+//  },
+//  options: {},
+//  });
+//};
+//window.onload = function() {
+//    chart = new Chart(graficoPesos, {
+//        type: "line",
+//
+//       data: {
+//           labels: chartData.map((row) => row.fecha),
+//           datasets: [{
+//              label: "Grafica Historial de Pesos",
+//             backgroundColor: "rgb(0,0,0,1.0)",
+//            borerColor: "rgb(0,255,0)",
+//           data: chartData.map((row) => row.peso),
+//      }, ],
+//     },
+//    options: {},
+//  });
+//};

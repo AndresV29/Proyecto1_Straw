@@ -5,47 +5,14 @@ const txtNombreEnfermedad = document.getElementById("txt-nombre-enfermedad");
 const txtDescripcionEnfermedad = document.getElementById("txt-descripcion-enfermedad");
 const txtEstadoEnfermedad = document.getElementById("txt-estado-enfermedad");
 const txtMedicamentos = document.getElementById("txt-medicamento");
-// const tblEnfermedades = document.querySelector("#tbl-enfermedades");
 let enfermedad = {};
 
-// const imprimirTablaEnfermedades = () => {
-//     let fila = tblEnfermedades.insertRow();
-//     fila.insertCell().innerText = enfermedad.nombreEnfermedad;
-//     fila.insertCell().innerText = enfermedad.descripcionEnfermedad;
-//     fila.insertCell().innerText = enfermedad.estadoEnfermedad;
-//     fila.insertCell().innerText = enfermedad.medicamentos;
-
-
-// };
-
-const cuerpoTabla = document.querySelector("#tbl-enfermedades tbody");
-let listaEnfermedades = [];
-
-const cargarLista = async() => {
-    listaEnfermedades = await obtenerDatos("/obtener-enfermedades");
-    mostrarEnfermedades();
-
-};
-
-const mostrarEnfermedades = () => {
-    cuerpoTabla.innerHTML = "";
-    listaEnfermedades.forEach(enfermedad => {
-        let fila = cuerpoTabla.insertRow();
-        fila.insertCell().innerText = enfermedad.nombre;
-        fila.insertCell().innerText = enfermedad.descripcion;
-        fila.insertCell().innerText = enfermedad.estado;
-        fila.insertCell().innerText = enfermedad.medicamento;
-    });
-};
-
-cargarLista();
 
 
 validarEnfermedades = () => {
     let nombreEnfermedad = txtNombreEnfermedad.value;
     let descripcionEnfermedad = txtDescripcionEnfermedad.value;
     let estadoEnfermedad = txtEstadoEnfermedad.value;
-    let medicamentos = txtMedicamentos.value;
     let error = false;
 
     if (nombreEnfermedad == "") {
@@ -71,15 +38,15 @@ validarEnfermedades = () => {
         enfermedad.descripcionEnfermedad = txtDescripcionEnfermedad.value;
         enfermedad.estadoEnfermedad = txtEstadoEnfermedad.value;
         enfermedad.medicamentos = txtMedicamentos.value;
-        // imprimirTablaEnfermedades();
+        registrarDatos(enfermedad, "/registrar-enfermedad", "mis-enfermedades.html");
     } else {
         swal.fire({
-            "icon": "warning",
+            "icon": "error",
             "title": "No se ha registrado la enfermedad",
             "text": "Revise los campos resaltados"
         })
     };
-    registrarDatos(enfermedad, "/registrar-enfermedad");
+
 };
 
 btnAgregarEnfermedad.addEventListener("click", validarEnfermedades);

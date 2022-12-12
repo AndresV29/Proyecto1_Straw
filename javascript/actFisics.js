@@ -1,17 +1,22 @@
 const hInicio = document.getElementById("h-inicio");
 const hFinal = document.getElementById("h-final");
+const fecha = document.getElementById("fecha");
 const nombre = document.getElementById("nombre");
 const tipo = document.getElementById("tipo");
 const peso = document.getElementById("peso");
 const imc = document.getElementById("imc");
-const btnRegistro = document.getElementById("registro")
+const btnRegistro = document.getElementById("registro");
+let actividad = {};
 
 let error = false;
 const cuerpoTabla = document.querySelector("#tbl-actividades tbody");
 let listaActividades = [];
+//let listaActiv = [];
+let arrTipos = [];
+let arrFrecuencia = [];
 
 const cargarLista = async() => {
-    listaActividades = await obtenerDatos("/obtener-actividades");
+    listaActividades = await obtenerDatos("/listar-actividades");
     mostrarActividades();
 
 };
@@ -20,10 +25,10 @@ const mostrarActividades = () => {
     cuerpoTabla.innerHTML = "";
     listaActividades.forEach(actividad => {
         let fila = cuerpoTabla.insertRow();
-        fila.insertCell().innerText = actividad.horaInicial
+        fila.insertCell().innerText = actividad.horaInicio;
         fila.insertCell().innerText = actividad.horaFinal;
-        fila.insertCell().innerText = actividad.nombreActividad;
-        fila.insertCell().innerText = actividad.tipoActividad;
+        fila.insertCell().innerText = actividad.nombre;
+        fila.insertCell().innerText = actividad.tipo;
         fila.insertCell().innerText = actividad.peso;
         fila.insertCell().innerText = actividad.imc;
     });
@@ -33,86 +38,95 @@ cargarLista();
 
 function validaHoraInicio() {
     if (hInicio.value === "") {
-        error = false;
+        error = true;
         hInicio.classList.add("vacio");
     } else {
-        error = true;
         hInicio.classList.remove("vacio");
     }
 }
 
 function validaHoraFinal() {
     if (hFinal.value === "") {
-        error = false;
+        error = true;
         hFinal.classList.add("vacio");
     } else {
-        error = true;
         hFinal.classList.remove("vacio");
     }
 }
 
 function validaNombre() {
     if (nombre.value === "") {
-        error = false;
+        error = true;
         nombre.classList.add("vacio");
     } else {
-        error = true;
         nombre.classList.remove("vacio");
     }
 }
 
 function validaTipo() {
     if (tipo.value === "") {
-        error = false;
+        error = true;
         hInicio.classList.add("vacio");
     } else {
-        error = true;
         hInicio.classList.remove("vacio");
     }
 }
 
 function validaPeso() {
     if (peso.value === "") {
-        error = false;
+        error = true;
         peso.classList.add("vacio");
     } else {
-        error = true;
         peso.classList.remove("vacio");
     }
 }
 
 function validaIMC() {
     if (imc.value === "") {
-        error = false;
+        error = true;
         imc.classList.add("vacio");
     } else {
-        error = true;
         imc.classList.remove("vacio");
     }
 }
 
 function validaInfo() {
+
+
     validaHoraInicio();
     validaHoraFinal();
     validaNombre();
-    validaPeso();
+    validaTipo();
     validaIMC();
+
+
+
     if (error == false) {
-        actividad.horaInicial = hInicio.value;
+        console.log(hInicio.value);
+        console.log(hFinal.value);
+        console.log(fecha.value);
+        console.log(nombre.value);
+        console.log(tipo.value);
+        console.log(peso.value);
+        console.log(imc.value);
+
+        actividad.horaInicio = hInicio.value;
         actividad.horaFinal = hFinal.value;
-        actividad.nombreActividad = nombre.value;
-        actividad.tipoActividad = tipo.value;
+        actividad.fecha = fecha.value;
+        actividad.nombre = nombre.value;
+        actividad.tipo = tipo.value;
         actividad.peso = peso.value;
         actividad.imc = imc.value;
+        registrarDatos(actividad, "/registrar-actividad", "act-fisica.html");
         limpiaTabla();
     } else {
+
         swal.fire({
             "icon": "warning",
             "title": "No se ha registrado la actividad",
             "text": "Revise los campos resaltados"
         })
     };
-    registrarDatos(actividad, "/registrar-actividad");
 }
 
 function limpiaTabla() {
@@ -123,36 +137,71 @@ function limpiaTabla() {
     nombre.value = "";
 }
 
-btnRegistro.addEventListener('click', Event => {
+/*btnRegistro.addEventListener('click', Event => {
     validaInfo();
-});
+});*/
+
+btnRegistro.addEventListener("click", validaInfo);
 
 //codigo de chart.js
-const ctx = document.getElementById('myChart');
 
-var etiquetas = ['Correr', 'Pesas', 'Crosfit', 'Fuerza', 'Ciclismo', 'Yoga', 'Natacion'];
-var datos = [12, 19, 3, 5, 2, 3, 14]
+const crearGrafico = (arrTipos, arrFrecuencia) => {
+    let ctx = document.getElementById('myChart').getContext('2d');
 
+    let grafico = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: arrTipos,
+            datasets: [{
+                label: 'Actividad fisica',
+                fill: true,
+                borderColor: "#DA3D1B",
+                data: arrFrecuencia,
+                borderWidth: 5,
 
+            }]
+        },
+        options: {
+            scales: {
 
-new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: etiquetas,
-        datasets: [{
-            label: 'Actividad fisica',
-            fill: true,
-            borderColor: "#DA3D1B",
-            data: datos,
-            borderWidth: 5,
+                y: {
+                    beginAtZero: true
 
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
+                }
+            },
+            responsive: false,
+            maintainAspectRatio: false,
+            //width: 600,
+            // height: 600
         }
-    }
-});
+    });
+};
+
+
+
+const obtenerActividades = async() => {
+    //llama la funcion
+    let listaActiv = [];
+    listaActiv = await obtenerDatos('/listar-actividades');
+    let prev;
+
+    listaActiv.sort();
+
+    listaActiv.forEach(actividad => {
+        if (!arrTipos.includes(actividad.tipo)) {
+            arrTipos.push(actividad.tipo);
+            arrFrecuencia.push(1);
+        } else {
+            ++arrFrecuencia[arrFrecuencia.length - 1];
+            prev = actividad;
+        }
+
+        //arrFrecuencia.push(actividad.peso);
+    });
+
+    //arrFrecuencia = keys(arrTipos);
+
+    crearGrafico(arrTipos, arrFrecuencia);
+};
+
+obtenerActividades();
