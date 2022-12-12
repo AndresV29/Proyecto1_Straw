@@ -1,11 +1,12 @@
 moment.locale('es');
 const cuerpoTabla = document.querySelector('#tbl-perfil tbody');
-const fotoPerfil = document.getElementById('imagenPerfil');
+const fotoPerfil = document.getElementById('fotoPerfil');
 let listaUsuarios = [];
 let listaPesos = []
 
 const cargarLista = async() => {
     listaUsuarios = await obtenerDatos('/obtener-usuario');
+    imagenPhoto(listaUsuarios[listaUsuarios.length - 1].foto);
     mostrarTabla();
 };
 
@@ -15,9 +16,7 @@ const cargarListapesos = async() => {
 };
 
 const imagenPhoto = (imagen) => {
-    let img = document.createElement('img');
-    img.src = imagen;
-    return imagen
+    fotoPerfil.src = imagen;
 };
 
 const agua = (peso) => {
@@ -61,15 +60,21 @@ const mostrarTabla = async() => {
     fila.insertCell().innerText = proteina(dato.genero, dato.actividad, ultimoPeso.peso);
     fila.insertCell().innerText = indice;
     fila.insertCell().innerText = dato.actividad;
-    // fila.insertCell().appendChild(imagenPhoto(dato.foto))
-};
-const mostrarFoto = async() => {
-    const dato = listaUsuarios[listaUsuarios.length - 1];
-    let foto = imagenPhoto(dato.foto);
-    let identificador = document.createElement('img').fotoPerfil.src = foto;
-    return identificador;
+
+    // listaUsuarios.forEach(usuario => {
+    //     let fila = cuerpoTabla.insertRow();
+    //     fila.insertCell().innerText = usuario.nombre;
+    //     fila.insertCell().innerText = moment(usuario.nacimiento).add(1, 'days').format('MM-DD-YYYY');
+    //     fila.insertCell().innerText = usuario.estatura;
+    //     fila.insertCell().innerText = usuario.genero;
+    //     fila.insertCell().innerText = usuario.correo;
+    //     fila.insertCell().innerText = usuario.pesoMeta;
+    //     fila.insertCell().innerText = agua(usuario.pesoMeta);
+    //     fila.insertCell().innerText = proteina(usuario.genero, usuario.actividad, usuario.pesoMeta);
+    //     fila.insertCell().innerText = usuario.imcdesdeotrapagina;
+    //     fila.insertCell().innerText = usuario.actividad;
+    //     fila.insertCell().appendChild(imagenPhoto(usuario.foto))
+    // });
 };
 
-fotoPerfil = cargarLista();
-mostrarFoto();
-image.png
+cargarLista();
