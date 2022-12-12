@@ -2,8 +2,10 @@ const btnIniciar = document.getElementById("btn-iniciar");
 const txtPlan = document.getElementById("txt-plan");
 const txtInicio = document.getElementById("txt-inicio");
 const txtFinalizacion = document.getElementById("txt-finalizacion");
-const filtroTipoPlan = document.getElementById("filtro-plan");
+const filtroTipoPlan = document.getElementById("txt-plan");
+
 const cuerpoTabla = document.querySelector("#tbl-ayunos tbody");
+
 let listaAyunos = [];
 let ayuno = {};
 
