@@ -173,3 +173,20 @@ h2 {
     height: 35px;
     width: fit-content;
 }
+
+.formulario div input,
+select {
+    text-align: center;
+    width: 250px;
+    height: 30px;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    border: 0.5;
+}
+
+.seccion1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
