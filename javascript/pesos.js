@@ -6,6 +6,7 @@ const tblHistorial = document.querySelector("#tbl-pesos tbody");
 let historial = {};
 let graficoPesos = document.getElementById("grafica-pesos");
 let chartData = [];
+let listaMediciones = [];
 
 const calcularImc = () => {
     let peso = txtPeso.value;
@@ -89,7 +90,7 @@ const validarPesos = () => {
         historial.peso = txtPeso.value;
         historial.estatura = txtEstatura.value;
         historial.imc = calcularImc();
-        imprimirTabla();
+        imprimirTabla(listaMediciones);
     } else {
         console.log("Por favor rellene los campos resaltados en rojo");
     }
@@ -131,7 +132,7 @@ const crearGrafico = (arrFechas, arrPesos) => {
 
 const obtenerPesos = async() => {
     // se llama a la funcion obtenerDatos del servicio general
-    let listaMediciones = await obtenerListaPesos("obtener-pesos");
+    listaMediciones = await obtenerListaPesos("obtener-pesos");
     let arrFechas = [];
     let arrPesos = [];
 
