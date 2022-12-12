@@ -1,6 +1,7 @@
 moment.locale('es');
 const cuerpoTabla = document.querySelector('#tbl-perfil tbody');
 const fotoPerfil = document.getElementById('fotoPerfil');
+const botonEditar = document.getElementById('btn-editar');
 let listaUsuarios = [];
 let listaPesos = [];
 
@@ -88,6 +89,7 @@ const mostrarTabla = async() => {
     fila.insertCell().innerText = clasificarImc(indice);
     fila.insertCell().innerText = dato.actividad;
 
+
     // listaUsuarios.forEach(usuario => {
     //     let fila = cuerpoTabla.insertRow();
     //     fila.insertCell().innerText = usuario.nombre;
@@ -104,4 +106,8 @@ const mostrarTabla = async() => {
     // });
 };
 
+botonEditar.addEventListener('click', () => {
+    console.log(listaUsuarios[listaUsuarios.length - 1]._id)
+    window.location.href = 'editar.html';
+})
 cargarLista();
