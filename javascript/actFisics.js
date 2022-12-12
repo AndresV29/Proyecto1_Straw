@@ -151,12 +151,11 @@ function validaInfo() {
         actividad.peso = peso.value;
         actividad.imc = imc.value;
         registrarDatos(actividad, "/registrar-actividad", "act-fisica.html");
-        obtenerHorasTotales();
+        //obtenerHorasTotales();
         limpiaTabla();
 
     } else {
 
-        console.log("hola");
         swal.fire({
             "icon": "warning",
             "title": "No se ha registrado la actividad",
