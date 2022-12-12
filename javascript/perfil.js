@@ -18,7 +18,6 @@ const cargarListapesos = async() => {
 const imagenPhoto = (imagen) => {
     fotoPerfil.src = imagen;
 };
-
 const agua = (peso) => {
     resultado = peso / 7;
     resultado = Math.round(resultado, 0);
@@ -43,6 +42,32 @@ const imc = (peso, estatura) => {
     const indice = peso / Math.pow(estatura, 2);
     return indice.toFixed(2);
 };
+const clasificarImc = (imc) => {
+    let clasificacion = "";
+
+    if (imc >= 40) {
+        clasificacion = "Persona en alto riesgo";
+    } else {
+        if (imc >= 35) {
+            clasificacion = "Persona en alto riesgo";
+        } else {
+            if (imc >= 30) {
+                clasificacion = "Obesidad 1";
+            } else {
+                if (imc >= 25) {
+                    clasificacion = "Sobrepeso";
+                } else {
+                    if (imc >= 18.5) {
+                        clasificacion = "Peso normal";
+                    } else {
+                        clasificacion = "Peso bajo";
+                    }
+                }
+            }
+        }
+    }
+    return clasificacion;
+};
 
 const mostrarTabla = async() => {
     cuerpoTabla.innerHTML = '';
@@ -55,10 +80,12 @@ const mostrarTabla = async() => {
     fila.insertCell().innerText = dato.estatura;
     fila.insertCell().innerText = dato.genero;
     fila.insertCell().innerText = dato.correo;
+    fila.insertCell().innerText = ultimoPeso.peso;
     fila.insertCell().innerText = dato.pesoMeta;
     fila.insertCell().innerText = agua(ultimoPeso.peso);
     fila.insertCell().innerText = proteina(dato.genero, dato.actividad, ultimoPeso.peso);
     fila.insertCell().innerText = indice;
+    fila.insertCell().innerText = clasificarImc(indice);
     fila.insertCell().innerText = dato.actividad;
 
     // listaUsuarios.forEach(usuario => {
