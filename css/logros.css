@@ -9,15 +9,13 @@ html>* {
     border-radius: 3px;
 }
 
-.nav {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 60px;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 30px;
+.navbar {
     background-color: #1e90ff;
+}
+
+.nav-link {
+    color: #f5f6fa !important;
+    font-size: 20px;
 }
 
 a:hover {
@@ -52,7 +50,7 @@ label {
     height: 30px;
 }
 
-div input,
+.formulario div input,
 select {
     display: inline-block;
     text-align: center;
@@ -118,18 +116,19 @@ button {
     flex-basis: 40%;
 }
 
-.espaciado {
-    padding-bottom: 30px;
-}
-
 .title {
     padding-bottom: 40px;
     justify-content: right;
+    padding-top: 20px;
 }
 
 .tabla-Logros {
     margin-left: auto;
     margin-right: auto;
+}
+
+.espaciado {
+    padding-bottom: 20px;
 }
 
 table,
