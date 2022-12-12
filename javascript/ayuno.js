@@ -1,19 +1,40 @@
 const btnIniciar = document.getElementById("btn-iniciar");
-const btnDetener = document.getElementById("btn-detener");
 const txtPlan = document.getElementById("txt-plan");
 const txtInicio = document.getElementById("txt-inicio");
 const txtFinalizacion = document.getElementById("txt-finalizacion");
-const tblAyunos = document.querySelector("#tbl-info tbody");
+const filtroTipoPlan = document.getElementById("filtro-plan");
+const cuerpoTabla = document.querySelector("#tbl-ayunos tbody");
+let listaAyunos = [];
 let ayuno = {};
 
-const imprimirTabla = () => {
-    let fila = tblAyunos.insertRow();
+const cargarLista = async() => {
+    listaAyunos = await obtenerDatos("/obtener-ayunos");
+    mostrarAyunos();
 
-    fila.insertCell().innerText = i;
-    fila.insertCell().innerText = ayuno.plan;
-    fila.insertCell().innerText = ayuno.inicio;
-    fila.insertCell().innerText = ayuno.finalizacion;
 };
+
+const mostrarAyunos = () => {
+    cuerpoTabla.innerHTML = "";
+
+    const copiaLista = [...listaAyunos]
+    const listaFiltrada = copiaLista.filter((ayuno) => {
+        if (filtroTipoPlan.value == "") {
+            return true;
+        }
+        return filtroTipoPlan.value.toLowerCase() == ayuno.plan.toLowerCase()
+    });
+
+    listaFiltrada.forEach(ayuno => {
+        let fila = cuerpoTabla.insertRow();
+        fila.insertCell().innerText = ayuno.plan;
+        fila.insertCell().innerText = ayuno.inicio;
+        fila.insertCell().innerText = ayuno.finalizacion;
+    });
+};
+
+cargarLista();
+
+
 
 const validar = () => {
     let plan = txtPlan.value;
@@ -61,4 +82,11 @@ const validar = () => {
 };
 
 btnIniciar.addEventListener("click", validar);
-btnDetener.addEventListener("click", validar);
+
+filtroTipoPlan.addEventListener("change", mostrarAyunos);
+botonLimpiarF.addEventListener("click", () => {
+    filtroTipoPlan.value = "";
+
+    mostrarAyunos();
+
+});
