@@ -15,6 +15,7 @@ let dificultad = txtDificultad.value;
 const btnRegistrar = document.getElementById("btn-registrar-logros");
 const tblLogros = document.querySelector("#tbl-logro tbody");
 let listaLogros = [];
+let listaUsuarios = [];
 let logro = {};
 
 const listarLogro = async() => {
@@ -34,6 +35,11 @@ const imprimirTabla = () => {
         fila.insertCell().innerText = logro.dificultad;
     });
 };
+
+const inicializarListas = async() => {
+    listaUsuarios = await obtenerDatos("/obtener-usuario");
+};
+
 const limpiar = () => {
     logro = {
         objetivo: (txtObjetivo.value = "."),
