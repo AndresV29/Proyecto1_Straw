@@ -40,6 +40,8 @@ const inicializarListas = async() => {
     listaUsuarios = await obtenerDatos("/obtener-usuario");
 };
 
+// listarUsusarios .length - 1
+
 const limpiar = () => {
     logro = {
         objetivo: (txtObjetivo.value = "."),

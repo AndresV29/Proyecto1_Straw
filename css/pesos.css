@@ -207,3 +207,8 @@ td {
     font-size: 22px;
     margin-top: 5%;
 }
+
+#txt-fecha-registro {
+    width: 276px;
+    height: 43px;
+}

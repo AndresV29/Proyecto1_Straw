@@ -76,60 +76,66 @@
         </nav>
     </header>
     <main>
-        <div class="contenedor">
-            <div class="iq">
-                <h1 class="title">Registrar Logros</h1>
-                <form>
-                    <div class="espaciado">
-                        <label for="txt-objetivo">Objetivo:</label>
-                        <select name="txt-objetivo" id="txt-objetivo">
-                <option value="">--Seleccione un objetivo--</option>
-                <option>Reducción de Peso</option>
-                <option>Inicio de Ayuno</option>
-                <option>Actividad física</option>
-                <option>Reducción de IMC</option>
-            </select>
-                    </div>
-                    <div class="espaciado">
-                        <label for="txt-obj">Nombre del logro</label>
-                        <input type="text" id="txt-obj" />
-                    </div>
-                    <div class="espaciado">
-                        <label for="txt-horas">Horas meta:</label>
-                        <input type="number" id="txt-horas" min="1" />
-                    </div>
+        <h1 class="title">Registrar Logros</h1>
+        <form class="orden">
+            <div class="columnas">
+                <div class="espaciado">
+                    <label for="txt-objetivo">Objetivo:</label>
+                    <select name="txt-objetivo" id="txt-objetivo">
+                    <option value="">--Seleccione un objetivo--</option>
+                    <option>Reducción de Peso</option>
+                    <option>Inicio de Ayuno</option>
+                    <option>Actividad física</option>
+                    <option>Reducción de IMC</option>
+                  </select>
+                </div>
+                <div class="espaciado">
+                    <label for="txt-obj">Nombre del logro</label>
+                    <input type="text" id="txt-obj" />
+                </div>
+                <div class="espaciado">
+                    <label for="txt-horas">Horas meta:</label>
+                    <input type="number" id="txt-horas" min="1" />
+                </div>
+            </div>
 
-                    <div class="espaciado">
-                        <label for="txt-pesometa">Peso meta:</label>
-                        <input type="number" id="txt-pesometa" min="1" />
-                    </div>
+            <div class="columnas">
+                <div class="espaciado">
+                    <label for="txt-pesometa">Peso meta:</label>
+                    <input type="number" id="txt-pesometa" min="1" />
+                </div>
 
-                    <div class="espaciado">
-                        <label for="txt-imc">IMC deseado:</label>
-                        <input type="number" id="txt-imc" min="1" />
-                    </div>
+                <div class="espaciado">
+                    <label for="txt-imc">IMC deseado:</label>
+                    <input type="number" id="txt-imc" min="1" />
+                </div>
 
-                    <div class="espaciado">
-                        <label for="txt-dificultad">Dificultad:</label>
-                        <select name="txt-dificultad" id="txt-dificultad">
+                <div class="espaciado">
+                    <label for="txt-dificultad">Dificultad:</label>
+                    <select name="txt-dificultad" id="txt-dificultad">
                 <option value="">Elegir dificultad</option>
                 <option value="Fácil">Fácil</option>
                 <option value="Medio">Medio</option>
                 <option value="Difícil">Difícil</option>
-            </select>
-                    </div>
 
-                    <button type="button" id="btn-registrar-logros">Registrar</button>
-                </form>
+              </select>
+                </div>
+
+                </select>
             </div>
+        </form>
+
+        </div>
+        </form>
+        <div class="boton">
+            <button type="button" id="btn-registrar-logros">Registrar</button>
         </div>
 
         <div class="tabla-logros">
-            <h2>Mis Logros</h2>
+            <h1 class="title">Mis Logros</h1>
             <table id="tbl-logro" class="table">
                 <thead>
                     <tr>
-                        <!-- <td>Progreso:</td> -->
                         <td>Objetivo:</td>
                         <td>Nombre del logro:</td>
                         <td>Hora meta:</td>
