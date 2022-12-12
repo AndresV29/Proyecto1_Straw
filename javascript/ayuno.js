@@ -34,8 +34,6 @@ const mostrarAyunos = () => {
 
 cargarLista();
 
-
-
 const validar = () => {
     let plan = txtPlan.value;
     let inicio = txtInicio.value;
@@ -71,7 +69,6 @@ const validar = () => {
             'text': 'Ayuno registrado exitosamente'
         });
         registrarDatos(ayuno, "/registrar-ayuno", "ayuno.html");
-        imprimirTabla();
 
     } else {
         swal.fire({
