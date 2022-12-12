@@ -97,6 +97,7 @@ function validaInfo() {
     validaNombre();
     validaPeso();
     validaIMC();
+    //cambio
     if (error == false) {
         actividad.horaInicial = hInicio.value;
         actividad.horaFinal = hFinal.value;
