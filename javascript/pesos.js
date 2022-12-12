@@ -42,17 +42,20 @@ const clasificarImc = (imc) => {
     return clasificacion;
 };
 
-const imprimirTabla = () => {
-    let clasificacion = clasificarImc(historial.imc);
+const imprimirTabla = (listaMediciones) => {
+    listaMediciones.forEach((historial) => {
+        let imc = historial.peso / Math.pow(historial.estatura, 2);
+        let clasificacion = clasificarImc(imc);
 
-    let fila = tblHistorial.insertRow();
-    fila.insertCell().innerText = historial.fecha;
-    fila.insertCell().innerText = historial.peso;
-    fila.insertCell().innerText = historial.imc;
+        let fila = tblHistorial.insertRow();
+        fila.insertCell().innerText = historial.fecha;
+        fila.insertCell().innerText = historial.peso;
+        fila.insertCell().innerText = imc;
 
-    let celdaClasif = fila.insertCell();
-    celdaClasif.innerText = clasificacion;
-    celdaClasif.classList.add(clasificacion);
+        let celdaClasif = fila.insertCell();
+        celdaClasif.innerText = clasificacion;
+        celdaClasif.classList.add(clasificacion);
+    });
 };
 
 const validarPesos = () => {
@@ -136,7 +139,7 @@ const obtenerPesos = async() => {
         arrFechas.push(moment(medicion.fecha).add(1, "days").format("MM-DD-YYYY"));
         arrPesos.push(medicion.peso);
     });
-
+    imprimirTabla(listaMediciones);
     crearGrafico(arrFechas, arrPesos);
 };
 
