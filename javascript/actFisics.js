@@ -66,9 +66,9 @@ function validaNombre() {
 function validaTipo() {
     if (tipo.value === "") {
         error = true;
-        hInicio.classList.add("vacio");
+        tipo.classList.add("vacio");
     } else {
-        hInicio.classList.remove("vacio");
+        tipo.classList.remove("vacio");
     }
 }
 
@@ -90,14 +90,25 @@ function validaIMC() {
     }
 }
 
+function validaFecha() {
+    if (fecha.value === "") {
+        error = true;
+        fecha.classList.add("vacio");
+    } else {
+        fecha.classList.remove("vacio");
+    }
+}
+
 function validaInfo() {
 
-
-    validaHoraInicio();
-    validaHoraFinal();
     validaNombre();
     validaTipo();
+    validaHoraInicio();
+    validaHoraFinal();
+    validaFecha();
     validaIMC();
+    validaPeso();
+
 
 
 
@@ -119,8 +130,10 @@ function validaInfo() {
         actividad.imc = imc.value;
         registrarDatos(actividad, "/registrar-actividad", "act-fisica.html");
         limpiaTabla();
+
     } else {
 
+        console.log("hola");
         swal.fire({
             "icon": "warning",
             "title": "No se ha registrado la actividad",
