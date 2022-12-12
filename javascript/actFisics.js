@@ -89,6 +89,28 @@ function validaIMC() {
         imc.classList.remove("vacio");
     }
 }
+const obtenerHorasTotales = () => {
+    let horasTotales = listaActividades.reduce((acumulador, valorActual) => {
+        const horaInicio = new Date();
+        horaInicio.setHours(valorActual.horaInicio.split(":")[0]);
+        horaInicio.setMinutes(valorActual.horaInicio.split(":")[1]);
+        const horaFinal = new Date();
+        horaFinal.setHours(valorActual.horaFinal.split(":")[0]);
+        horaFinal.setMinutes(valorActual.horaFinal.split(":")[1]);
+        //let calHoras = horaFinal - horaInicio;
+        const msInHour = 1000 * 60 * 60;
+        let calHoras = Math.round(Math.abs(horaFinal - horaInicio) / msInHour);
+        console.log(horaInicio);
+        console.log("acum+calHoras=", acumulador + calHoras);
+        console.log("solo calHoras", calHoras)
+        if (isNaN(calHoras)) {
+            console.log("entra if")
+            return acumulador + 0;
+        }
+        return acumulador + calHoras;
+    }, 0);
+    console.log(horasTotales)
+};
 
 function validaFecha() {
     if (fecha.value === "") {
@@ -129,6 +151,7 @@ function validaInfo() {
         actividad.peso = peso.value;
         actividad.imc = imc.value;
         registrarDatos(actividad, "/registrar-actividad", "act-fisica.html");
+        obtenerHorasTotales();
         limpiaTabla();
 
     } else {
