@@ -1,0 +1,175 @@
+html>* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f6fa;
+}
+
+.vacio {
+    border: solid 2px red;
+    border-radius: 3px;
+}
+
+a:hover {
+    background-color: #92b7ee;
+    color: black;
+    transition: 0.5s;
+}
+
+.navbar {
+    background-color: #1e90ff;
+}
+
+.nav-link {
+    color: #f5f6fa !important;
+    font-size: 20px;
+}
+
+img {
+    height: 55px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.links-nav {
+    text-align: center;
+    align-self: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e90ff;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    margin-top: 100px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+button:hover {
+    background-color: #ffa657;
+    color: #000;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 19px;
+    transition: 0.5s;
+}
+
+button {
+    height: 45px;
+    width: 200px;
+    color: white;
+    background-color: #92b7ee;
+    font-size: 19px;
+    font-weight: bold;
+    border-radius: 3px;
+    border: none;
+}
+
+main {
+    margin: 0 50px;
+}
+
+.main-registro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 1900px;
+}
+
+.formulario {
+    align-items: center;
+}
+
+#h3 {
+    font-size: 17px;
+}
+
+#titulo-registro {
+    margin-left: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#titulo-tabla {
+    margin-top: 100px;
+    color: #000;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.tabla-ayunos {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+table,
+th,
+td {
+    border: solid 1px #000;
+    background-color: white;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 80%;
+}
+
+th {
+    background-color: #1e90ff;
+    font-size: 19px;
+    height: 50px;
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+    height: 1 0px;
+    vertical-align: center;
+}
+
+td:hover {
+    background-color: rgb(182, 182, 182);
+}
+
+h2 {
+    height: 100px;
+    width: 300px;
+}
+
+#filtros {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#boton-limpiar-filtro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#btn-limpiar-filtro {
+    height: 35px;
+    width: fit-content;
+}
