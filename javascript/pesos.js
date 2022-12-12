@@ -1,4 +1,3 @@
-moment.locale('es');
 const txtFecha = document.getElementById("txt-fecha-registro");
 const txtPeso = document.getElementById("txt-peso-registro");
 const txtEstatura = document.getElementById("txt-estatura");
@@ -49,7 +48,7 @@ const imprimirTabla = (listaMediciones) => {
         let clasificacion = clasificarImc(imc);
 
         let fila = tblHistorial.insertRow();
-        fila.insertCell().innerText = moment(historial.fecha).format('MM-DD-YYYY');
+        fila.insertCell().innerText = historial.fecha;
         fila.insertCell().innerText = historial.peso;
         fila.insertCell().innerText = imc.toFixed(2);
 
